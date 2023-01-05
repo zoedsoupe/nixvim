@@ -1267,6 +1267,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_plugins_telescope_extensions_project_nvim_enable">plugins.telescope.extensions.project-nvim.enable</a></li>
 <li><a href="#_plugins_telescope_extraoptions">plugins.telescope.extraOptions</a></li>
 <li><a href="#_plugins_telescope_highlighttheme">plugins.telescope.highlightTheme</a></li>
+<li><a href="#_plugins_treesitter_refactor_enable">plugins.treesitter-refactor.enable</a></li>
+<li><a href="#_plugins_treesitter_refactor_highlightcurrentscope_disable">plugins.treesitter-refactor.highlightCurrentScope.disable</a></li>
+<li><a href="#_plugins_treesitter_refactor_highlightcurrentscope_enable">plugins.treesitter-refactor.highlightCurrentScope.enable</a></li>
+<li><a href="#_plugins_treesitter_refactor_highlightdefinitions_clearoncursormove">plugins.treesitter-refactor.highlightDefinitions.clearOnCursorMove</a></li>
+<li><a href="#_plugins_treesitter_refactor_highlightdefinitions_disable">plugins.treesitter-refactor.highlightDefinitions.disable</a></li>
+<li><a href="#_plugins_treesitter_refactor_highlightdefinitions_enable">plugins.treesitter-refactor.highlightDefinitions.enable</a></li>
+<li><a href="#_plugins_treesitter_refactor_navigation_disable">plugins.treesitter-refactor.navigation.disable</a></li>
+<li><a href="#_plugins_treesitter_refactor_navigation_enable">plugins.treesitter-refactor.navigation.enable</a></li>
+<li><a href="#_plugins_treesitter_refactor_navigation_keymaps_gotodefinition">plugins.treesitter-refactor.navigation.keymaps.gotoDefinition</a></li>
+<li><a href="#_plugins_treesitter_refactor_navigation_keymaps_gotodefinitionlspfallback">plugins.treesitter-refactor.navigation.keymaps.gotoDefinitionLspFallback</a></li>
+<li><a href="#_plugins_treesitter_refactor_navigation_keymaps_gotonextusage">plugins.treesitter-refactor.navigation.keymaps.gotoNextUsage</a></li>
+<li><a href="#_plugins_treesitter_refactor_navigation_keymaps_gotoprevioususage">plugins.treesitter-refactor.navigation.keymaps.gotoPreviousUsage</a></li>
+<li><a href="#_plugins_treesitter_refactor_navigation_keymaps_listdefinitons">plugins.treesitter-refactor.navigation.keymaps.listDefinitons</a></li>
+<li><a href="#_plugins_treesitter_refactor_navigation_keymaps_listdefinitonstoc">plugins.treesitter-refactor.navigation.keymaps.listDefinitonsToc</a></li>
+<li><a href="#_plugins_treesitter_refactor_smartrename_disable">plugins.treesitter-refactor.smartRename.disable</a></li>
+<li><a href="#_plugins_treesitter_refactor_smartrename_enable">plugins.treesitter-refactor.smartRename.enable</a></li>
+<li><a href="#_plugins_treesitter_refactor_smartrename_keymaps_smartrename">plugins.treesitter-refactor.smartRename.keymaps.smartRename</a></li>
 <li><a href="#_plugins_treesitter_customcaptures">plugins.treesitter.customCaptures</a></li>
 <li><a href="#_plugins_treesitter_disabledlanguages">plugins.treesitter.disabledLanguages</a></li>
 <li><a href="#_plugins_treesitter_enable">plugins.treesitter.enable</a></li>
@@ -1280,6 +1297,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_plugins_treesitter_incrementalselection_keymaps_nodeincremental">plugins.treesitter.incrementalSelection.keymaps.nodeIncremental</a></li>
 <li><a href="#_plugins_treesitter_incrementalselection_keymaps_scopeincremental">plugins.treesitter.incrementalSelection.keymaps.scopeIncremental</a></li>
 <li><a href="#_plugins_treesitter_indent">plugins.treesitter.indent</a></li>
+<li><a href="#_plugins_treesitter_moduleconfig">plugins.treesitter.moduleConfig</a></li>
 <li><a href="#_plugins_treesitter_nixgrammars">plugins.treesitter.nixGrammars</a></li>
 <li><a href="#_plugins_treesitter_parserinstalldir">plugins.treesitter.parserInstallDir</a></li>
 <li><a href="#_plugins_trouble_enable">plugins.trouble.enable</a></li>
@@ -26042,12 +26060,531 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_treesitter_refactor_enable">plugins.treesitter-refactor.enable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether to enable Enable treesitter-refactor (requires plugins.treesitter.enable to be true).</p>
+</div>
+<h3 id="_details_822" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>false</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Example</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_highlightcurrentscope_disable">plugins.treesitter-refactor.highlightCurrentScope.disable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>List of languages to disable the module on</p>
+</div>
+<h3 id="_details_823" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>[]</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_highlightcurrentscope_enable">plugins.treesitter-refactor.highlightCurrentScope.enable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether to enable Highlights the block from the current scope where the cursor is..</p>
+</div>
+<h3 id="_details_824" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>false</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Example</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_highlightdefinitions_clearoncursormove">plugins.treesitter-refactor.highlightDefinitions.clearOnCursorMove</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Controls if highlights should be cleared when the cursor is moved. If your 'updatetime'
+is around <code>100</code> you can set this to false to have a less laggy experience.</p>
+</div>
+<h3 id="_details_825" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_highlightdefinitions_disable">plugins.treesitter-refactor.highlightDefinitions.disable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>List of languages to disable the module on</p>
+</div>
+<h3 id="_details_826" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>[]</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_highlightdefinitions_enable">plugins.treesitter-refactor.highlightDefinitions.enable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether to enable Highlights definition and usages of the current symbol under the cursor..</p>
+</div>
+<h3 id="_details_827" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>false</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Example</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_navigation_disable">plugins.treesitter-refactor.navigation.disable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>List of languages to disable the module on</p>
+</div>
+<h3 id="_details_828" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>[]</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_navigation_enable">plugins.treesitter-refactor.navigation.enable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether to enable Provides "go to definition" for the symbol under the cursor,
+and lists the definitions from the current file.
+.</p>
+</div>
+<h3 id="_details_829" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>false</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Example</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_navigation_keymaps_gotodefinition">plugins.treesitter-refactor.navigation.keymaps.gotoDefinition</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>go to the definition of the symbol under the cursor</p>
+</div>
+<h3 id="_details_830" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>"gnd"</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_navigation_keymaps_gotodefinitionlspfallback">plugins.treesitter-refactor.navigation.keymaps.gotoDefinitionLspFallback</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>go to the definition of the symbol under the cursor or use vim.lsp.buf.definition if
+the symbol can not be resolved. You can use your own fallback function if create a
+mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fallback_function)&lt;cr&gt;</code>.</p>
+</div>
+<h3 id="_details_831" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_navigation_keymaps_gotonextusage">plugins.treesitter-refactor.navigation.keymaps.gotoNextUsage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>go to next usage of identifier under the cursor</p>
+</div>
+<h3 id="_details_832" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>"&lt;a-*&gt;"</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_navigation_keymaps_gotoprevioususage">plugins.treesitter-refactor.navigation.keymaps.gotoPreviousUsage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>go to previous usage of identifier</p>
+</div>
+<h3 id="_details_833" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>"&lt;a-#&gt;"</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_navigation_keymaps_listdefinitons">plugins.treesitter-refactor.navigation.keymaps.listDefinitons</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>list all definitions from the current file</p>
+</div>
+<h3 id="_details_834" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>"gnD"</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_navigation_keymaps_listdefinitonstoc">plugins.treesitter-refactor.navigation.keymaps.listDefinitonsToc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>list all definitions from the current file like a table of contents (similar to the one
+you see when pressing |gO| in help files).</p>
+</div>
+<h3 id="_details_835" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>"gO"</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_smartrename_disable">plugins.treesitter-refactor.smartRename.disable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>List of languages to disable the module on</p>
+</div>
+<h3 id="_details_836" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>[]</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_smartrename_enable">plugins.treesitter-refactor.smartRename.enable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether to enable Renames the symbol under the cursor within the current scope (and current file)..</p>
+</div>
+<h3 id="_details_837" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>false</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Example</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_treesitter_refactor_smartrename_keymaps_smartrename">plugins.treesitter-refactor.smartRename.keymaps.smartRename</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>rename symbol under the cursor</p>
+</div>
+<h3 id="_details_838" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>"grr"</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_treesitter_customcaptures">plugins.treesitter.customCaptures</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Custom capture group highlighting</p>
 </div>
-<h3 id="_details_822" class="discrete">details</h3>
+<h3 id="_details_839" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26076,7 +26613,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>A list of languages to disable</p>
 </div>
-<h3 id="_details_823" class="discrete">details</h3>
+<h3 id="_details_840" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26105,7 +26642,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable tree-sitter syntax highlighting.</p>
 </div>
-<h3 id="_details_824" class="discrete">details</h3>
+<h3 id="_details_841" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26138,7 +26675,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Either "all" or a list of languages</p>
 </div>
-<h3 id="_details_825" class="discrete">details</h3>
+<h3 id="_details_842" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26167,7 +26704,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable tree-sitter based folding.</p>
 </div>
-<h3 id="_details_826" class="discrete">details</h3>
+<h3 id="_details_843" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26200,7 +26737,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Grammar packages to install</p>
 </div>
-<h3 id="_details_827" class="discrete">details</h3>
+<h3 id="_details_844" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26229,7 +26766,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>List of parsers to ignore installing (for "all")</p>
 </div>
-<h3 id="_details_828" class="discrete">details</h3>
+<h3 id="_details_845" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26258,7 +26795,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Incremental selection based on the named nodes from the grammar.</p>
 </div>
-<h3 id="_details_829" class="discrete">details</h3>
+<h3 id="_details_846" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26291,7 +26828,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_830" class="discrete">details</h3>
+<h3 id="_details_847" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26320,7 +26857,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_831" class="discrete">details</h3>
+<h3 id="_details_848" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26349,7 +26886,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_832" class="discrete">details</h3>
+<h3 id="_details_849" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26378,7 +26915,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_833" class="discrete">details</h3>
+<h3 id="_details_850" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26407,7 +26944,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable tree-sitter based indentation.</p>
 </div>
-<h3 id="_details_834" class="discrete">details</h3>
+<h3 id="_details_851" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26435,12 +26972,41 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_treesitter_moduleconfig">plugins.treesitter.moduleConfig</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is the configuration for extra modules. It should not be used directly</p>
+</div>
+<h3 id="_details_852" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>attribute set of anything</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>{}</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_treesitter_nixgrammars">plugins.treesitter.nixGrammars</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Install grammars with Nix</p>
 </div>
-<h3 id="_details_835" class="discrete">details</h3>
+<h3 id="_details_853" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26469,7 +27035,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Location of the parsers to be installed by the plugin (only needed when nixGrammars is disabled)</p>
 </div>
-<h3 id="_details_836" class="discrete">details</h3>
+<h3 id="_details_854" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26498,7 +27064,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable trouble.nvim.</p>
 </div>
-<h3 id="_details_837" class="discrete">details</h3>
+<h3 id="_details_855" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26531,7 +27097,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Height of the trouble list when position is top or bottom</p>
 </div>
-<h3 id="_details_838" class="discrete">details</h3>
+<h3 id="_details_856" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26560,7 +27126,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Use devicons for filenames</p>
 </div>
-<h3 id="_details_839" class="discrete">details</h3>
+<h3 id="_details_857" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26589,7 +27155,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Position of the list</p>
 </div>
-<h3 id="_details_840" class="discrete">details</h3>
+<h3 id="_details_858" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26618,7 +27184,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Width of the trouble list when position is left or right</p>
 </div>
-<h3 id="_details_841" class="discrete">details</h3>
+<h3 id="_details_859" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26647,7 +27213,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Auto open diff window</p>
 </div>
-<h3 id="_details_842" class="discrete">details</h3>
+<h3 id="_details_860" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26676,7 +27242,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Diff command</p>
 </div>
-<h3 id="_details_843" class="discrete">details</h3>
+<h3 id="_details_861" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26705,7 +27271,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Undotree diff panel height</p>
 </div>
-<h3 id="_details_844" class="discrete">details</h3>
+<h3 id="_details_862" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26734,7 +27300,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable undotree.</p>
 </div>
-<h3 id="_details_845" class="discrete">details</h3>
+<h3 id="_details_863" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26767,7 +27333,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Focus undotree after being opened</p>
 </div>
-<h3 id="_details_846" class="discrete">details</h3>
+<h3 id="_details_864" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26796,7 +27362,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Highlight changed text</p>
 </div>
-<h3 id="_details_847" class="discrete">details</h3>
+<h3 id="_details_865" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26825,7 +27391,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Highlight changes with a sign in the gutter</p>
 </div>
-<h3 id="_details_848" class="discrete">details</h3>
+<h3 id="_details_866" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26854,7 +27420,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Added lines highlight group</p>
 </div>
-<h3 id="_details_849" class="discrete">details</h3>
+<h3 id="_details_867" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26883,7 +27449,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Changed lines highlight group</p>
 </div>
-<h3 id="_details_850" class="discrete">details</h3>
+<h3 id="_details_868" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26912,7 +27478,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Deleted lines highlight group</p>
 </div>
-<h3 id="_details_851" class="discrete">details</h3>
+<h3 id="_details_869" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26941,7 +27507,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Use a relative timestamp</p>
 </div>
-<h3 id="_details_852" class="discrete">details</h3>
+<h3 id="_details_870" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26970,7 +27536,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>E.g. use 'd' instead of 'days'</p>
 </div>
-<h3 id="_details_853" class="discrete">details</h3>
+<h3 id="_details_871" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26999,7 +27565,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Show cursor line</p>
 </div>
-<h3 id="_details_854" class="discrete">details</h3>
+<h3 id="_details_872" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27028,7 +27594,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Show help line</p>
 </div>
-<h3 id="_details_855" class="discrete">details</h3>
+<h3 id="_details_873" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27057,7 +27623,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Tree node shape</p>
 </div>
-<h3 id="_details_856" class="discrete">details</h3>
+<h3 id="_details_874" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27086,7 +27652,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Window layout for undotree. Check <a href="https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29" class="bare">https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29</a> for reference</p>
 </div>
-<h3 id="_details_857" class="discrete">details</h3>
+<h3 id="_details_875" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27115,7 +27681,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Undotree window width</p>
 </div>
-<h3 id="_details_858" class="discrete">details</h3>
+<h3 id="_details_876" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27144,7 +27710,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable zig.</p>
 </div>
-<h3 id="_details_859" class="discrete">details</h3>
+<h3 id="_details_877" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27177,7 +27743,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Run zig fmt on save</p>
 </div>
-<h3 id="_details_860" class="discrete">details</h3>
+<h3 id="_details_878" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27210,7 +27776,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vi&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_861" class="discrete">details</h3>
+<h3 id="_details_879" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27239,7 +27805,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vim&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_862" class="discrete">details</h3>
+<h3 id="_details_880" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27268,7 +27834,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Should the config be included in the wrapper script</p>
 </div>
-<h3 id="_details_863" class="discrete">details</h3>
+<h3 id="_details_881" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
