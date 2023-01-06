@@ -1181,6 +1181,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_plugins_nvim_tree_view_width">plugins.nvim-tree.view.width</a></li>
 <li><a href="#_plugins_packer_enable">plugins.packer.enable</a></li>
 <li><a href="#_plugins_packer_plugins">plugins.packer.plugins</a></li>
+<li><a href="#_plugins_plantuml_syntax_enable">plugins.plantuml-syntax.enable</a></li>
+<li><a href="#_plugins_plantuml_syntax_executablescript">plugins.plantuml-syntax.executableScript</a></li>
+<li><a href="#_plugins_plantuml_syntax_setmakeprg">plugins.plantuml-syntax.setMakeprg</a></li>
 <li><a href="#_plugins_project_nvim_datapath">plugins.project-nvim.dataPath</a></li>
 <li><a href="#_plugins_project_nvim_detectionmethods">plugins.project-nvim.detectionMethods</a></li>
 <li><a href="#_plugins_project_nvim_enable">plugins.project-nvim.enable</a></li>
@@ -23395,12 +23398,103 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_plantuml_syntax_enable">plugins.plantuml-syntax.enable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether to enable Enable plantuml syntax support.</p>
+</div>
+<h3 id="_details_736" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>false</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Example</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_plantuml_syntax_executablescript">plugins.plantuml-syntax.executableScript</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Set the script to be called with makeprg, default to 'plantuml' in PATH</p>
+</div>
+<h3 id="_details_737" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_plantuml_syntax_setmakeprg">plugins.plantuml-syntax.setMakeprg</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Set the makeprg to 'plantuml'</p>
+</div>
+<h3 id="_details_738" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_project_nvim_datapath">plugins.project-nvim.dataPath</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_736" class="discrete">details</h3>
+<h3 id="_details_739" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23429,7 +23523,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_737" class="discrete">details</h3>
+<h3 id="_details_740" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23458,7 +23552,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable project.nvim.</p>
 </div>
-<h3 id="_details_738" class="discrete">details</h3>
+<h3 id="_details_741" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23491,7 +23585,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_739" class="discrete">details</h3>
+<h3 id="_details_742" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23521,7 +23615,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <p>These attributes will be added to the table parameter for the setup function.
 (Can override other attributes set by nixvim)</p>
 </div>
-<h3 id="_details_740" class="discrete">details</h3>
+<h3 id="_details_743" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23550,7 +23644,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_741" class="discrete">details</h3>
+<h3 id="_details_744" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23579,7 +23673,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_742" class="discrete">details</h3>
+<h3 id="_details_745" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23608,7 +23702,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_743" class="discrete">details</h3>
+<h3 id="_details_746" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23637,7 +23731,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_744" class="discrete">details</h3>
+<h3 id="_details_747" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23666,7 +23760,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_745" class="discrete">details</h3>
+<h3 id="_details_748" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23695,7 +23789,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_746" class="discrete">details</h3>
+<h3 id="_details_749" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23724,7 +23818,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_747" class="discrete">details</h3>
+<h3 id="_details_750" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23753,7 +23847,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_748" class="discrete">details</h3>
+<h3 id="_details_751" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23782,7 +23876,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Delay in miliseconds</p>
 </div>
-<h3 id="_details_749" class="discrete">details</h3>
+<h3 id="_details_752" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23811,7 +23905,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable specs-nvim.</p>
 </div>
-<h3 id="_details_750" class="discrete">details</h3>
+<h3 id="_details_753" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23844,7 +23938,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_751" class="discrete">details</h3>
+<h3 id="_details_754" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23873,7 +23967,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_752" class="discrete">details</h3>
+<h3 id="_details_755" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23902,7 +23996,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_753" class="discrete">details</h3>
+<h3 id="_details_756" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23935,7 +24029,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_754" class="discrete">details</h3>
+<h3 id="_details_757" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23964,7 +24058,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_755" class="discrete">details</h3>
+<h3 id="_details_758" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23993,7 +24087,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Increment in miliseconds</p>
 </div>
-<h3 id="_details_756" class="discrete">details</h3>
+<h3 id="_details_759" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24022,7 +24116,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_757" class="discrete">details</h3>
+<h3 id="_details_760" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24051,7 +24145,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_758" class="discrete">details</h3>
+<h3 id="_details_761" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24080,7 +24174,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_759" class="discrete">details</h3>
+<h3 id="_details_762" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24109,7 +24203,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_760" class="discrete">details</h3>
+<h3 id="_details_763" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24142,7 +24236,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_761" class="discrete">details</h3>
+<h3 id="_details_764" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24171,7 +24265,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_762" class="discrete">details</h3>
+<h3 id="_details_765" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24200,7 +24294,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>A list of files or directories to bookmark.</p>
 </div>
-<h3 id="_details_763" class="discrete">details</h3>
+<h3 id="_details_766" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24233,7 +24327,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>The default command for switching directories</p>
 </div>
-<h3 id="_details_764" class="discrete">details</h3>
+<h3 id="_details_767" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24266,7 +24360,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>When opening a file or bookmark, change to its directory</p>
 </div>
-<h3 id="_details_765" class="discrete">details</h3>
+<h3 id="_details_768" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24299,7 +24393,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>When opening a file or bookmark, change to the root directory of the VCS</p>
 </div>
-<h3 id="_details_766" class="discrete">details</h3>
+<h3 id="_details_769" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24332,7 +24426,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>A list of commands to execute on selection</p>
 </div>
-<h3 id="_details_767" class="discrete">details</h3>
+<h3 id="_details_770" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24365,7 +24459,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Custom footer</p>
 </div>
-<h3 id="_details_768" class="discrete">details</h3>
+<h3 id="_details_771" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24398,7 +24492,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Define your own header</p>
 </div>
-<h3 id="_details_769" class="discrete">details</h3>
+<h3 id="_details_772" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24431,7 +24525,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Use this list as indices instead of increasing numbers</p>
 </div>
-<h3 id="_details_770" class="discrete">details</h3>
+<h3 id="_details_773" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24464,7 +24558,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Own quotes for the cowsay header</p>
 </div>
-<h3 id="_details_771" class="discrete">details</h3>
+<h3 id="_details_774" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24497,7 +24591,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Don&#8217;t run Startify at Vim startup</p>
 </div>
-<h3 id="_details_772" class="discrete">details</h3>
+<h3 id="_details_775" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24530,7 +24624,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable startify.</p>
 </div>
-<h3 id="_details_773" class="discrete">details</h3>
+<h3 id="_details_776" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24563,7 +24657,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Show &lt;empty buffer&gt; and &lt;quit&gt;</p>
 </div>
-<h3 id="_details_774" class="discrete">details</h3>
+<h3 id="_details_777" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24596,7 +24690,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Improves start time but reduces accuracy of the file list</p>
 </div>
-<h3 id="_details_775" class="discrete">details</h3>
+<h3 id="_details_778" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24629,7 +24723,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>The number of files to list</p>
 </div>
-<h3 id="_details_776" class="discrete">details</h3>
+<h3 id="_details_779" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24662,7 +24756,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Startify display lists. If it&#8217;s a string, it&#8217;ll be interpreted as literal lua code</p>
 </div>
-<h3 id="_details_777" class="discrete">details</h3>
+<h3 id="_details_780" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24695,7 +24789,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Number of spaces used for left padding</p>
 </div>
-<h3 id="_details_778" class="discrete">details</h3>
+<h3 id="_details_781" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24728,7 +24822,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>If the file is in or below the current working directory, use a relative path</p>
 </div>
-<h3 id="_details_779" class="discrete">details</h3>
+<h3 id="_details_782" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24761,7 +24855,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Load Session.vim</p>
 </div>
-<h3 id="_details_780" class="discrete">details</h3>
+<h3 id="_details_783" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24794,7 +24888,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Commands to be executed before saving a session</p>
 </div>
-<h3 id="_details_781" class="discrete">details</h3>
+<h3 id="_details_784" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24827,7 +24921,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Delete all buffers when loading or closing a session</p>
 </div>
-<h3 id="_details_782" class="discrete">details</h3>
+<h3 id="_details_785" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24860,7 +24954,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Directory to save/load session</p>
 </div>
-<h3 id="_details_783" class="discrete">details</h3>
+<h3 id="_details_786" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24893,7 +24987,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Maximum number of sessions to display</p>
 </div>
-<h3 id="_details_784" class="discrete">details</h3>
+<h3 id="_details_787" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24926,7 +25020,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Automatically update sessions</p>
 </div>
-<h3 id="_details_785" class="discrete">details</h3>
+<h3 id="_details_788" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24959,7 +25053,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Lines matching any of the patterns in this list will be removed from the session file</p>
 </div>
-<h3 id="_details_786" class="discrete">details</h3>
+<h3 id="_details_789" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24992,7 +25086,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>List of cmdline commands to run when loading the session</p>
 </div>
-<h3 id="_details_787" class="discrete">details</h3>
+<h3 id="_details_790" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25025,7 +25119,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>List of variables for Startify to save into the session file</p>
 </div>
-<h3 id="_details_788" class="discrete">details</h3>
+<h3 id="_details_791" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25058,7 +25152,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Sort sessions by modification time rather than alphabetically</p>
 </div>
-<h3 id="_details_789" class="discrete">details</h3>
+<h3 id="_details_792" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25091,7 +25185,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>A list of regexes that is used to filter recently used files</p>
 </div>
-<h3 id="_details_790" class="discrete">details</h3>
+<h3 id="_details_793" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25124,7 +25218,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Do not create the startify buffer if this is a Vim server instance with a name contained in this list</p>
 </div>
-<h3 id="_details_791" class="discrete">details</h3>
+<h3 id="_details_794" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25157,7 +25251,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Update v:oldfiles on-the-fly, so that :Startify is always up-to-date</p>
 </div>
-<h3 id="_details_792" class="discrete">details</h3>
+<h3 id="_details_795" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25190,7 +25284,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Show environment variables in path, if their name is shorter than their value</p>
 </div>
-<h3 id="_details_793" class="discrete">details</h3>
+<h3 id="_details_796" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25223,7 +25317,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Use unicode box drawing characters for the fortune header</p>
 </div>
-<h3 id="_details_794" class="discrete">details</h3>
+<h3 id="_details_797" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25256,7 +25350,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable surround.vim.</p>
 </div>
-<h3 id="_details_795" class="discrete">details</h3>
+<h3 id="_details_798" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25289,7 +25383,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Telescope default configuration</p>
 </div>
-<h3 id="_details_796" class="discrete">details</h3>
+<h3 id="_details_799" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25318,7 +25412,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable telescope.nvim.</p>
 </div>
-<h3 id="_details_797" class="discrete">details</h3>
+<h3 id="_details_800" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25351,7 +25445,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>A list of enabled extensions. Don&#8217;t use this directly</p>
 </div>
-<h3 id="_details_798" class="discrete">details</h3>
+<h3 id="_details_801" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25380,7 +25474,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Configuration for the extensions. Don&#8217;t use this directly</p>
 </div>
-<h3 id="_details_799" class="discrete">details</h3>
+<h3 id="_details_802" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25409,7 +25503,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Path to parent directory of custom database location. Defaults to $XDG_DATA_HOME/nvim</p>
 </div>
-<h3 id="_details_800" class="discrete">details</h3>
+<h3 id="_details_803" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25438,7 +25532,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Default workspace tag to filter by e.g 'CWD' to filter by default to the current directory</p>
 </div>
-<h3 id="_details_801" class="discrete">details</h3>
+<h3 id="_details_804" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25467,7 +25561,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Disable devicons (if available)</p>
 </div>
-<h3 id="_details_802" class="discrete">details</h3>
+<h3 id="_details_805" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25496,7 +25590,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable frecency.</p>
 </div>
-<h3 id="_details_803" class="discrete">details</h3>
+<h3 id="_details_806" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25529,7 +25623,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Patterns in this list control which files are indexed</p>
 </div>
-<h3 id="_details_804" class="discrete">details</h3>
+<h3 id="_details_807" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25558,7 +25652,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to show scores generated by the algorithm in the results</p>
 </div>
-<h3 id="_details_805" class="discrete">details</h3>
+<h3 id="_details_808" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25587,7 +25681,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Determines if non-indexed files are included in workspace filter results</p>
 </div>
-<h3 id="_details_806" class="discrete">details</h3>
+<h3 id="_details_809" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25616,7 +25710,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>this table contains mappings of workspace_tag &#8594; workspace_directory</p>
 </div>
-<h3 id="_details_807" class="discrete">details</h3>
+<h3 id="_details_810" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25645,7 +25739,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_808" class="discrete">details</h3>
+<h3 id="_details_811" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25674,7 +25768,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable fzf-native.</p>
 </div>
-<h3 id="_details_809" class="discrete">details</h3>
+<h3 id="_details_812" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25707,7 +25801,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to fuzzy search. False will do exact matching</p>
 </div>
-<h3 id="_details_810" class="discrete">details</h3>
+<h3 id="_details_813" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25736,7 +25830,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Override the file sorter</p>
 </div>
-<h3 id="_details_811" class="discrete">details</h3>
+<h3 id="_details_814" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25765,7 +25859,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Override the generice sorter</p>
 </div>
-<h3 id="_details_812" class="discrete">details</h3>
+<h3 id="_details_815" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25794,7 +25888,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable fzy-native.</p>
 </div>
-<h3 id="_details_813" class="discrete">details</h3>
+<h3 id="_details_816" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25827,7 +25921,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Override the file sorter</p>
 </div>
-<h3 id="_details_814" class="discrete">details</h3>
+<h3 id="_details_817" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25856,7 +25950,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Override the generice sorter</p>
 </div>
-<h3 id="_details_815" class="discrete">details</h3>
+<h3 id="_details_818" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25885,7 +25979,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable media_files extension for telescope.</p>
 </div>
-<h3 id="_details_816" class="discrete">details</h3>
+<h3 id="_details_819" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25918,7 +26012,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_817" class="discrete">details</h3>
+<h3 id="_details_820" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25947,7 +26041,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_818" class="discrete">details</h3>
+<h3 id="_details_821" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25980,7 +26074,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable project-nvim telescope extension.</p>
 </div>
-<h3 id="_details_819" class="discrete">details</h3>
+<h3 id="_details_822" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26013,7 +26107,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>An attribute set, that lets you set extra options or override options set by nixvim</p>
 </div>
-<h3 id="_details_820" class="discrete">details</h3>
+<h3 id="_details_823" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26042,7 +26136,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>The colorscheme to use for syntax highlighting</p>
 </div>
-<h3 id="_details_821" class="discrete">details</h3>
+<h3 id="_details_824" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26071,7 +26165,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable nvim-treesitter-context.</p>
 </div>
-<h3 id="_details_822" class="discrete">details</h3>
+<h3 id="_details_825" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26104,7 +26198,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Treat the coresponding entry in patterns as an exact match</p>
 </div>
-<h3 id="_details_823" class="discrete">details</h3>
+<h3 id="_details_826" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26133,7 +26227,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>How many lines the window should span. Null means no limit</p>
 </div>
-<h3 id="_details_824" class="discrete">details</h3>
+<h3 id="_details_827" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26162,7 +26256,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Minimum editor window height to enable context</p>
 </div>
-<h3 id="_details_825" class="discrete">details</h3>
+<h3 id="_details_828" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26191,7 +26285,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Patterns to use for context delimitation. The 'default' key matches all filetypes</p>
 </div>
-<h3 id="_details_826" class="discrete">details</h3>
+<h3 id="_details_829" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26220,7 +26314,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Which context lines to discard if <code>max_lines</code> is exceeded</p>
 </div>
-<h3 id="_details_827" class="discrete">details</h3>
+<h3 id="_details_830" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26249,7 +26343,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Enable treesitter-refactor (requires plugins.treesitter.enable to be true).</p>
 </div>
-<h3 id="_details_828" class="discrete">details</h3>
+<h3 id="_details_831" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26282,7 +26376,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_829" class="discrete">details</h3>
+<h3 id="_details_832" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26311,7 +26405,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <div class="paragraph">
 <p>Whether to enable Highlights the block from the current scope where the cursor is..</p>
 </div>
-<h3 id="_details_830" class="discrete">details</h3>
+<h3 id="_details_833" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26345,7 +26439,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <p>Controls if highlights should be cleared when the cursor is moved. If your 'updatetime'
 is around <code>100</code> you can set this to false to have a less laggy experience.</p>
 </div>
-<h3 id="_details_831" class="discrete">details</h3>
+<h3 id="_details_834" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26374,7 +26468,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_832" class="discrete">details</h3>
+<h3 id="_details_835" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26403,7 +26497,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>Whether to enable Highlights definition and usages of the current symbol under the cursor..</p>
 </div>
-<h3 id="_details_833" class="discrete">details</h3>
+<h3 id="_details_836" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26436,7 +26530,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_834" class="discrete">details</h3>
+<h3 id="_details_837" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26467,7 +26561,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 and lists the definitions from the current file.
 .</p>
 </div>
-<h3 id="_details_835" class="discrete">details</h3>
+<h3 id="_details_838" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26500,7 +26594,7 @@ and lists the definitions from the current file.
 <div class="paragraph">
 <p>go to the definition of the symbol under the cursor</p>
 </div>
-<h3 id="_details_836" class="discrete">details</h3>
+<h3 id="_details_839" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26531,7 +26625,7 @@ and lists the definitions from the current file.
 the symbol can not be resolved. You can use your own fallback function if create a
 mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fallback_function)&lt;cr&gt;</code>.</p>
 </div>
-<h3 id="_details_837" class="discrete">details</h3>
+<h3 id="_details_840" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26560,7 +26654,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>go to next usage of identifier under the cursor</p>
 </div>
-<h3 id="_details_838" class="discrete">details</h3>
+<h3 id="_details_841" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26589,7 +26683,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>go to previous usage of identifier</p>
 </div>
-<h3 id="_details_839" class="discrete">details</h3>
+<h3 id="_details_842" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26618,7 +26712,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>list all definitions from the current file</p>
 </div>
-<h3 id="_details_840" class="discrete">details</h3>
+<h3 id="_details_843" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26648,7 +26742,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <p>list all definitions from the current file like a table of contents (similar to the one
 you see when pressing |gO| in help files).</p>
 </div>
-<h3 id="_details_841" class="discrete">details</h3>
+<h3 id="_details_844" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26677,7 +26771,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_842" class="discrete">details</h3>
+<h3 id="_details_845" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26706,7 +26800,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Renames the symbol under the cursor within the current scope (and current file)..</p>
 </div>
-<h3 id="_details_843" class="discrete">details</h3>
+<h3 id="_details_846" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26739,7 +26833,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>rename symbol under the cursor</p>
 </div>
-<h3 id="_details_844" class="discrete">details</h3>
+<h3 id="_details_847" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26768,7 +26862,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Custom capture group highlighting</p>
 </div>
-<h3 id="_details_845" class="discrete">details</h3>
+<h3 id="_details_848" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26797,7 +26891,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>A list of languages to disable</p>
 </div>
-<h3 id="_details_846" class="discrete">details</h3>
+<h3 id="_details_849" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26826,7 +26920,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Enable tree-sitter syntax highlighting.</p>
 </div>
-<h3 id="_details_847" class="discrete">details</h3>
+<h3 id="_details_850" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26859,7 +26953,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Either "all" or a list of languages</p>
 </div>
-<h3 id="_details_848" class="discrete">details</h3>
+<h3 id="_details_851" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26888,7 +26982,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Enable tree-sitter based folding.</p>
 </div>
-<h3 id="_details_849" class="discrete">details</h3>
+<h3 id="_details_852" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26921,7 +27015,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Grammar packages to install</p>
 </div>
-<h3 id="_details_850" class="discrete">details</h3>
+<h3 id="_details_853" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26950,7 +27044,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>List of parsers to ignore installing (for "all")</p>
 </div>
-<h3 id="_details_851" class="discrete">details</h3>
+<h3 id="_details_854" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26979,7 +27073,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Incremental selection based on the named nodes from the grammar.</p>
 </div>
-<h3 id="_details_852" class="discrete">details</h3>
+<h3 id="_details_855" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27012,7 +27106,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_853" class="discrete">details</h3>
+<h3 id="_details_856" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27041,7 +27135,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_854" class="discrete">details</h3>
+<h3 id="_details_857" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27070,7 +27164,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_855" class="discrete">details</h3>
+<h3 id="_details_858" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27099,7 +27193,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_856" class="discrete">details</h3>
+<h3 id="_details_859" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27128,7 +27222,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Enable tree-sitter based indentation.</p>
 </div>
-<h3 id="_details_857" class="discrete">details</h3>
+<h3 id="_details_860" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27161,7 +27255,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This is the configuration for extra modules. It should not be used directly</p>
 </div>
-<h3 id="_details_858" class="discrete">details</h3>
+<h3 id="_details_861" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27190,7 +27284,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Install grammars with Nix</p>
 </div>
-<h3 id="_details_859" class="discrete">details</h3>
+<h3 id="_details_862" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27219,7 +27313,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Location of the parsers to be installed by the plugin (only needed when nixGrammars is disabled)</p>
 </div>
-<h3 id="_details_860" class="discrete">details</h3>
+<h3 id="_details_863" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27248,7 +27342,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable trouble.nvim.</p>
 </div>
-<h3 id="_details_861" class="discrete">details</h3>
+<h3 id="_details_864" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27281,7 +27375,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Height of the trouble list when position is top or bottom</p>
 </div>
-<h3 id="_details_862" class="discrete">details</h3>
+<h3 id="_details_865" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27310,7 +27404,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Use devicons for filenames</p>
 </div>
-<h3 id="_details_863" class="discrete">details</h3>
+<h3 id="_details_866" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27339,7 +27433,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Position of the list</p>
 </div>
-<h3 id="_details_864" class="discrete">details</h3>
+<h3 id="_details_867" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27368,7 +27462,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Width of the trouble list when position is left or right</p>
 </div>
-<h3 id="_details_865" class="discrete">details</h3>
+<h3 id="_details_868" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27397,7 +27491,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Auto open diff window</p>
 </div>
-<h3 id="_details_866" class="discrete">details</h3>
+<h3 id="_details_869" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27426,7 +27520,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Diff command</p>
 </div>
-<h3 id="_details_867" class="discrete">details</h3>
+<h3 id="_details_870" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27455,7 +27549,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Undotree diff panel height</p>
 </div>
-<h3 id="_details_868" class="discrete">details</h3>
+<h3 id="_details_871" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27484,7 +27578,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Enable undotree.</p>
 </div>
-<h3 id="_details_869" class="discrete">details</h3>
+<h3 id="_details_872" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27517,7 +27611,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Focus undotree after being opened</p>
 </div>
-<h3 id="_details_870" class="discrete">details</h3>
+<h3 id="_details_873" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27546,7 +27640,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Highlight changed text</p>
 </div>
-<h3 id="_details_871" class="discrete">details</h3>
+<h3 id="_details_874" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27575,7 +27669,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Highlight changes with a sign in the gutter</p>
 </div>
-<h3 id="_details_872" class="discrete">details</h3>
+<h3 id="_details_875" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27604,7 +27698,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Added lines highlight group</p>
 </div>
-<h3 id="_details_873" class="discrete">details</h3>
+<h3 id="_details_876" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27633,7 +27727,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Changed lines highlight group</p>
 </div>
-<h3 id="_details_874" class="discrete">details</h3>
+<h3 id="_details_877" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27662,7 +27756,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Deleted lines highlight group</p>
 </div>
-<h3 id="_details_875" class="discrete">details</h3>
+<h3 id="_details_878" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27691,7 +27785,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Use a relative timestamp</p>
 </div>
-<h3 id="_details_876" class="discrete">details</h3>
+<h3 id="_details_879" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27720,7 +27814,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>E.g. use 'd' instead of 'days'</p>
 </div>
-<h3 id="_details_877" class="discrete">details</h3>
+<h3 id="_details_880" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27749,7 +27843,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Show cursor line</p>
 </div>
-<h3 id="_details_878" class="discrete">details</h3>
+<h3 id="_details_881" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27778,7 +27872,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Show help line</p>
 </div>
-<h3 id="_details_879" class="discrete">details</h3>
+<h3 id="_details_882" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27807,7 +27901,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Tree node shape</p>
 </div>
-<h3 id="_details_880" class="discrete">details</h3>
+<h3 id="_details_883" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27836,7 +27930,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Window layout for undotree. Check <a href="https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29" class="bare">https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29</a> for reference</p>
 </div>
-<h3 id="_details_881" class="discrete">details</h3>
+<h3 id="_details_884" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27865,7 +27959,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Undotree window width</p>
 </div>
-<h3 id="_details_882" class="discrete">details</h3>
+<h3 id="_details_885" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27894,7 +27988,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Enable zig.</p>
 </div>
-<h3 id="_details_883" class="discrete">details</h3>
+<h3 id="_details_886" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27927,7 +28021,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Run zig fmt on save</p>
 </div>
-<h3 id="_details_884" class="discrete">details</h3>
+<h3 id="_details_887" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27960,7 +28054,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vi&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_885" class="discrete">details</h3>
+<h3 id="_details_888" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27989,7 +28083,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vim&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_886" class="discrete">details</h3>
+<h3 id="_details_889" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -28018,7 +28112,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Should the config be included in the wrapper script</p>
 </div>
-<h3 id="_details_887" class="discrete">details</h3>
+<h3 id="_details_890" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
