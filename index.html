@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="generator" content="Asciidoctor 2.0.18">
 <meta name="author" content="This lists all the options available for NixVim.">
 <title>NixVim options</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -85,10 +85,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -1378,13 +1378,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>list of submodule</p>
+<p>list of (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -1392,7 +1392,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"autoCmd = [\n  {\n    event = [ \"BufEnter\" \"BufWinEnter\" ];\n    pattern = [ \"*.c\" \"*.h\" ];\n    command = \"echo 'Entering a C or C++ file'\";\n  }\n];\n"</pre>
+<pre>''
+  autoCmd = [
+    {
+      event = [ "BufEnter" "BufWinEnter" ];
+      pattern = [ "*.c" "*.h" ];
+      command = "echo 'Entering a C or C++ file'";
+    }
+  ];
+''</pre>
 </div>
 </div>
 </dd>
@@ -2943,7 +2951,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>["qf","help"]</pre>
+<pre>[
+  "qf"
+  "help"
+]</pre>
 </div>
 </div>
 </dd>
@@ -3005,7 +3016,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"italic":true}</pre>
+<pre>{
+  italic = true;
+}</pre>
 </div>
 </div>
 </dd>
@@ -3063,7 +3076,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3092,7 +3105,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"italic":true}</pre>
+<pre>{
+  italic = true;
+}</pre>
 </div>
 </div>
 </dd>
@@ -3150,7 +3165,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3357,7 +3372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -3380,13 +3395,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>list of package or submodule</p>
+<p>list of (package or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -3444,7 +3459,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3473,7 +3488,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3481,7 +3496,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"highlight = {\n  Comment.fg = '#ff0000';\n};\n"</pre>
+<pre>''
+  highlight = {
+    Comment.fg = '#ff0000';
+  };
+''</pre>
 </div>
 </div>
 </dd>
@@ -3509,7 +3528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3517,7 +3536,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"maps = {\n  normalVisualOp.\";\" = \":\"; # Same as noremap ; :\n  normal.\"&lt;leader&gt;m\" = {\n    silent = true;\n    action = \"&lt;cmd&gt;make&lt;CR&gt;\";\n  }; # Same as nnoremap &lt;leader&gt;m &lt;silent&gt; &lt;cmd&gt;make&lt;CR&gt;\n};\n"</pre>
+<pre>''
+  maps = {
+    normalVisualOp.";" = ":"; # Same as noremap ; :
+    normal."&lt;leader&gt;m" = {
+      silent = true;
+      action = "&lt;cmd&gt;make&lt;CR&gt;";
+    }; # Same as nnoremap &lt;leader&gt;m &lt;silent&gt; &lt;cmd&gt;make&lt;CR&gt;
+  };
+''</pre>
 </div>
 </div>
 </dd>
@@ -3536,13 +3563,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3565,13 +3592,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3594,13 +3621,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3623,13 +3650,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3652,13 +3679,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3681,13 +3708,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3710,13 +3737,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3739,13 +3766,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3768,13 +3795,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3797,13 +3824,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3826,13 +3853,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of string or submodule</p>
+<p>attribute set of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3861,7 +3888,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -3890,7 +3917,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"_type":"derivation","name":"neovim-unwrapped-0.7.2"}</pre>
+<pre>&lt;derivation neovim-unwrapped-0.8.2&gt;</pre>
 </div>
 </div>
 </dd>
@@ -3946,7 +3973,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set</p>
+<p>null or (attribute set)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -4033,7 +4060,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -4737,7 +4764,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -4766,7 +4793,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -4853,7 +4880,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -4940,7 +4967,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5027,7 +5054,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5114,7 +5141,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5201,7 +5228,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5288,7 +5315,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5375,7 +5402,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5462,7 +5489,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5549,7 +5576,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5636,7 +5663,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5723,7 +5750,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5810,7 +5837,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5897,7 +5924,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -5984,7 +6011,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6071,7 +6098,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6158,7 +6185,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6245,7 +6272,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6332,7 +6359,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6419,7 +6446,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6506,7 +6533,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6593,7 +6620,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6680,7 +6707,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6767,7 +6794,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6854,7 +6881,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -6941,7 +6968,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7028,7 +7055,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7115,7 +7142,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7202,7 +7229,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7289,7 +7316,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7376,7 +7403,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7463,7 +7490,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7550,7 +7577,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7637,7 +7664,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7724,7 +7751,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7811,7 +7838,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7898,7 +7925,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -7985,7 +8012,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -8072,7 +8099,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -8159,7 +8186,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -8246,7 +8273,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -8333,7 +8360,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -8420,7 +8447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -8507,7 +8534,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -10495,7 +10522,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -10611,7 +10638,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -10756,7 +10783,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -10915,7 +10942,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -10923,7 +10950,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"_type":"literalExpression","text":"{\n          \"*\": false,\n          python: true\n        }"}</pre>
+<pre>{
+          "*": false,
+          python: true
+        }</pre>
 </div>
 </div>
 </dd>
@@ -10948,7 +10978,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"_type":"derivation","name":"vimplugin-copilot.vim-2022-08-26"}</pre>
+<pre>&lt;derivation vimplugin-copilot.vim-2022-12-19&gt;</pre>
 </div>
 </div>
 </dd>
@@ -11161,7 +11191,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of submodule</p>
+<p>null or (list of (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -11335,7 +11365,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -11364,7 +11394,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -11457,7 +11487,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -11757,7 +11787,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of attribute set of string or signed integer or attribute set of string or signed integer or attribute set of string or signed integer</p>
+<p>null or (attribute set of attribute set of (string or signed integer or attribute set of (string or signed integer or attribute set of (string or signed integer))))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -12001,7 +12031,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -12415,7 +12445,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule or string</p>
+<p>null or (submodule) or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -12711,7 +12741,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -13095,7 +13125,18 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"+":"&gt;","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9"}</pre>
+<pre>{
+  "+" = "&gt;";
+  "1" = "1";
+  "2" = "2";
+  "3" = "3";
+  "4" = "4";
+  "5" = "5";
+  "6" = "6";
+  "7" = "7";
+  "8" = "8";
+  "9" = "9";
+}</pre>
 </div>
 </div>
 </dd>
@@ -13153,7 +13194,7 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string or submodule</p>
+<p>string or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -13186,7 +13227,7 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string or submodule</p>
+<p>string or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -13399,7 +13440,7 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -13719,7 +13760,7 @@ argument.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -13733,7 +13774,19 @@ argument.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"\\'\\'\nfunction(bufnr)\n  if vim.api.nvim_buf_get_name(bufnr):match(&lt;PATTERN&gt;) then\n    -- Don't attach to specific buffers whose name matches a pattern\n    return false\n  end\n  -- Setup keymaps\n  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'hs', '&lt;cmd&gt;lua require\"gitsigns\".stage_hunk()&lt;CR&gt;', {})\n  ... -- More keymaps\nend\n\\'\\'\n"</pre>
+<pre>''
+  \'\'
+  function(bufnr)
+    if vim.api.nvim_buf_get_name(bufnr):match(&lt;PATTERN&gt;) then
+      -- Don't attach to specific buffers whose name matches a pattern
+      return false
+    end
+    -- Setup keymaps
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'hs', '&lt;cmd&gt;lua require"gitsigns".stage_hunk()&lt;CR&gt;', {})
+    ... -- More keymaps
+  end
+  \'\'
+''</pre>
 </div>
 </div>
 </dd>
@@ -13784,7 +13837,13 @@ Table is passed directly to <code>nvim_open_win</code>.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"border":"single","col":1,"relative":"cursor","row":0,"style":"minimal"}</pre>
+<pre>{
+  border = "single";
+  col = 1;
+  relative = "cursor";
+  row = 0;
+  style = "minimal";
+}</pre>
 </div>
 </div>
 </dd>
@@ -14806,7 +14865,18 @@ in <code>signs.</strong>.text</code> are used.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"function":" function(status)\n  local added, changed, removed = status.added, status.changed, status.removed\n  local status_txt = {}\n  if added   and added   &gt; 0 then table.insert(status_txt, '+'..added  ) end\n  if changed and changed &gt; 0 then table.insert(status_txt, '~'..changed) end\n  if removed and removed &gt; 0 then table.insert(status_txt, '-'..removed) end\n  return table.concat(status_txt, ' ')\nend\n"}</pre>
+<pre>{
+  function = ''
+     function(status)
+      local added, changed, removed = status.added, status.changed, status.removed
+      local status_txt = {}
+      if added   and added   &gt; 0 then table.insert(status_txt, '+'..added  ) end
+      if changed and changed &gt; 0 then table.insert(status_txt, '~'..changed) end
+      if removed and removed &gt; 0 then table.insert(status_txt, '-'..removed) end
+      return table.concat(status_txt, ' ')
+    end
+  '';
+}</pre>
 </div>
 </div>
 </dd>
@@ -15037,7 +15107,7 @@ details set.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of submodule</p>
+<p>null or (list of (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -15479,7 +15549,7 @@ details set.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -15508,7 +15578,7 @@ details set.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of list of string</p>
+<p>null or (list of list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -15537,7 +15607,7 @@ details set.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of list of string</p>
+<p>null or (list of list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -15599,7 +15669,7 @@ details set.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of string</p>
+<p>null or (attribute set of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -15631,7 +15701,7 @@ details set.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of string</p>
+<p>null or (attribute set of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -15645,7 +15715,20 @@ details set.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"plugins.lightline = {\n  enable = true;\n  componentFunction = {\n    readonly = \"LightlineReadonly\";\n  };\n\n  extraConfig = ''\n    function! LightlineReadonly()\n      return &amp;readonly &amp;&amp; &amp;filetype !=# 'help' ? 'RO' : ''\n    endfunction\n  '';\n};\n"</pre>
+<pre>''
+  plugins.lightline = {
+    enable = true;
+    componentFunction = {
+      readonly = "LightlineReadonly";
+    };
+
+    extraConfig = '''
+      function! LightlineReadonly()
+        return &amp;readonly &amp;&amp; &amp;filetype !=# 'help' ? 'RO' : '''
+      endfunction
+    ''';
+  };
+''</pre>
 </div>
 </div>
 </dd>
@@ -15697,7 +15780,7 @@ details set.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of string</p>
+<p>null or (attribute set of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -15821,13 +15904,13 @@ details set.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>list of string or submodule</p>
+<p>list of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -16008,7 +16091,7 @@ excluded from analysis.</p>
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -16615,7 +16698,7 @@ Glob patterns are currently not supported.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -16646,7 +16729,7 @@ with the diagnostic message.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -16703,7 +16786,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -17002,7 +17085,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -17141,7 +17224,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of string</p>
+<p>null or (attribute set of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -17261,7 +17344,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of string</p>
+<p>null or (attribute set of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18077,7 +18160,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18164,7 +18247,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18230,7 +18313,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18263,7 +18346,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18350,7 +18433,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18379,7 +18462,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18408,7 +18491,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18437,7 +18520,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18466,7 +18549,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18495,7 +18578,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18524,7 +18607,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18553,7 +18636,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18582,7 +18665,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18611,7 +18694,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18640,7 +18723,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18669,7 +18752,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18698,7 +18781,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18727,7 +18810,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or submodule</p>
+<p>null or (list of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18818,13 +18901,13 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>list of submodule</p>
+<p>list of (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -18832,7 +18915,19 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"[\n  {}\n  {\n    paths = ./path/to/snippets;\n  }\n]\n# generates:\n# \n# require(\"luasnip.loaders.from_vscode\").lazy_load({})\n# require(\"luasnip.loaders.from_vscode\").lazy_load({['paths'] = {'/nix/store/.../path/to/snippets'}})\n#\n"</pre>
+<pre>''
+  [
+    {}
+    {
+      paths = ./path/to/snippets;
+    }
+  ]
+  # generates:
+  #
+  # require("luasnip.loaders.from_vscode").lazy_load({})
+  # require("luasnip.loaders.from_vscode").lazy_load({['paths'] = {'/nix/store/.../path/to/snippets'}})
+  #
+''</pre>
 </div>
 </div>
 </dd>
@@ -18851,7 +18946,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18880,7 +18975,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18938,7 +19033,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or string or path or submodule or list of string or path or submodule</p>
+<p>null or string or path or (submodule) or list of (string or path or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -18973,7 +19068,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"_type":"derivation","name":"vimplugin-luasnip-2022-09-06"}</pre>
+<pre>&lt;derivation vimplugin-luasnip-2023-01-09&gt;</pre>
 </div>
 </div>
 </dd>
@@ -19183,7 +19278,12 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"package = pkgs.fetchFromGitHub {\n          owner = \"WhiteBlackGoose\";\n          repo = \"magma-nvim-goose\";\n          rev = version;\n          sha256 = \"sha256-IaslJK1F2BxTvZzKGH9OKOl2RICi4d4rSgjliAIAqK4=\";} "</pre>
+<pre>''
+  package = pkgs.fetchFromGitHub {
+            owner = "WhiteBlackGoose";
+            repo = "magma-nvim-goose";
+            rev = version;
+            sha256 = "sha256-IaslJK1F2BxTvZzKGH9OKOl2RICi4d4rSgjliAIAqK4=";} ''</pre>
 </div>
 </div>
 </dd>
@@ -19487,7 +19587,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -19723,7 +19823,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -19810,7 +19910,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -19833,7 +19933,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of one of "Close", "Depth1", "Depth2", "Depth3", "Depth4", "Toggle", "Discard", "Stage", "StageUnstaged", "StageAll", "GoToFile", "Unstaged", "UnstagedStage", "CommandHistory", "RefreshBuffer", "HelpPopup", "PullPopup", "PushPopup", "CommitPopup", "LogPopup", "StashPopup", "BranchPopup"</p>
+<p>null or (attribute set of (one of "Close", "Depth1", "Depth2", "Depth3", "Depth4", "Toggle", "Discard", "Stage", "StageUnstaged", "StageAll", "GoToFile", "Unstaged", "UnstagedStage", "CommandHistory", "RefreshBuffer", "HelpPopup", "PullPopup", "PushPopup", "CommitPopup", "LogPopup", "StashPopup", "BranchPopup"))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -19868,7 +19968,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -19891,7 +19991,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -19949,7 +20049,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20007,7 +20107,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20065,7 +20165,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20123,7 +20223,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20181,7 +20281,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20239,7 +20339,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20303,7 +20403,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -20326,7 +20426,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20355,7 +20455,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20384,7 +20484,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -20537,13 +20637,13 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -21542,7 +21642,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of attribute set of string</p>
+<p>null or (list of attribute set of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -21571,7 +21671,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -21600,7 +21700,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -21662,7 +21762,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -21720,7 +21820,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of string</p>
+<p>null or (attribute set of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -21749,7 +21849,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>unspecified</p>
+<p>unspecified value</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -21778,7 +21878,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -21927,7 +22027,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22018,7 +22118,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set</p>
+<p>null or (attribute set)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22047,7 +22147,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22076,7 +22176,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22138,7 +22238,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of string or submodule</p>
+<p>null or (attribute set of (string or (submodule)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22152,7 +22252,29 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"{\n  \"&lt;CR&gt;\" = \"cmp.mapping.confirm({ select = true })\";\n  \"&lt;Tab&gt;\" = {\n    modes = [ \"i\" \"s\" ];\n    action = ''\n      function(fallback)\n        if cmp.visible() then\n          cmp.select_next_item()\n        elseif luasnip.expandable() then\n          luasnip.expand()\n        elseif luasnip.expand_or_jumpable() then\n          luasnip.expand_or_jump()\n        elseif check_backspace() then\n          fallback()\n        else\n          fallback()\n        end\n      end\n    '';\n  };\n}\n"</pre>
+<pre>''
+  {
+    "&lt;CR&gt;" = "cmp.mapping.confirm({ select = true })";
+    "&lt;Tab&gt;" = {
+      modes = [ "i" "s" ];
+      action = '''
+        function(fallback)
+          if cmp.visible() then
+            cmp.select_next_item()
+          elseif luasnip.expandable() then
+            luasnip.expand()
+          elseif luasnip.expand_or_jumpable() then
+            luasnip.expand_or_jump()
+          elseif check_backspace() then
+            fallback()
+          else
+            fallback()
+          end
+        end
+      ''';
+    };
+  }
+''</pre>
 </div>
 </div>
 </dd>
@@ -22171,13 +22293,13 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>list of one of "insert", "cmdline"</p>
+<p>list of (one of "insert", "cmdline")</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -22185,7 +22307,9 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"[ \"insert\" \"cmdline\" ]\n"</pre>
+<pre>''
+  [ "insert" "cmdline" ]
+''</pre>
 </div>
 </div>
 </dd>
@@ -22204,7 +22328,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22320,7 +22444,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22440,7 +22564,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22479,7 +22603,14 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"function(args)\n  vim.fn[\"vsnip#anonymous\"](args.body) -- For `vsnip` users.\n  -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.\n  -- require('snippy').expand_snippet(args.body) -- For `snippy` users.\n  -- vim.fn[\"UltiSnips#Anon\"](args.body) -- For `ultisnips` users.\nend\n"</pre>
+<pre>''
+  function(args)
+    vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+    -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+    -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+    -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+  end
+''</pre>
 </div>
 </div>
 </dd>
@@ -22498,7 +22629,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22587,7 +22718,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of submodule or list of list of submodule</p>
+<p>null or (list of (submodule)) or list of list of (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22601,7 +22732,14 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"[\n  { name = \"nvim_lsp\"; }\n  { name = \"luasnip\"; } #For luasnip users.\n  { name = \"path\"; }\n  { name = \"buffer\"; }\n]\n"</pre>
+<pre>''
+  [
+    { name = "nvim_lsp"; }
+    { name = "luasnip"; } #For luasnip users.
+    { name = "path"; }
+    { name = "buffer"; }
+  ]
+''</pre>
 </div>
 </div>
 </dd>
@@ -22620,7 +22758,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22649,7 +22787,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or string or attribute set</p>
+<p>null or string or (attribute set)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22678,7 +22816,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22707,7 +22845,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -22881,7 +23019,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or submodule</p>
+<p>null or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -23291,7 +23429,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -23494,7 +23632,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -23610,7 +23748,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -23784,7 +23922,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of boolean</p>
+<p>null or (list of boolean)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -24016,7 +24154,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of attribute set</p>
+<p>null or (list of (attribute set))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -24223,13 +24361,13 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>list of string or submodule</p>
+<p>list of (string or (submodule))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -24343,7 +24481,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or string or submodule</p>
+<p>null or string or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -24372,7 +24510,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -24434,7 +24572,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -24470,7 +24608,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -24493,7 +24631,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -24551,7 +24689,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -24793,7 +24931,9 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"builtin":"linear_fader"}</pre>
+<pre>{
+  builtin = "linear_fader";
+}</pre>
 </div>
 </div>
 </dd>
@@ -24859,7 +24999,13 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"function(blend, cnt)\n  if cnt &gt; 100 then\n      return 80\n  else return nil end\nend\n"</pre>
+<pre>''
+  function(blend, cnt)
+    if cnt &gt; 100 then
+        return 80
+    else return nil end
+  end
+''</pre>
 </div>
 </div>
 </dd>
@@ -24884,7 +25030,9 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>["nofile"]</pre>
+<pre>[
+  "nofile"
+]</pre>
 </div>
 </div>
 </dd>
@@ -24913,7 +25061,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -25000,7 +25148,9 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{"builtin":"shrink_resizer"}</pre>
+<pre>{
+  builtin = "shrink_resizer";
+}</pre>
 </div>
 </div>
 </dd>
@@ -25066,7 +25216,13 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"function(width, ccol, cnt)\n    if width-cnt &gt; 0 then\n        return {width+cnt, ccol}\n    else return nil end\nend\n"</pre>
+<pre>''
+  function(width, ccol, cnt)
+      if width-cnt &gt; 0 then
+          return {width+cnt, ccol}
+      else return nil end
+  end
+''</pre>
 </div>
 </div>
 </dd>
@@ -25143,7 +25299,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or attribute set of string</p>
+<p>null or (list of (string or attribute set of string))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25275,7 +25431,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string or list of string or attribute set</p>
+<p>null or (list of (string or list of string or (attribute set)))</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25374,7 +25530,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25407,7 +25563,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of list of string</p>
+<p>null or (list of list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25605,7 +25761,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of submodule or string</p>
+<p>null or (list of submodule) or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25737,7 +25893,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25836,7 +25992,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25902,7 +26058,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25935,7 +26091,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -25968,7 +26124,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -26034,7 +26190,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -26067,7 +26223,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -26232,7 +26388,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set</p>
+<p>null or (attribute set)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -26300,7 +26456,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -26329,7 +26485,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -26472,7 +26628,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -26559,7 +26715,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or attribute set of string</p>
+<p>null or (attribute set of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -26861,7 +27017,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>null or list of string</p>
+<p>null or (list of string)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
@@ -26962,7 +27118,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -27053,7 +27209,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -27140,7 +27296,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -27231,7 +27387,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -27323,7 +27479,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -27385,7 +27541,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -27626,7 +27782,7 @@ you see when pressing |gO| in help files).</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -27717,7 +27873,7 @@ you see when pressing |gO| in help files).</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
@@ -27746,7 +27902,7 @@ you see when pressing |gO| in help files).</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -27870,7 +28026,107 @@ you see when pressing |gO| in help files).</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[{"_type":"derivation","name":"tree-sitter-agda-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-bash-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-beancount-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-bibtex-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-c-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-c-sharp-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-clojure-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-cmake-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-comment-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-commonlisp-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-cpp-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-css-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-cuda-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-dart-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-devicetree-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-dockerfile-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-dot-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-elisp-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-elixir-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-elm-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-embedded-template-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-erlang-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-fennel-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-fish-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-fluent-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-fortran-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-gdscript-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-glimmer-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-glsl-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-go-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-godot-resource-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-gomod-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-gowork-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-graphql-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-haskell-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-hcl-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-heex-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-hjson-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-html-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-http-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-janet-simple-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-java-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-javascript-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-jsdoc-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-json-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-json5-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-julia-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-kotlin-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-latex-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-ledger-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-llvm-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-lua-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-make-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-markdown-grammar-0.20.6"},{"_type":"derivation","name":"markdown_inline-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-nickel-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-nix-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-norg-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-ocaml-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-ocaml-interface-grammar-0.20.6"},{"_type":"derivation","name":"org-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-perl-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-pgn-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-php-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-pioasm-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-prisma-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-pug-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-python-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-ql-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-ql-dbscheme-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-query-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-r-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-regex-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-rego-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-rst-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-ruby-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-rust-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-scala-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-scheme-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-scss-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-sparql-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-sql-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-supercollider-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-surface-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-svelte-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-tiger-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-tlaplus-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-toml-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-tsq-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-tsx-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-turtle-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-typescript-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-verilog-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-vim-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-vue-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-yaml-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-yang-grammar-0.20.6"},{"_type":"derivation","name":"tree-sitter-zig-grammar-0.20.6"}]</pre>
+<pre>[
+  &lt;derivation tree-sitter-bash-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-beancount-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-bibtex-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-c-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-c-sharp-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-clojure-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-cmake-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-comment-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-commonlisp-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-cpp-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-css-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-cuda-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-dart-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-devicetree-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-dockerfile-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-dot-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-eex-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-elisp-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-elixir-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-elm-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-embedded-template-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-erlang-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-fennel-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-fish-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-fortran-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-gdscript-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-glimmer-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-glsl-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-go-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-godot-resource-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-gomod-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-gowork-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-graphql-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-haskell-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-hcl-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-heex-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-hjson-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-html-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-http-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-janet-simple-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-java-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-javascript-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-jsdoc-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-json-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-json5-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-jsonnet-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-julia-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-kotlin-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-latex-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-ledger-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-llvm-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-lua-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-make-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-markdown-grammar-0.20.7&gt;
+  &lt;derivation markdown_inline-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-nickel-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-nix-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-norg-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-ocaml-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-ocaml-interface-grammar-0.20.7&gt;
+  &lt;derivation org-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-perl-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-pgn-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-php-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-pioasm-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-prisma-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-pug-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-python-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-ql-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-ql-dbscheme-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-query-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-r-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-regex-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-rego-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-rst-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-ruby-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-rust-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-scala-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-scheme-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-scss-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-smithy-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-sparql-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-sql-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-supercollider-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-surface-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-svelte-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-tiger-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-tlaplus-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-toml-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-tsq-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-tsx-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-turtle-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-typescript-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-verilog-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-vim-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-vue-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-yaml-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-yang-grammar-0.20.7&gt;
+  &lt;derivation tree-sitter-zig-grammar-0.20.7&gt;
+]</pre>
 </div>
 </div>
 </dd>
@@ -27899,7 +28155,7 @@ you see when pressing |gO| in help files).</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>[]</pre>
+<pre>[ ]</pre>
 </div>
 </div>
 </dd>
@@ -28110,7 +28366,7 @@ you see when pressing |gO| in help files).</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{}</pre>
+<pre>{ }</pre>
 </div>
 </div>
 </dd>
