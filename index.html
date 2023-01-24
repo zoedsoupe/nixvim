@@ -14163,18 +14163,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Attach to untracked files.</p>
 </div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
 <h3 id="_details_416" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>true</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14228,19 +14231,8 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
   • to specify unicode characters for the counts instead of 1-9.
   • to define characters to be used for counts greater than 9.</p>
 </div>
-<h3 id="_details_418" class="discrete">details</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>attribute set of string</p>
-</dd>
-<dt class="hdlist1">Default</dt>
-<dd>
-<div class="listingblock">
-<div class="content">
-<pre>{
-  "+" = "&gt;";
+<div class="paragraph">
+<p>default: `{
   "1" = "1";
   "2" = "2";
   "3" = "3";
@@ -14250,7 +14242,22 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
   "7" = "7";
   "8" = "8";
   "9" = "9";
-}</pre>
+  "+" = "&gt;";
+}
+`</p>
+</div>
+<h3 id="_details_418" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or (attribute set of string)</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14266,31 +14273,29 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <h2 id="_plugins_gitsigns_currentlineblame">plugins.gitsigns.currentLineBlame</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable Adds an unobtrusive and customisable blame annotation at the end of the current line.
-.</p>
+<p>Adds an unobtrusive and customisable blame annotation at the end of the current line.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_419" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -14303,18 +14308,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <p>String or function used to format the virtual text of
 |gitsigns-config-current_line_blame| for lines that aren&#8217;t committed.</p>
 </div>
+<div class="paragraph">
+<p>default: <code>" &lt;author&gt;"</code></p>
+</div>
 <h3 id="_details_420" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string or (submodule)</p>
+<p>null or string or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>" &lt;author&gt;"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14336,18 +14344,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <div class="paragraph">
 <p>See |gitsigns-config-current_line_blame_formatter| for more details.</p>
 </div>
+<div class="paragraph">
+<p>default: <code>" &lt;author&gt;, &lt;author_time&gt; - &lt;summary&gt;"</code></p>
+</div>
 <h3 id="_details_421" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string or (submodule)</p>
+<p>null or string or (submodule)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>" &lt;author&gt;, &lt;author_time&gt; - &lt;summary&gt;"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14365,18 +14376,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <div class="paragraph">
 <p>Sets the delay (in milliseconds) before blame virtual text is displayed</p>
 </div>
+<div class="paragraph">
+<p>default: <code>1000</code></p>
+</div>
 <h3 id="_details_422" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>signed integer</p>
+<p>null or signed integer</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>1000</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14392,30 +14406,29 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <h2 id="_plugins_gitsigns_currentlineblameopts_ignorewhitespace">plugins.gitsigns.currentLineBlameOpts.ignoreWhitespace</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable Ignore whitespace when running blame.</p>
+<p>Ignore whitespace when running blame</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_423" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -14427,18 +14440,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <div class="paragraph">
 <p>Whether to show a virtual text blame annotation</p>
 </div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
 <h3 id="_details_424" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>true</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14456,18 +14472,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <div class="paragraph">
 <p>Blame annotation position</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"eol"</code></p>
+</div>
 <h3 id="_details_425" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>one of "eol", "overlay", "right_align"</p>
+<p>null or one of "eol", "overlay", "right_align"</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"eol"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14485,18 +14504,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <div class="paragraph">
 <p>Priority of virtual text</p>
 </div>
+<div class="paragraph">
+<p>default: <code>100</code></p>
+</div>
 <h3 id="_details_426" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>signed integer</p>
+<p>null or signed integer</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>100</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14512,32 +14534,30 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <h2 id="_plugins_gitsigns_debugmode">plugins.gitsigns.debugMode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable Enables debug logging and makes the following functions available: <code>dump_cache</code>,
-<code>debug_messages</code>, <code>clear_debug</code>.
-.</p>
+<p>Enables debug logging and makes the following functions available: <code>dump_cache</code>,
+<code>debug_messages</code>, <code>clear_debug</code>.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_427" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -14578,18 +14598,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <div class="paragraph">
 <p>Diff algorithm to use</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"myers"</code></p>
+</div>
 <h3 id="_details_429" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>one of "myers", "minimal", "patience", "histogram"</p>
+<p>null or one of "myers", "minimal", "patience", "histogram"</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"myers"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14607,18 +14630,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <div class="paragraph">
 <p>Use the indent heuristic for the internal diff library.</p>
 </div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
+</div>
 <h3 id="_details_430" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14636,18 +14662,21 @@ of 1-9 uses the <code>&gt;</code> character in the sign.</p>
 <div class="paragraph">
 <p>Use Neovim&#8217;s built in xdiff library for running diffs</p>
 </div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
+</div>
 <h3 id="_details_431" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14695,18 +14724,21 @@ Requires <code>internal=true</code>.</p>
 <div class="paragraph">
 <p>Start diff mode with vertical splits</p>
 </div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
 <h3 id="_details_433" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>true</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14755,36 +14787,34 @@ Requires <code>internal=true</code>.</p>
 <h2 id="_plugins_gitsigns_linehl">plugins.gitsigns.linehl</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable line highlights.</p>
+<p>line highlights.</p>
 </div>
 <div class="paragraph">
 <p>When enabled the highlights defined in <code>signs.<strong>.linehl</code> are used. If
 the highlight group does not exist, then it is automatically defined
-and linked to the corresponding highlight group in <code>signs.</strong>.hl</code>.
-.</p>
+and linked to the corresponding highlight group in <code>signs.</strong>.hl</code>.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_435" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -14796,18 +14826,21 @@ and linked to the corresponding highlight group in <code>signs.</strong>.hl</cod
 <div class="paragraph">
 <p>Max file length (in lines) to attach to</p>
 </div>
+<div class="paragraph">
+<p>default: <code>40000</code></p>
+</div>
 <h3 id="_details_436" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>signed integer</p>
+<p>null or signed integer</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>40000</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -14823,36 +14856,34 @@ and linked to the corresponding highlight group in <code>signs.</strong>.hl</cod
 <h2 id="_plugins_gitsigns_numhl">plugins.gitsigns.numhl</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable line number highlights.</p>
+<p>line number highlights.</p>
 </div>
 <div class="paragraph">
 <p>When enabled the highlights defined in <code>signs.<strong>.numhl</code> are used. If
 the highlight group does not exist, then it is automatically defined
-and linked to the corresponding highlight group in <code>signs.</strong>.hl</code>.
-.</p>
+and linked to the corresponding highlight group in <code>signs.</strong>.hl</code>.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_437" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -14969,24 +15000,28 @@ argument.</p>
 <p>Option overrides for the Gitsigns preview window.
 Table is passed directly to <code>nvim_open_win</code>.</p>
 </div>
+<div class="paragraph">
+<p>default: `{
+  border = "single";
+  style = "minimal";
+  relative = "cursor";
+  row = 0;
+  col = 1;
+}
+`</p>
+</div>
 <h3 id="_details_441" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>attribute set of anything</p>
+<p>null or (attribute set of anything)</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>{
-  border = "single";
-  col = 1;
-  relative = "cursor";
-  row = 0;
-  style = "minimal";
-}</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15002,34 +15037,32 @@ Table is passed directly to <code>nvim_open_win</code>.</p>
 <h2 id="_plugins_gitsigns_showdeleted">plugins.gitsigns.showDeleted</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable showing the old version of hunks inline in the buffer (via virtual lines).</p>
+<p>showing the old version of hunks inline in the buffer (via virtual lines).</p>
 </div>
 <div class="paragraph">
-<p>Note: Virtual lines currently use the highlight <code>GitSignsDeleteVirtLn</code>.
-.</p>
+<p>Note: Virtual lines currently use the highlight <code>GitSignsDeleteVirtLn</code>.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_442" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -15041,18 +15074,21 @@ Table is passed directly to <code>nvim_open_win</code>.</p>
 <div class="paragraph">
 <p>Priority to use for signs</p>
 </div>
+<div class="paragraph">
+<p>default: <code>6</code></p>
+</div>
 <h3 id="_details_443" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>signed integer</p>
+<p>null or signed integer</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>6</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15074,18 +15110,21 @@ Table is passed directly to <code>nvim_open_win</code>.</p>
 <p>When enabled the highlights defined in <code>signs.<strong>.hl</code> and symbols defined
 in <code>signs.</strong>.text</code> are used.</p>
 </div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
 <h3 id="_details_444" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>true</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15103,18 +15142,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsAdd"</code></p>
+</div>
 <h3 id="_details_445" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsAdd"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15132,18 +15174,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the line</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsAddLn"</code></p>
+</div>
 <h3 id="_details_446" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsAddLn"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15161,18 +15206,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the number column</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsAddNr"</code></p>
+</div>
 <h3 id="_details_447" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsAddNr"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15188,30 +15236,29 @@ in <code>signs.</strong>.text</code> are used.</p>
 <h2 id="_plugins_gitsigns_signs_add_showcount">plugins.gitsigns.signs.add.showCount</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable showing count of hunk, e.g. number of deleted lines.</p>
+<p>showing count of hunk, e.g. number of deleted lines</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_448" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -15223,18 +15270,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the character to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"┃"</code></p>
+</div>
 <h3 id="_details_449" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"┃"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15252,18 +15302,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsChange"</code></p>
+</div>
 <h3 id="_details_450" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsChange"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15281,18 +15334,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the line</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsChangeLn"</code></p>
+</div>
 <h3 id="_details_451" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsChangeLn"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15310,18 +15366,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the number column</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsChangeNr"</code></p>
+</div>
 <h3 id="_details_452" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsChangeNr"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15337,30 +15396,29 @@ in <code>signs.</strong>.text</code> are used.</p>
 <h2 id="_plugins_gitsigns_signs_change_showcount">plugins.gitsigns.signs.change.showCount</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable showing count of hunk, e.g. number of deleted lines.</p>
+<p>showing count of hunk, e.g. number of deleted lines</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_453" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -15372,18 +15430,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the character to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"┃"</code></p>
+</div>
 <h3 id="_details_454" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"┃"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15401,18 +15462,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsChange"</code></p>
+</div>
 <h3 id="_details_455" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsChange"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15430,18 +15494,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the line</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsChangeLn"</code></p>
+</div>
 <h3 id="_details_456" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsChangeLn"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15459,18 +15526,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the number column</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsChangeNr"</code></p>
+</div>
 <h3 id="_details_457" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsChangeNr"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15486,30 +15556,29 @@ in <code>signs.</strong>.text</code> are used.</p>
 <h2 id="_plugins_gitsigns_signs_changedelete_showcount">plugins.gitsigns.signs.changedelete.showCount</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable showing count of hunk, e.g. number of deleted lines.</p>
+<p>showing count of hunk, e.g. number of deleted lines</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_458" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -15521,18 +15590,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the character to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"~"</code></p>
+</div>
 <h3 id="_details_459" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"~"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15550,18 +15622,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsDelete"</code></p>
+</div>
 <h3 id="_details_460" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsDelete"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15579,18 +15654,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the line</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsDeleteLn"</code></p>
+</div>
 <h3 id="_details_461" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsDeleteLn"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15608,18 +15686,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the number column</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsDeleteNr"</code></p>
+</div>
 <h3 id="_details_462" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsDeleteNr"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15635,30 +15716,29 @@ in <code>signs.</strong>.text</code> are used.</p>
 <h2 id="_plugins_gitsigns_signs_delete_showcount">plugins.gitsigns.signs.delete.showCount</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable showing count of hunk, e.g. number of deleted lines.</p>
+<p>showing count of hunk, e.g. number of deleted lines</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_463" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -15670,18 +15750,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the character to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"▁"</code></p>
+</div>
 <h3 id="_details_464" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"▁"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15699,18 +15782,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsDelete"</code></p>
+</div>
 <h3 id="_details_465" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsDelete"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15728,18 +15814,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the line</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsDeleteLn"</code></p>
+</div>
 <h3 id="_details_466" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsDeleteLn"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15757,18 +15846,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the number column</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsDeleteNr"</code></p>
+</div>
 <h3 id="_details_467" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsDeleteNr"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15784,30 +15876,29 @@ in <code>signs.</strong>.text</code> are used.</p>
 <h2 id="_plugins_gitsigns_signs_topdelete_showcount">plugins.gitsigns.signs.topdelete.showCount</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable showing count of hunk, e.g. number of deleted lines.</p>
+<p>showing count of hunk, e.g. number of deleted lines</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_468" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -15819,18 +15910,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the character to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"▔"</code></p>
+</div>
 <h3 id="_details_469" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"▔"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15848,18 +15942,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsAdd"</code></p>
+</div>
 <h3 id="_details_470" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsAdd"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15877,18 +15974,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the line</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsAddLn"</code></p>
+</div>
 <h3 id="_details_471" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsAddLn"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15906,18 +16006,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the highlight group to use for the number column</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"GitSignsAddNr"</code></p>
+</div>
 <h3 id="_details_472" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"GitSignsAddNr"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15933,30 +16036,29 @@ in <code>signs.</strong>.text</code> are used.</p>
 <h2 id="_plugins_gitsigns_signs_untracked_showcount">plugins.gitsigns.signs.untracked.showCount</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable showing count of hunk, e.g. number of deleted lines.</p>
+<p>showing count of hunk, e.g. number of deleted lines</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_473" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -15968,18 +16070,21 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Specifies the character to use for the sign</p>
 </div>
+<div class="paragraph">
+<p>default: <code>"┆"</code></p>
+</div>
 <h3 id="_details_474" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>string</p>
+<p>null or string</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>"┆"</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -15997,19 +16102,9 @@ in <code>signs.</strong>.text</code> are used.</p>
 <div class="paragraph">
 <p>Function used to format <code>b:gitsigns_status</code></p>
 </div>
-<h3 id="_details_475" class="discrete">details</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>submodule</p>
-</dd>
-<dt class="hdlist1">Default</dt>
-<dd>
-<div class="listingblock">
-<div class="content">
-<pre>{
-  function = ''
+<div class="paragraph">
+<p>default: `{
+  function = \'\'
      function(status)
       local added, changed, removed = status.added, status.changed, status.removed
       local status_txt = {}
@@ -16018,8 +16113,22 @@ in <code>signs.</strong>.text</code> are used.</p>
       if removed and removed &gt; 0 then table.insert(status_txt, '-'..removed) end
       return table.concat(status_txt, ' ')
     end
-  '';
-}</pre>
+  \'\';
+}
+`</p>
+</div>
+<h3 id="_details_475" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or (submodule)</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -16092,18 +16201,21 @@ window.</p>
 <div class="paragraph">
 <p>Debounce time for updates (in milliseconds).</p>
 </div>
+<div class="paragraph">
+<p>default: <code>100</code></p>
+</div>
 <h3 id="_details_478" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>signed integer or floating point number</p>
+<p>null or signed integer</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>100</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -16121,18 +16233,21 @@ window.</p>
 <div class="paragraph">
 <p>Whether the watcher is enabled</p>
 </div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
 <h3 id="_details_479" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>true</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -16150,18 +16265,21 @@ window.</p>
 <div class="paragraph">
 <p>If a file is moved with <code>git mv</code>, switch the buffer to the new location</p>
 </div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
 <h3 id="_details_480" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>true</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -16179,18 +16297,21 @@ window.</p>
 <div class="paragraph">
 <p>Interval the watcher waits between polls of the gitdir in milliseconds</p>
 </div>
+<div class="paragraph">
+<p>default: <code>1000</code></p>
+</div>
 <h3 id="_details_481" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>signed integer</p>
+<p>null or signed integer</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>1000</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
@@ -16206,32 +16327,30 @@ window.</p>
 <h2 id="_plugins_gitsigns_worddiff">plugins.gitsigns.wordDiff</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable Highlight intra-line word differences in the buffer.
-Requires <code>config.diff_opts.internal = true</code>.
-.</p>
+<p>Highlight intra-line word differences in the buffer.
+Requires <code>config.diff_opts.internal = true</code>.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_482" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -16322,30 +16441,29 @@ details set.</p>
 <h2 id="_plugins_gitsigns_yadm_enable">plugins.gitsigns.yadm.enable</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whether to enable YADM support.</p>
+<p>YADM support</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_486" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
 <dd>
-<p>boolean</p>
+<p>null or boolean</p>
 </dd>
 <dt class="hdlist1">Default</dt>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>false</pre>
+<pre>null</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1">Example</dt>
+<dt class="hdlist1">No Example</dt>
 <dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
+<p></p>
 </dd>
 </dl>
 </div>
@@ -30936,7 +31054,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <h2 id="_plugins_nvim_lightbulb_autocmd_enabled">plugins.nvim-lightbulb.autocmd.enabled</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>default: ``</p>
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_940" class="discrete">details</h3>
 <div class="dlist">
@@ -31056,7 +31174,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <h2 id="_plugins_nvim_lightbulb_float_enabled">plugins.nvim-lightbulb.float.enabled</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>default: ``</p>
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_944" class="discrete">details</h3>
 <div class="dlist">
@@ -31210,7 +31328,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <h2 id="_plugins_nvim_lightbulb_sign_enabled">plugins.nvim-lightbulb.sign.enabled</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>default: <code>1</code></p>
+<p>default: <code>true</code></p>
 </div>
 <h3 id="_details_949" class="discrete">details</h3>
 <div class="dlist">
@@ -31268,7 +31386,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <h2 id="_plugins_nvim_lightbulb_statustext_enabled">plugins.nvim-lightbulb.statusText.enabled</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>default: ``</p>
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_951" class="discrete">details</h3>
 <div class="dlist">
@@ -31361,7 +31479,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <h2 id="_plugins_nvim_lightbulb_virtualtext_enabled">plugins.nvim-lightbulb.virtualText.enabled</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>default: ``</p>
+<p>default: <code>false</code></p>
 </div>
 <h3 id="_details_954" class="discrete">details</h3>
 <div class="dlist">
