@@ -1589,6 +1589,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_plugins_rust_tools_server_workspace_symbol_search_kind">plugins.rust-tools.server.workspace.symbol.search.kind</a></li>
 <li><a href="#_plugins_rust_tools_server_workspace_symbol_search_limit">plugins.rust-tools.server.workspace.symbol.search.limit</a></li>
 <li><a href="#_plugins_rust_tools_server_workspace_symbol_search_scope">plugins.rust-tools.server.workspace.symbol.search.scope</a></li>
+<li><a href="#_plugins_rust_tools_serverpackage">plugins.rust-tools.serverPackage</a></li>
 <li><a href="#_plugins_specs_blend">plugins.specs.blend</a></li>
 <li><a href="#_plugins_specs_color">plugins.specs.color</a></li>
 <li><a href="#_plugins_specs_delay">plugins.specs.delay</a></li>
@@ -37951,12 +37952,41 @@ Other clients requires all results upfront and might require a higher limit.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_rust_tools_serverpackage">plugins.rust-tools.serverPackage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Package to use for rust-analyzer</p>
+</div>
+<h3 id="_details_1144" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>package</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;derivation rust-analyzer-2023-01-09&gt;</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_specs_blend">plugins.specs.blend</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1144" class="discrete">details</h3>
+<h3 id="_details_1145" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -37985,7 +38015,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1145" class="discrete">details</h3>
+<h3 id="_details_1146" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38014,7 +38044,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Delay in miliseconds</p>
 </div>
-<h3 id="_details_1146" class="discrete">details</h3>
+<h3 id="_details_1147" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38043,7 +38073,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable specs-nvim.</p>
 </div>
-<h3 id="_details_1147" class="discrete">details</h3>
+<h3 id="_details_1148" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38076,7 +38106,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1148" class="discrete">details</h3>
+<h3 id="_details_1149" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38107,7 +38137,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1149" class="discrete">details</h3>
+<h3 id="_details_1150" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38136,7 +38166,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1150" class="discrete">details</h3>
+<h3 id="_details_1151" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38175,7 +38205,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1151" class="discrete">details</h3>
+<h3 id="_details_1152" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38206,7 +38236,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1152" class="discrete">details</h3>
+<h3 id="_details_1153" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38235,7 +38265,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Increment in miliseconds</p>
 </div>
-<h3 id="_details_1153" class="discrete">details</h3>
+<h3 id="_details_1154" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38264,7 +38294,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1154" class="discrete">details</h3>
+<h3 id="_details_1155" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38293,7 +38323,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Plugin to use for specs-nvim</p>
 </div>
-<h3 id="_details_1155" class="discrete">details</h3>
+<h3 id="_details_1156" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38322,7 +38352,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1156" class="discrete">details</h3>
+<h3 id="_details_1157" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38353,7 +38383,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1157" class="discrete">details</h3>
+<h3 id="_details_1158" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38382,7 +38412,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1158" class="discrete">details</h3>
+<h3 id="_details_1159" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38421,7 +38451,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1159" class="discrete">details</h3>
+<h3 id="_details_1160" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38450,7 +38480,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1160" class="discrete">details</h3>
+<h3 id="_details_1161" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38479,7 +38509,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>A list of files or directories to bookmark.</p>
 </div>
-<h3 id="_details_1161" class="discrete">details</h3>
+<h3 id="_details_1162" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38512,7 +38542,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>The default command for switching directories</p>
 </div>
-<h3 id="_details_1162" class="discrete">details</h3>
+<h3 id="_details_1163" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38545,7 +38575,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>When opening a file or bookmark, change to its directory</p>
 </div>
-<h3 id="_details_1163" class="discrete">details</h3>
+<h3 id="_details_1164" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38578,7 +38608,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>When opening a file or bookmark, change to the root directory of the VCS</p>
 </div>
-<h3 id="_details_1164" class="discrete">details</h3>
+<h3 id="_details_1165" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38611,7 +38641,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>A list of commands to execute on selection</p>
 </div>
-<h3 id="_details_1165" class="discrete">details</h3>
+<h3 id="_details_1166" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38644,7 +38674,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Custom footer</p>
 </div>
-<h3 id="_details_1166" class="discrete">details</h3>
+<h3 id="_details_1167" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38677,7 +38707,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Define your own header</p>
 </div>
-<h3 id="_details_1167" class="discrete">details</h3>
+<h3 id="_details_1168" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38710,7 +38740,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Use this list as indices instead of increasing numbers</p>
 </div>
-<h3 id="_details_1168" class="discrete">details</h3>
+<h3 id="_details_1169" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38743,7 +38773,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Own quotes for the cowsay header</p>
 </div>
-<h3 id="_details_1169" class="discrete">details</h3>
+<h3 id="_details_1170" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38776,7 +38806,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Don&#8217;t run Startify at Vim startup</p>
 </div>
-<h3 id="_details_1170" class="discrete">details</h3>
+<h3 id="_details_1171" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38809,7 +38839,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable Enable startify.</p>
 </div>
-<h3 id="_details_1171" class="discrete">details</h3>
+<h3 id="_details_1172" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38842,7 +38872,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Show &lt;empty buffer&gt; and &lt;quit&gt;</p>
 </div>
-<h3 id="_details_1172" class="discrete">details</h3>
+<h3 id="_details_1173" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38875,7 +38905,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Improves start time but reduces accuracy of the file list</p>
 </div>
-<h3 id="_details_1173" class="discrete">details</h3>
+<h3 id="_details_1174" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38908,7 +38938,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>The number of files to list</p>
 </div>
-<h3 id="_details_1174" class="discrete">details</h3>
+<h3 id="_details_1175" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38941,7 +38971,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Startify display lists. If it&#8217;s a string, it&#8217;ll be interpreted as literal lua code</p>
 </div>
-<h3 id="_details_1175" class="discrete">details</h3>
+<h3 id="_details_1176" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -38974,7 +39004,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Plugin to use for startify</p>
 </div>
-<h3 id="_details_1176" class="discrete">details</h3>
+<h3 id="_details_1177" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39003,7 +39033,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Number of spaces used for left padding</p>
 </div>
-<h3 id="_details_1177" class="discrete">details</h3>
+<h3 id="_details_1178" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39036,7 +39066,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>If the file is in or below the current working directory, use a relative path</p>
 </div>
-<h3 id="_details_1178" class="discrete">details</h3>
+<h3 id="_details_1179" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39069,7 +39099,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Load Session.vim</p>
 </div>
-<h3 id="_details_1179" class="discrete">details</h3>
+<h3 id="_details_1180" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39102,7 +39132,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Commands to be executed before saving a session</p>
 </div>
-<h3 id="_details_1180" class="discrete">details</h3>
+<h3 id="_details_1181" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39135,7 +39165,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Delete all buffers when loading or closing a session</p>
 </div>
-<h3 id="_details_1181" class="discrete">details</h3>
+<h3 id="_details_1182" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39168,7 +39198,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Directory to save/load session</p>
 </div>
-<h3 id="_details_1182" class="discrete">details</h3>
+<h3 id="_details_1183" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39201,7 +39231,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Maximum number of sessions to display</p>
 </div>
-<h3 id="_details_1183" class="discrete">details</h3>
+<h3 id="_details_1184" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39234,7 +39264,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Automatically update sessions</p>
 </div>
-<h3 id="_details_1184" class="discrete">details</h3>
+<h3 id="_details_1185" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39267,7 +39297,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Lines matching any of the patterns in this list will be removed from the session file</p>
 </div>
-<h3 id="_details_1185" class="discrete">details</h3>
+<h3 id="_details_1186" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39300,7 +39330,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>List of cmdline commands to run when loading the session</p>
 </div>
-<h3 id="_details_1186" class="discrete">details</h3>
+<h3 id="_details_1187" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39333,7 +39363,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>List of variables for Startify to save into the session file</p>
 </div>
-<h3 id="_details_1187" class="discrete">details</h3>
+<h3 id="_details_1188" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39366,7 +39396,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Sort sessions by modification time rather than alphabetically</p>
 </div>
-<h3 id="_details_1188" class="discrete">details</h3>
+<h3 id="_details_1189" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39399,7 +39429,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>A list of regexes that is used to filter recently used files</p>
 </div>
-<h3 id="_details_1189" class="discrete">details</h3>
+<h3 id="_details_1190" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39432,7 +39462,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Do not create the startify buffer if this is a Vim server instance with a name contained in this list</p>
 </div>
-<h3 id="_details_1190" class="discrete">details</h3>
+<h3 id="_details_1191" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39465,7 +39495,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Update v:oldfiles on-the-fly, so that :Startify is always up-to-date</p>
 </div>
-<h3 id="_details_1191" class="discrete">details</h3>
+<h3 id="_details_1192" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39498,7 +39528,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Show environment variables in path, if their name is shorter than their value</p>
 </div>
-<h3 id="_details_1192" class="discrete">details</h3>
+<h3 id="_details_1193" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39531,7 +39561,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Use unicode box drawing characters for the fortune header</p>
 </div>
-<h3 id="_details_1193" class="discrete">details</h3>
+<h3 id="_details_1194" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39564,7 +39594,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable Enable surround.vim.</p>
 </div>
-<h3 id="_details_1194" class="discrete">details</h3>
+<h3 id="_details_1195" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39597,7 +39627,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Plugin to use for surround</p>
 </div>
-<h3 id="_details_1195" class="discrete">details</h3>
+<h3 id="_details_1196" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39626,7 +39656,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Telescope default configuration</p>
 </div>
-<h3 id="_details_1196" class="discrete">details</h3>
+<h3 id="_details_1197" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39655,7 +39685,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable telescope.nvim.</p>
 </div>
-<h3 id="_details_1197" class="discrete">details</h3>
+<h3 id="_details_1198" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39688,7 +39718,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>A list of enabled extensions. Don&#8217;t use this directly</p>
 </div>
-<h3 id="_details_1198" class="discrete">details</h3>
+<h3 id="_details_1199" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39717,7 +39747,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Configuration for the extensions. Don&#8217;t use this directly</p>
 </div>
-<h3 id="_details_1199" class="discrete">details</h3>
+<h3 id="_details_1200" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39746,7 +39776,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Path to parent directory of custom database location. Defaults to $XDG_DATA_HOME/nvim</p>
 </div>
-<h3 id="_details_1200" class="discrete">details</h3>
+<h3 id="_details_1201" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39775,7 +39805,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Default workspace tag to filter by e.g 'CWD' to filter by default to the current directory</p>
 </div>
-<h3 id="_details_1201" class="discrete">details</h3>
+<h3 id="_details_1202" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39804,7 +39834,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Disable devicons (if available)</p>
 </div>
-<h3 id="_details_1202" class="discrete">details</h3>
+<h3 id="_details_1203" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39833,7 +39863,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable frecency.</p>
 </div>
-<h3 id="_details_1203" class="discrete">details</h3>
+<h3 id="_details_1204" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39866,7 +39896,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Patterns in this list control which files are indexed</p>
 </div>
-<h3 id="_details_1204" class="discrete">details</h3>
+<h3 id="_details_1205" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39895,7 +39925,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Plugin to use for telescope frecency</p>
 </div>
-<h3 id="_details_1205" class="discrete">details</h3>
+<h3 id="_details_1206" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39924,7 +39954,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to show scores generated by the algorithm in the results</p>
 </div>
-<h3 id="_details_1206" class="discrete">details</h3>
+<h3 id="_details_1207" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39953,7 +39983,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Determines if non-indexed files are included in workspace filter results</p>
 </div>
-<h3 id="_details_1207" class="discrete">details</h3>
+<h3 id="_details_1208" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -39982,7 +40012,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>this table contains mappings of workspace_tag &#8594; workspace_directory</p>
 </div>
-<h3 id="_details_1208" class="discrete">details</h3>
+<h3 id="_details_1209" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40011,7 +40041,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1209" class="discrete">details</h3>
+<h3 id="_details_1210" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40040,7 +40070,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable Enable fzf-native.</p>
 </div>
-<h3 id="_details_1210" class="discrete">details</h3>
+<h3 id="_details_1211" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40073,7 +40103,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to fuzzy search. False will do exact matching</p>
 </div>
-<h3 id="_details_1211" class="discrete">details</h3>
+<h3 id="_details_1212" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40102,7 +40132,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Override the file sorter</p>
 </div>
-<h3 id="_details_1212" class="discrete">details</h3>
+<h3 id="_details_1213" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40131,7 +40161,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Override the generice sorter</p>
 </div>
-<h3 id="_details_1213" class="discrete">details</h3>
+<h3 id="_details_1214" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40160,7 +40190,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Plugin to use for telescope extension fzf-native</p>
 </div>
-<h3 id="_details_1214" class="discrete">details</h3>
+<h3 id="_details_1215" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40189,7 +40219,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable Enable fzy-native.</p>
 </div>
-<h3 id="_details_1215" class="discrete">details</h3>
+<h3 id="_details_1216" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40222,7 +40252,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Override the file sorter</p>
 </div>
-<h3 id="_details_1216" class="discrete">details</h3>
+<h3 id="_details_1217" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40251,7 +40281,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Override the generice sorter</p>
 </div>
-<h3 id="_details_1217" class="discrete">details</h3>
+<h3 id="_details_1218" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40280,7 +40310,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable Enable media_files extension for telescope.</p>
 </div>
-<h3 id="_details_1218" class="discrete">details</h3>
+<h3 id="_details_1219" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40313,7 +40343,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1219" class="discrete">details</h3>
+<h3 id="_details_1220" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40342,7 +40372,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1220" class="discrete">details</h3>
+<h3 id="_details_1221" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40375,7 +40405,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Plugin to use for telescope extension media_files</p>
 </div>
-<h3 id="_details_1221" class="discrete">details</h3>
+<h3 id="_details_1222" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40404,7 +40434,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable project-nvim telescope extension.</p>
 </div>
-<h3 id="_details_1222" class="discrete">details</h3>
+<h3 id="_details_1223" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40437,7 +40467,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>An attribute set, that lets you set extra options or override options set by nixvim</p>
 </div>
-<h3 id="_details_1223" class="discrete">details</h3>
+<h3 id="_details_1224" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40466,7 +40496,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>The colorscheme to use for syntax highlighting</p>
 </div>
-<h3 id="_details_1224" class="discrete">details</h3>
+<h3 id="_details_1225" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40495,7 +40525,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Plugin to use for telescope.nvim</p>
 </div>
-<h3 id="_details_1225" class="discrete">details</h3>
+<h3 id="_details_1226" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40524,7 +40554,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable nvim-treesitter-context.</p>
 </div>
-<h3 id="_details_1226" class="discrete">details</h3>
+<h3 id="_details_1227" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40557,7 +40587,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Treat the coresponding entry in patterns as an exact match</p>
 </div>
-<h3 id="_details_1227" class="discrete">details</h3>
+<h3 id="_details_1228" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40586,7 +40616,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>How many lines the window should span. Null means no limit</p>
 </div>
-<h3 id="_details_1228" class="discrete">details</h3>
+<h3 id="_details_1229" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40615,7 +40645,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Minimum editor window height to enable context</p>
 </div>
-<h3 id="_details_1229" class="discrete">details</h3>
+<h3 id="_details_1230" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40644,7 +40674,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Plugin to use for nvim-treesitter-context</p>
 </div>
-<h3 id="_details_1230" class="discrete">details</h3>
+<h3 id="_details_1231" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40673,7 +40703,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Patterns to use for context delimitation. The 'default' key matches all filetypes</p>
 </div>
-<h3 id="_details_1231" class="discrete">details</h3>
+<h3 id="_details_1232" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40702,7 +40732,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Which context lines to discard if <code>max_lines</code> is exceeded</p>
 </div>
-<h3 id="_details_1232" class="discrete">details</h3>
+<h3 id="_details_1233" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40731,7 +40761,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable treesitter-refactor (requires plugins.treesitter.enable to be true).</p>
 </div>
-<h3 id="_details_1233" class="discrete">details</h3>
+<h3 id="_details_1234" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40764,7 +40794,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_1234" class="discrete">details</h3>
+<h3 id="_details_1235" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40793,7 +40823,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="paragraph">
 <p>Whether to enable highlights the block from the current scope where the cursor is..</p>
 </div>
-<h3 id="_details_1235" class="discrete">details</h3>
+<h3 id="_details_1236" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40827,7 +40857,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <p>Controls if highlights should be cleared when the cursor is moved. If your 'updatetime'
 is around <code>100</code> you can set this to false to have a less laggy experience.</p>
 </div>
-<h3 id="_details_1236" class="discrete">details</h3>
+<h3 id="_details_1237" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40856,7 +40886,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_1237" class="discrete">details</h3>
+<h3 id="_details_1238" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40885,7 +40915,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>Whether to enable Highlights definition and usages of the current symbol under the cursor..</p>
 </div>
-<h3 id="_details_1238" class="discrete">details</h3>
+<h3 id="_details_1239" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40918,7 +40948,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_1239" class="discrete">details</h3>
+<h3 id="_details_1240" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40949,7 +40979,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 and lists the definitions from the current file.
 .</p>
 </div>
-<h3 id="_details_1240" class="discrete">details</h3>
+<h3 id="_details_1241" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -40982,7 +41012,7 @@ and lists the definitions from the current file.
 <div class="paragraph">
 <p>go to the definition of the symbol under the cursor</p>
 </div>
-<h3 id="_details_1241" class="discrete">details</h3>
+<h3 id="_details_1242" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41013,7 +41043,7 @@ and lists the definitions from the current file.
 the symbol can not be resolved. You can use your own fallback function if create a
 mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fallback_function)&lt;cr&gt;</code>.</p>
 </div>
-<h3 id="_details_1242" class="discrete">details</h3>
+<h3 id="_details_1243" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41042,7 +41072,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>go to next usage of identifier under the cursor</p>
 </div>
-<h3 id="_details_1243" class="discrete">details</h3>
+<h3 id="_details_1244" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41071,7 +41101,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>go to previous usage of identifier</p>
 </div>
-<h3 id="_details_1244" class="discrete">details</h3>
+<h3 id="_details_1245" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41100,7 +41130,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>list all definitions from the current file</p>
 </div>
-<h3 id="_details_1245" class="discrete">details</h3>
+<h3 id="_details_1246" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41130,7 +41160,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <p>list all definitions from the current file like a table of contents (similar to the one
 you see when pressing |gO| in help files).</p>
 </div>
-<h3 id="_details_1246" class="discrete">details</h3>
+<h3 id="_details_1247" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41159,7 +41189,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Plugin to use for treesitter-refactor</p>
 </div>
-<h3 id="_details_1247" class="discrete">details</h3>
+<h3 id="_details_1248" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41188,7 +41218,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_1248" class="discrete">details</h3>
+<h3 id="_details_1249" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41217,7 +41247,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Renames the symbol under the cursor within the current scope (and current file)..</p>
 </div>
-<h3 id="_details_1249" class="discrete">details</h3>
+<h3 id="_details_1250" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41250,7 +41280,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>rename symbol under the cursor</p>
 </div>
-<h3 id="_details_1250" class="discrete">details</h3>
+<h3 id="_details_1251" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41279,7 +41309,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Custom capture group highlighting</p>
 </div>
-<h3 id="_details_1251" class="discrete">details</h3>
+<h3 id="_details_1252" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41308,7 +41338,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>A list of languages to disable</p>
 </div>
-<h3 id="_details_1252" class="discrete">details</h3>
+<h3 id="_details_1253" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41337,7 +41367,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable tree-sitter syntax highlighting.</p>
 </div>
-<h3 id="_details_1253" class="discrete">details</h3>
+<h3 id="_details_1254" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41370,7 +41400,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Either "all" or a list of languages</p>
 </div>
-<h3 id="_details_1254" class="discrete">details</h3>
+<h3 id="_details_1255" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41399,7 +41429,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable tree-sitter based folding.</p>
 </div>
-<h3 id="_details_1255" class="discrete">details</h3>
+<h3 id="_details_1256" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41432,7 +41462,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Grammar packages to install</p>
 </div>
-<h3 id="_details_1256" class="discrete">details</h3>
+<h3 id="_details_1257" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41608,7 +41638,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>List of parsers to ignore installing (for "all")</p>
 </div>
-<h3 id="_details_1257" class="discrete">details</h3>
+<h3 id="_details_1258" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41637,7 +41667,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable incremental selection based on the named nodes from the grammar.</p>
 </div>
-<h3 id="_details_1258" class="discrete">details</h3>
+<h3 id="_details_1259" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41670,7 +41700,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1259" class="discrete">details</h3>
+<h3 id="_details_1260" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41699,7 +41729,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1260" class="discrete">details</h3>
+<h3 id="_details_1261" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41728,7 +41758,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1261" class="discrete">details</h3>
+<h3 id="_details_1262" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41757,7 +41787,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1262" class="discrete">details</h3>
+<h3 id="_details_1263" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41786,7 +41816,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable tree-sitter based indentation.</p>
 </div>
-<h3 id="_details_1263" class="discrete">details</h3>
+<h3 id="_details_1264" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41819,7 +41849,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This is the configuration for extra modules. It should not be used directly</p>
 </div>
-<h3 id="_details_1264" class="discrete">details</h3>
+<h3 id="_details_1265" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41848,7 +41878,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Install grammars with Nix</p>
 </div>
-<h3 id="_details_1265" class="discrete">details</h3>
+<h3 id="_details_1266" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41877,7 +41907,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Plugin to use for nvim-treesitter. If using nixGrammars, it should include a <code>withPlugins</code> function</p>
 </div>
-<h3 id="_details_1266" class="discrete">details</h3>
+<h3 id="_details_1267" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41907,7 +41937,7 @@ you see when pressing |gO| in help files).</p>
 <p>Location of the parsers to be installed by the plugin (only needed when nixGrammars is disabled).
 This default might not work on your own install, please make sure that $XDG_DATA_HOME is set if you want to use the default. Otherwise, change it to something that will work for you!</p>
 </div>
-<h3 id="_details_1267" class="discrete">details</h3>
+<h3 id="_details_1268" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41936,7 +41966,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Whether to enable trouble.nvim.</p>
 </div>
-<h3 id="_details_1268" class="discrete">details</h3>
+<h3 id="_details_1269" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41969,7 +41999,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Height of the trouble list when position is top or bottom</p>
 </div>
-<h3 id="_details_1269" class="discrete">details</h3>
+<h3 id="_details_1270" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -41998,7 +42028,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Use devicons for filenames</p>
 </div>
-<h3 id="_details_1270" class="discrete">details</h3>
+<h3 id="_details_1271" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42027,7 +42057,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Plugin to use for trouble-nvim</p>
 </div>
-<h3 id="_details_1271" class="discrete">details</h3>
+<h3 id="_details_1272" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42056,7 +42086,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Position of the list</p>
 </div>
-<h3 id="_details_1272" class="discrete">details</h3>
+<h3 id="_details_1273" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42085,7 +42115,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Width of the trouble list when position is left or right</p>
 </div>
-<h3 id="_details_1273" class="discrete">details</h3>
+<h3 id="_details_1274" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42114,7 +42144,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Auto open diff window</p>
 </div>
-<h3 id="_details_1274" class="discrete">details</h3>
+<h3 id="_details_1275" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42143,7 +42173,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Diff command</p>
 </div>
-<h3 id="_details_1275" class="discrete">details</h3>
+<h3 id="_details_1276" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42172,7 +42202,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Undotree diff panel height</p>
 </div>
-<h3 id="_details_1276" class="discrete">details</h3>
+<h3 id="_details_1277" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42201,7 +42231,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Whether to enable Enable undotree.</p>
 </div>
-<h3 id="_details_1277" class="discrete">details</h3>
+<h3 id="_details_1278" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42234,7 +42264,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Focus undotree after being opened</p>
 </div>
-<h3 id="_details_1278" class="discrete">details</h3>
+<h3 id="_details_1279" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42263,7 +42293,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Highlight changed text</p>
 </div>
-<h3 id="_details_1279" class="discrete">details</h3>
+<h3 id="_details_1280" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42292,7 +42322,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Highlight changes with a sign in the gutter</p>
 </div>
-<h3 id="_details_1280" class="discrete">details</h3>
+<h3 id="_details_1281" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42321,7 +42351,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Added lines highlight group</p>
 </div>
-<h3 id="_details_1281" class="discrete">details</h3>
+<h3 id="_details_1282" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42350,7 +42380,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Changed lines highlight group</p>
 </div>
-<h3 id="_details_1282" class="discrete">details</h3>
+<h3 id="_details_1283" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42379,7 +42409,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Deleted lines highlight group</p>
 </div>
-<h3 id="_details_1283" class="discrete">details</h3>
+<h3 id="_details_1284" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42408,7 +42438,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Plugin to use for undotree</p>
 </div>
-<h3 id="_details_1284" class="discrete">details</h3>
+<h3 id="_details_1285" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42437,7 +42467,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Use a relative timestamp</p>
 </div>
-<h3 id="_details_1285" class="discrete">details</h3>
+<h3 id="_details_1286" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42466,7 +42496,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>E.g. use 'd' instead of 'days'</p>
 </div>
-<h3 id="_details_1286" class="discrete">details</h3>
+<h3 id="_details_1287" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42495,7 +42525,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Show cursor line</p>
 </div>
-<h3 id="_details_1287" class="discrete">details</h3>
+<h3 id="_details_1288" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42524,7 +42554,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Show help line</p>
 </div>
-<h3 id="_details_1288" class="discrete">details</h3>
+<h3 id="_details_1289" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42553,7 +42583,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Tree node shape</p>
 </div>
-<h3 id="_details_1289" class="discrete">details</h3>
+<h3 id="_details_1290" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42582,7 +42612,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Window layout for undotree. Check <a href="https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29" class="bare">https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29</a> for reference</p>
 </div>
-<h3 id="_details_1290" class="discrete">details</h3>
+<h3 id="_details_1291" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42611,7 +42641,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Undotree window width</p>
 </div>
-<h3 id="_details_1291" class="discrete">details</h3>
+<h3 id="_details_1292" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42640,7 +42670,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Whether to enable Enable zig.</p>
 </div>
-<h3 id="_details_1292" class="discrete">details</h3>
+<h3 id="_details_1293" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42673,7 +42703,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Run zig fmt on save</p>
 </div>
-<h3 id="_details_1293" class="discrete">details</h3>
+<h3 id="_details_1294" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42706,7 +42736,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Plugin to use for zig</p>
 </div>
-<h3 id="_details_1294" class="discrete">details</h3>
+<h3 id="_details_1295" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42735,7 +42765,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vi&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_1295" class="discrete">details</h3>
+<h3 id="_details_1296" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42764,7 +42794,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vim&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_1296" class="discrete">details</h3>
+<h3 id="_details_1297" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -42793,7 +42823,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Should the config be included in the wrapper script</p>
 </div>
-<h3 id="_details_1297" class="discrete">details</h3>
+<h3 id="_details_1298" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
