@@ -1134,6 +1134,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_plugins_lsp_servers_html_package">plugins.lsp.servers.html.package</a></li>
 <li><a href="#_plugins_lsp_servers_jsonls_enable">plugins.lsp.servers.jsonls.enable</a></li>
 <li><a href="#_plugins_lsp_servers_jsonls_package">plugins.lsp.servers.jsonls.package</a></li>
+<li><a href="#_plugins_lsp_servers_lua_ls_enable">plugins.lsp.servers.lua-ls.enable</a></li>
+<li><a href="#_plugins_lsp_servers_lua_ls_package">plugins.lsp.servers.lua-ls.package</a></li>
 <li><a href="#_plugins_lsp_servers_nil_ls_enable">plugins.lsp.servers.nil_ls.enable</a></li>
 <li><a href="#_plugins_lsp_servers_nil_ls_package">plugins.lsp.servers.nil_ls.package</a></li>
 <li><a href="#_plugins_lsp_servers_nil_ls_settings_diagnostics_excludedfiles">plugins.lsp.servers.nil_ls.settings.diagnostics.excludedFiles</a></li>
@@ -1250,8 +1252,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_plugins_lsp_servers_rust_analyzer_settings_workspace_symbol_search_kind">plugins.lsp.servers.rust-analyzer.settings.workspace.symbol.search.kind</a></li>
 <li><a href="#_plugins_lsp_servers_rust_analyzer_settings_workspace_symbol_search_limit">plugins.lsp.servers.rust-analyzer.settings.workspace.symbol.search.limit</a></li>
 <li><a href="#_plugins_lsp_servers_rust_analyzer_settings_workspace_symbol_search_scope">plugins.lsp.servers.rust-analyzer.settings.workspace.symbol.search.scope</a></li>
-<li><a href="#_plugins_lsp_servers_sumneko_lua_enable">plugins.lsp.servers.sumneko-lua.enable</a></li>
-<li><a href="#_plugins_lsp_servers_sumneko_lua_package">plugins.lsp.servers.sumneko-lua.package</a></li>
 <li><a href="#_plugins_lsp_servers_tailwindcss_enable">plugins.lsp.servers.tailwindcss.enable</a></li>
 <li><a href="#_plugins_lsp_servers_tailwindcss_package">plugins.lsp.servers.tailwindcss.package</a></li>
 <li><a href="#_plugins_lsp_servers_texlab_enable">plugins.lsp.servers.texlab.enable</a></li>
@@ -3020,7 +3020,7 @@ autoCmd = [
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-gruvbox.nvim-2023-01-04&gt;</pre>
+<pre>&lt;derivation vimplugin-gruvbox.nvim-2023-02-11&gt;</pre>
 </div>
 </div>
 </dd>
@@ -3466,7 +3466,7 @@ autoCmd = [
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-nord.nvim-2022-12-23&gt;</pre>
+<pre>&lt;derivation vimplugin-nord.nvim-2023-01-20&gt;</pre>
 </div>
 </div>
 </dd>
@@ -3780,7 +3780,7 @@ autoCmd = [
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-tokyonight.nvim-2023-01-04&gt;</pre>
+<pre>&lt;derivation vimplugin-tokyonight.nvim-2023-02-09&gt;</pre>
 </div>
 </div>
 </dd>
@@ -4827,7 +4827,7 @@ autoCmd = [
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation neovim-unwrapped-0.8.2&gt;</pre>
+<pre>&lt;derivation neovim-unwrapped-0.8.3&gt;</pre>
 </div>
 </div>
 </dd>
@@ -4947,7 +4947,7 @@ autoCmd = [
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-vim-airline-2023-01-09&gt;</pre>
+<pre>&lt;derivation vimplugin-vim-airline-2023-02-02&gt;</pre>
 </div>
 </div>
 </dd>
@@ -6461,7 +6461,7 @@ But only a static string is accepted here.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-barbar.nvim-2023-01-03&gt;</pre>
+<pre>&lt;derivation vimplugin-barbar.nvim-2023-02-16&gt;</pre>
 </div>
 </div>
 </dd>
@@ -11114,7 +11114,7 @@ order of usability (see <code>letters</code> option)</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-bufferline.nvim-2022-12-24&gt;</pre>
+<pre>&lt;derivation vimplugin-bufferline.nvim-2023-02-11&gt;</pre>
 </div>
 </div>
 </dd>
@@ -13992,7 +13992,7 @@ autoSetHints both are true.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-comment.nvim-2023-01-07&gt;</pre>
+<pre>&lt;derivation vimplugin-comment.nvim-2023-02-16&gt;</pre>
 </div>
 </div>
 </dd>
@@ -14297,7 +14297,7 @@ autoSetHints both are true.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-copilot.vim-2022-12-19&gt;</pre>
+<pre>&lt;derivation vimplugin-copilot.vim-2023-02-15&gt;</pre>
 </div>
 </div>
 </dd>
@@ -14454,7 +14454,7 @@ autoSetHints both are true.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-coq_nvim-2023-01-08&gt;</pre>
+<pre>&lt;derivation vimplugin-coq_nvim-2023-02-12&gt;</pre>
 </div>
 </div>
 </dd>
@@ -14835,7 +14835,7 @@ autoSetHints both are true.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-dashboard-nvim-2022-12-31&gt;</pre>
+<pre>&lt;derivation vimplugin-dashboard-nvim-2023-02-16&gt;</pre>
 </div>
 </div>
 </dd>
@@ -15294,7 +15294,7 @@ autoSetHints both are true.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-vim-endwise-2022-08-17&gt;</pre>
+<pre>&lt;derivation vimplugin-vim-endwise-2023-02-03&gt;</pre>
 </div>
 </div>
 </dd>
@@ -15501,7 +15501,7 @@ autoSetHints both are true.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-vim-floaterm-2022-11-03&gt;</pre>
+<pre>&lt;derivation vimplugin-vim-floaterm-2023-01-14&gt;</pre>
 </div>
 </div>
 </dd>
@@ -15737,7 +15737,7 @@ autoSetHints both are true.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-vim-fugitive-2022-12-30&gt;</pre>
+<pre>&lt;derivation vimplugin-vim-fugitive-2023-02-09&gt;</pre>
 </div>
 </div>
 </dd>
@@ -17946,7 +17946,7 @@ argument.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation luascm.1-gitsigns.nvim-2023-01-09&gt;</pre>
+<pre>&lt;derivation luascm.1-gitsigns.nvim-2023-02-16&gt;</pre>
 </div>
 </div>
 </dd>
@@ -19837,7 +19837,7 @@ details set.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-harpoon-2022-11-23&gt;</pre>
+<pre>&lt;derivation vimplugin-harpoon-2023-01-23&gt;</pre>
 </div>
 </div>
 </dd>
@@ -20857,7 +20857,7 @@ create indentation.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-indent-blankline.nvim-2022-12-08&gt;</pre>
+<pre>&lt;derivation vimplugin-indent-blankline.nvim-2023-01-26&gt;</pre>
 </div>
 </div>
 </dd>
@@ -21603,7 +21603,7 @@ are considered when generating indentation and the context.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-vim-ledger-2022-11-27&gt;</pre>
+<pre>&lt;derivation vimplugin-vim-ledger-2023-02-05&gt;</pre>
 </div>
 </div>
 </dd>
@@ -22194,7 +22194,7 @@ are considered when generating indentation and the context.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation _at_astrojs_slash_language-server-0.29.1&gt;</pre>
+<pre>&lt;derivation _at_astrojs_slash_language-server-0.29.5&gt;</pre>
 </div>
 </div>
 </dd>
@@ -22256,7 +22256,7 @@ are considered when generating indentation and the context.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation bash-language-server-4.1.3&gt;</pre>
+<pre>&lt;derivation bash-language-server-4.6.2&gt;</pre>
 </div>
 </div>
 </dd>
@@ -22380,7 +22380,7 @@ are considered when generating indentation and the context.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vscode-langservers-extracted-4.5.0&gt;</pre>
+<pre>&lt;derivation vscode-langservers-extracted-4.6.0&gt;</pre>
 </div>
 </div>
 </dd>
@@ -22807,7 +22807,7 @@ imports will be updated if the client supports willRenameFiles requests</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation deno-1.29.1&gt;</pre>
+<pre>&lt;derivation deno-1.30.3&gt;</pre>
 </div>
 </div>
 </dd>
@@ -22869,7 +22869,7 @@ imports will be updated if the client supports willRenameFiles requests</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation elixir-ls-0.12.0&gt;</pre>
+<pre>&lt;derivation elixir-ls-0.13.0&gt;</pre>
 </div>
 </div>
 </dd>
@@ -22931,7 +22931,7 @@ imports will be updated if the client supports willRenameFiles requests</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vscode-langservers-extracted-4.5.0&gt;</pre>
+<pre>&lt;derivation vscode-langservers-extracted-4.6.0&gt;</pre>
 </div>
 </div>
 </dd>
@@ -23150,7 +23150,7 @@ imports will be updated if the client supports willRenameFiles requests</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vscode-langservers-extracted-4.5.0&gt;</pre>
+<pre>&lt;derivation vscode-langservers-extracted-4.6.0&gt;</pre>
 </div>
 </div>
 </dd>
@@ -23212,7 +23212,69 @@ imports will be updated if the client supports willRenameFiles requests</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vscode-langservers-extracted-4.5.0&gt;</pre>
+<pre>&lt;derivation vscode-langservers-extracted-4.6.0&gt;</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_lsp_servers_lua_ls_enable">plugins.lsp.servers.lua-ls.enable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether to enable Enable lua LS, for lua.</p>
+</div>
+<h3 id="_details_689" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>false</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Example</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>true</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_lsp_servers_lua_ls_package">plugins.lsp.servers.lua-ls.package</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This option has no description.</p>
+</div>
+<h3 id="_details_690" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or package</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;derivation lua-language-server-3.6.11&gt;</pre>
 </div>
 </div>
 </dd>
@@ -23230,7 +23292,7 @@ imports will be updated if the client supports willRenameFiles requests</p>
 <div class="paragraph">
 <p>Whether to enable Enable nil, for Nix.</p>
 </div>
-<h3 id="_details_689" class="discrete">details</h3>
+<h3 id="_details_691" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23263,7 +23325,7 @@ imports will be updated if the client supports willRenameFiles requests</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_690" class="discrete">details</h3>
+<h3 id="_details_692" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23274,7 +23336,7 @@ imports will be updated if the client supports willRenameFiles requests</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation nil-2023-01-01&gt;</pre>
+<pre>&lt;derivation nil-2023-02-03&gt;</pre>
 </div>
 </div>
 </dd>
@@ -23294,7 +23356,7 @@ imports will be updated if the client supports willRenameFiles requests</p>
 It accepts an array of paths. Relative paths are joint to the workspace root.
 Glob patterns are currently not supported.</p>
 </div>
-<h3 id="_details_691" class="discrete">details</h3>
+<h3 id="_details_693" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23325,7 +23387,7 @@ Glob patterns are currently not supported.</p>
 The kind identifier is a snake_cased_string usually shown together
 with the diagnostic message.</p>
 </div>
-<h3 id="_details_692" class="discrete">details</h3>
+<h3 id="_details_694" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23355,7 +23417,7 @@ with the diagnostic message.</p>
 <p>External formatter command (with arguments).
 It should accepts file content in stdin and print the formatted code into stdout.</p>
 </div>
-<h3 id="_details_693" class="discrete">details</h3>
+<h3 id="_details_695" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23384,7 +23446,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <div class="paragraph">
 <p>Whether to enable Enable pyright, for Python..</p>
 </div>
-<h3 id="_details_694" class="discrete">details</h3>
+<h3 id="_details_696" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23417,7 +23479,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_695" class="discrete">details</h3>
+<h3 id="_details_697" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23428,7 +23490,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation pyright-1.1.285&gt;</pre>
+<pre>&lt;derivation pyright-1.1.292&gt;</pre>
 </div>
 </div>
 </dd>
@@ -23446,7 +23508,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <div class="paragraph">
 <p>Whether to enable Enable rnix LSP, for Nix.</p>
 </div>
-<h3 id="_details_696" class="discrete">details</h3>
+<h3 id="_details_698" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23479,7 +23541,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_697" class="discrete">details</h3>
+<h3 id="_details_699" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23508,7 +23570,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <div class="paragraph">
 <p>Whether to enable Enable rust-analyzer, for Rust..</p>
 </div>
-<h3 id="_details_698" class="discrete">details</h3>
+<h3 id="_details_700" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23541,7 +23603,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_699" class="discrete">details</h3>
+<h3 id="_details_701" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23552,7 +23614,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation rust-analyzer-2023-01-09&gt;</pre>
+<pre>&lt;derivation rust-analyzer-2023-02-06&gt;</pre>
 </div>
 </div>
 </dd>
@@ -23578,7 +23640,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "todo"</code></pre>
 </div>
 </div>
-<h3 id="_details_700" class="discrete">details</h3>
+<h3 id="_details_702" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23615,7 +23677,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_701" class="discrete">details</h3>
+<h3 id="_details_703" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23652,7 +23714,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <pre class="highlight"><code class="language-nix" data-lang="nix">    0</code></pre>
 </div>
 </div>
-<h3 id="_details_702" class="discrete">details</h3>
+<h3 id="_details_704" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23690,7 +23752,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_703" class="discrete">details</h3>
+<h3 id="_details_705" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23727,7 +23789,7 @@ It should accepts file content in stdin and print the formatted code into stdout
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_704" class="discrete">details</h3>
+<h3 id="_details_706" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23779,7 +23841,7 @@ targets and features, with the following base command line:</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_705" class="discrete">details</h3>
+<h3 id="_details_707" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23817,7 +23879,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_706" class="discrete">details</h3>
+<h3 id="_details_708" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23857,7 +23919,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_707" class="discrete">details</h3>
+<h3 id="_details_709" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23894,7 +23956,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_708" class="discrete">details</h3>
+<h3 id="_details_710" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23931,7 +23993,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_709" class="discrete">details</h3>
+<h3 id="_details_711" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -23968,7 +24030,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_710" class="discrete">details</h3>
+<h3 id="_details_712" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24005,7 +24067,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    ["core"]</code></pre>
 </div>
 </div>
-<h3 id="_details_711" class="discrete">details</h3>
+<h3 id="_details_713" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24042,7 +24104,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_712" class="discrete">details</h3>
+<h3 id="_details_714" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24079,7 +24141,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "check"</code></pre>
 </div>
 </div>
-<h3 id="_details_713" class="discrete">details</h3>
+<h3 id="_details_715" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24116,7 +24178,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_714" class="discrete">details</h3>
+<h3 id="_details_716" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24153,7 +24215,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_715" class="discrete">details</h3>
+<h3 id="_details_717" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24194,7 +24256,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_716" class="discrete">details</h3>
+<h3 id="_details_718" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24232,7 +24294,7 @@ avoid checking unnecessary things.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_717" class="discrete">details</h3>
+<h3 id="_details_719" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24292,7 +24354,7 @@ each of them, with the working directory being the project root
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_718" class="discrete">details</h3>
+<h3 id="_details_720" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24330,7 +24392,7 @@ each of them, with the working directory being the project root
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_719" class="discrete">details</h3>
+<h3 id="_details_721" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24368,7 +24430,7 @@ Note that your client must specify the <code>additionalTextEdits</code> LSP clie
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_720" class="discrete">details</h3>
+<h3 id="_details_722" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24406,7 +24468,7 @@ with <code>self</code> prefixed to them when inside a method.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_721" class="discrete">details</h3>
+<h3 id="_details_723" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24443,7 +24505,7 @@ with <code>self</code> prefixed to them when inside a method.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "fill_arguments"</code></pre>
 </div>
 </div>
-<h3 id="_details_722" class="discrete">details</h3>
+<h3 id="_details_724" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24480,7 +24542,7 @@ with <code>self</code> prefixed to them when inside a method.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_723" class="discrete">details</h3>
+<h3 id="_details_725" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24517,7 +24579,7 @@ with <code>self</code> prefixed to them when inside a method.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_724" class="discrete">details</h3>
+<h3 id="_details_726" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24587,7 +24649,7 @@ with <code>self</code> prefixed to them when inside a method.</p>
 }</code></pre>
 </div>
 </div>
-<h3 id="_details_725" class="discrete">details</h3>
+<h3 id="_details_727" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24624,7 +24686,7 @@ with <code>self</code> prefixed to them when inside a method.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_726" class="discrete">details</h3>
+<h3 id="_details_728" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24661,7 +24723,7 @@ with <code>self</code> prefixed to them when inside a method.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_727" class="discrete">details</h3>
+<h3 id="_details_729" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24699,7 +24761,7 @@ have more false positives than usual.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_728" class="discrete">details</h3>
+<h3 id="_details_730" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24737,7 +24799,7 @@ This should be the reverse mapping of what is passed to <code>rustc</code> as <c
 <pre class="highlight"><code class="language-nix" data-lang="nix">    {}</code></pre>
 </div>
 </div>
-<h3 id="_details_729" class="discrete">details</h3>
+<h3 id="_details_731" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24778,7 +24840,7 @@ and will not show up in the <code>Problems Panel</code>.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_730" class="discrete">details</h3>
+<h3 id="_details_732" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24819,7 +24881,7 @@ and a blue icon in the <code>Problems Panel</code>.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_731" class="discrete">details</h3>
+<h3 id="_details_733" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24858,7 +24920,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_732" class="discrete">details</h3>
+<h3 id="_details_734" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24895,7 +24957,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "client"</code></pre>
 </div>
 </div>
-<h3 id="_details_733" class="discrete">details</h3>
+<h3 id="_details_735" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24932,7 +24994,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_734" class="discrete">details</h3>
+<h3 id="_details_736" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -24969,7 +25031,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_735" class="discrete">details</h3>
+<h3 id="_details_737" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25006,7 +25068,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_736" class="discrete">details</h3>
+<h3 id="_details_738" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25043,7 +25105,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_737" class="discrete">details</h3>
+<h3 id="_details_739" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25081,7 +25143,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_738" class="discrete">details</h3>
+<h3 id="_details_740" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25118,7 +25180,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_739" class="discrete">details</h3>
+<h3 id="_details_741" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25156,7 +25218,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_740" class="discrete">details</h3>
+<h3 id="_details_742" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25194,7 +25256,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_741" class="discrete">details</h3>
+<h3 id="_details_743" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25232,7 +25294,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_742" class="discrete">details</h3>
+<h3 id="_details_744" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25270,7 +25332,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_743" class="discrete">details</h3>
+<h3 id="_details_745" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25307,7 +25369,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_744" class="discrete">details</h3>
+<h3 id="_details_746" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25345,7 +25407,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_745" class="discrete">details</h3>
+<h3 id="_details_747" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25382,7 +25444,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_746" class="discrete">details</h3>
+<h3 id="_details_748" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25419,7 +25481,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_747" class="discrete">details</h3>
+<h3 id="_details_749" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25456,7 +25518,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "crate"</code></pre>
 </div>
 </div>
-<h3 id="_details_748" class="discrete">details</h3>
+<h3 id="_details_750" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25493,7 +25555,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_749" class="discrete">details</h3>
+<h3 id="_details_751" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25530,7 +25592,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_750" class="discrete">details</h3>
+<h3 id="_details_752" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25567,7 +25629,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "plain"</code></pre>
 </div>
 </div>
-<h3 id="_details_751" class="discrete">details</h3>
+<h3 id="_details_753" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25604,7 +25666,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_752" class="discrete">details</h3>
+<h3 id="_details_754" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25641,7 +25703,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_753" class="discrete">details</h3>
+<h3 id="_details_755" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25678,7 +25740,7 @@ also need to add the folders to Code&#8217;s <code>files.watcherExclude</code>.<
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_754" class="discrete">details</h3>
+<h3 id="_details_756" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25716,7 +25778,7 @@ to always show them).</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    25</code></pre>
 </div>
 </div>
-<h3 id="_details_755" class="discrete">details</h3>
+<h3 id="_details_757" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25753,7 +25815,7 @@ to always show them).</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "never"</code></pre>
 </div>
 </div>
-<h3 id="_details_756" class="discrete">details</h3>
+<h3 id="_details_758" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25790,7 +25852,7 @@ to always show them).</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "never"</code></pre>
 </div>
 </div>
-<h3 id="_details_757" class="discrete">details</h3>
+<h3 id="_details_759" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25827,7 +25889,7 @@ to always show them).</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_758" class="discrete">details</h3>
+<h3 id="_details_760" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25864,7 +25926,7 @@ to always show them).</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    25</code></pre>
 </div>
 </div>
-<h3 id="_details_759" class="discrete">details</h3>
+<h3 id="_details_761" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25902,7 +25964,7 @@ site.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_760" class="discrete">details</h3>
+<h3 id="_details_762" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25939,7 +26001,7 @@ site.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "never"</code></pre>
 </div>
 </div>
-<h3 id="_details_761" class="discrete">details</h3>
+<h3 id="_details_763" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -25976,7 +26038,7 @@ site.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_762" class="discrete">details</h3>
+<h3 id="_details_764" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26013,7 +26075,7 @@ site.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_763" class="discrete">details</h3>
+<h3 id="_details_765" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26051,7 +26113,7 @@ Only applies to closures with blocks, same as <code><mark>rust-analyzer.inlayHin
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_764" class="discrete">details</h3>
+<h3 id="_details_766" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26088,7 +26150,7 @@ Only applies to closures with blocks, same as <code><mark>rust-analyzer.inlayHin
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_765" class="discrete">details</h3>
+<h3 id="_details_767" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26125,7 +26187,7 @@ Only applies to closures with blocks, same as <code><mark>rust-analyzer.inlayHin
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_766" class="discrete">details</h3>
+<h3 id="_details_768" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26162,7 +26224,7 @@ Only applies to closures with blocks, same as <code><mark>rust-analyzer.inlayHin
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_767" class="discrete">details</h3>
+<h3 id="_details_769" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26199,7 +26261,7 @@ Only applies to closures with blocks, same as <code><mark>rust-analyzer.inlayHin
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_768" class="discrete">details</h3>
+<h3 id="_details_770" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26236,7 +26298,7 @@ Only applies to closures with blocks, same as <code><mark>rust-analyzer.inlayHin
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_769" class="discrete">details</h3>
+<h3 id="_details_771" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26274,7 +26336,7 @@ Only applies to closures with blocks, same as <code><mark>rust-analyzer.inlayHin
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_770" class="discrete">details</h3>
+<h3 id="_details_772" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26311,7 +26373,7 @@ Only applies to closures with blocks, same as <code><mark>rust-analyzer.inlayHin
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_771" class="discrete">details</h3>
+<h3 id="_details_773" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26349,7 +26411,7 @@ client doesn&#8217;t set the corresponding capability.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_772" class="discrete">details</h3>
+<h3 id="_details_774" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26387,7 +26449,7 @@ client doesn&#8217;t set the corresponding capability.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_773" class="discrete">details</h3>
+<h3 id="_details_775" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26425,7 +26487,7 @@ Only applies when <code><mark>rust-analyzer.lens.enable</mark></code> is set.</p
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_774" class="discrete">details</h3>
+<h3 id="_details_776" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26463,7 +26525,7 @@ Only applies when <code><mark>rust-analyzer.lens.enable</mark></code> is set.</p
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_775" class="discrete">details</h3>
+<h3 id="_details_777" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26501,7 +26563,7 @@ Only applies when <code><mark>rust-analyzer.lens.enable</mark></code> is set.</p
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_776" class="discrete">details</h3>
+<h3 id="_details_778" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26539,7 +26601,7 @@ Only applies when <code><mark>rust-analyzer.lens.enable</mark></code> is set.</p
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_777" class="discrete">details</h3>
+<h3 id="_details_779" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26577,7 +26639,7 @@ Only applies when <code><mark>rust-analyzer.lens.enable</mark></code> is set.</p
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_778" class="discrete">details</h3>
+<h3 id="_details_780" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26619,7 +26681,7 @@ of projects.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_779" class="discrete">details</h3>
+<h3 id="_details_781" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26656,7 +26718,7 @@ of projects.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_780" class="discrete">details</h3>
+<h3 id="_details_782" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26693,7 +26755,7 @@ of projects.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_781" class="discrete">details</h3>
+<h3 id="_details_783" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26730,7 +26792,7 @@ of projects.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_782" class="discrete">details</h3>
+<h3 id="_details_784" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26767,7 +26829,7 @@ of projects.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_783" class="discrete">details</h3>
+<h3 id="_details_785" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26807,7 +26869,7 @@ of projects.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    {}</code></pre>
 </div>
 </div>
-<h3 id="_details_784" class="discrete">details</h3>
+<h3 id="_details_786" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26845,7 +26907,7 @@ this is rust-analyzer itself, but we override this in tests).</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_785" class="discrete">details</h3>
+<h3 id="_details_787" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26882,7 +26944,7 @@ this is rust-analyzer itself, but we override this in tests).</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_786" class="discrete">details</h3>
+<h3 id="_details_788" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26920,7 +26982,7 @@ tests or binaries. For example, it may be <code>--release</code>.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_787" class="discrete">details</h3>
+<h3 id="_details_789" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -26966,7 +27028,7 @@ crates must set <code>[package.metadata.rust-analyzer] rustc_private=true</code>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_788" class="discrete">details</h3>
+<h3 id="_details_790" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27003,7 +27065,7 @@ crates must set <code>[package.metadata.rust-analyzer] rustc_private=true</code>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    []</code></pre>
 </div>
 </div>
-<h3 id="_details_789" class="discrete">details</h3>
+<h3 id="_details_791" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27041,7 +27103,7 @@ formatting.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    null</code></pre>
 </div>
 </div>
-<h3 id="_details_790" class="discrete">details</h3>
+<h3 id="_details_792" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27080,7 +27142,7 @@ available on a nightly build.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_791" class="discrete">details</h3>
+<h3 id="_details_793" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27121,7 +27183,7 @@ doc links.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_792" class="discrete">details</h3>
+<h3 id="_details_794" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27162,7 +27224,7 @@ they are tagged with modifiers.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_793" class="discrete">details</h3>
+<h3 id="_details_795" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27203,7 +27265,7 @@ of the generic <code>operator</code> token type.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_794" class="discrete">details</h3>
+<h3 id="_details_796" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27244,7 +27306,7 @@ they are tagged with modifiers or have a special role.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_795" class="discrete">details</h3>
+<h3 id="_details_797" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27282,7 +27344,7 @@ calls.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_796" class="discrete">details</h3>
+<h3 id="_details_798" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27323,7 +27385,7 @@ of the generic <code>punctuation</code> token type.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_797" class="discrete">details</h3>
+<h3 id="_details_799" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27365,7 +27427,7 @@ their contents.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_798" class="discrete">details</h3>
+<h3 id="_details_800" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27402,7 +27464,7 @@ their contents.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "full"</code></pre>
 </div>
 </div>
-<h3 id="_details_799" class="discrete">details</h3>
+<h3 id="_details_801" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27439,7 +27501,7 @@ their contents.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    true</code></pre>
 </div>
 </div>
-<h3 id="_details_800" class="discrete">details</h3>
+<h3 id="_details_802" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27476,7 +27538,7 @@ their contents.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    false</code></pre>
 </div>
 </div>
-<h3 id="_details_801" class="discrete">details</h3>
+<h3 id="_details_803" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27513,7 +27575,7 @@ their contents.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "only_types"</code></pre>
 </div>
 </div>
-<h3 id="_details_802" class="discrete">details</h3>
+<h3 id="_details_804" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27552,7 +27614,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    128</code></pre>
 </div>
 </div>
-<h3 id="_details_803" class="discrete">details</h3>
+<h3 id="_details_805" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27589,7 +27651,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <pre class="highlight"><code class="language-nix" data-lang="nix">    "workspace"</code></pre>
 </div>
 </div>
-<h3 id="_details_804" class="discrete">details</h3>
+<h3 id="_details_806" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -27601,68 +27663,6 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <div class="listingblock">
 <div class="content">
 <pre>null</pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">No Example</dt>
-<dd>
-<p></p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_plugins_lsp_servers_sumneko_lua_enable">plugins.lsp.servers.sumneko-lua.enable</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Whether to enable Enable sumneko_lua, for lua.</p>
-</div>
-<h3 id="_details_805" class="discrete">details</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>boolean</p>
-</dd>
-<dt class="hdlist1">Default</dt>
-<dd>
-<div class="listingblock">
-<div class="content">
-<pre>false</pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">Example</dt>
-<dd>
-<div class="listingblock">
-<div class="content">
-<pre>true</pre>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_plugins_lsp_servers_sumneko_lua_package">plugins.lsp.servers.sumneko-lua.package</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This option has no description.</p>
-</div>
-<h3 id="_details_806" class="discrete">details</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>null or package</p>
-</dd>
-<dt class="hdlist1">Default</dt>
-<dd>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;derivation sumneko-lua-language-server-3.6.4&gt;</pre>
 </div>
 </div>
 </dd>
@@ -27724,7 +27724,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation _at_tailwindcss_slash_language-server-0.0.10&gt;</pre>
+<pre>&lt;derivation _at_tailwindcss_slash_language-server-0.0.11&gt;</pre>
 </div>
 </div>
 </dd>
@@ -27786,7 +27786,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation texlab-5.0.0&gt;</pre>
+<pre>&lt;derivation texlab-5.2.0&gt;</pre>
 </div>
 </div>
 </dd>
@@ -27848,7 +27848,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation typescript-language-server-2.2.0&gt;</pre>
+<pre>&lt;derivation typescript-language-server-3.1.0&gt;</pre>
 </div>
 </div>
 </dd>
@@ -29326,7 +29326,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-lualine.nvim-2023-01-05&gt;</pre>
+<pre>&lt;derivation vimplugin-lualine.nvim-2023-02-14&gt;</pre>
 </div>
 </div>
 </dd>
@@ -30071,7 +30071,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-luasnip-2023-01-09&gt;</pre>
+<pre>&lt;derivation vimplugin-luasnip-2023-02-11&gt;</pre>
 </div>
 </div>
 </dd>
@@ -31930,7 +31930,7 @@ For more detail see: <a href="https://github.com/iamcco/markdown-preview.nvim/pu
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-neogit-2023-01-09&gt;</pre>
+<pre>&lt;derivation vimplugin-neogit-2023-01-31&gt;</pre>
 </div>
 </div>
 </dd>
@@ -32866,7 +32866,7 @@ For more detail see: <a href="https://github.com/iamcco/markdown-preview.nvim/pu
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-nvim-notify-2022-12-06&gt;</pre>
+<pre>&lt;derivation vimplugin-nvim-notify-2023-01-18&gt;</pre>
 </div>
 </div>
 </dd>
@@ -33015,7 +33015,7 @@ For more detail see: <a href="https://github.com/iamcco/markdown-preview.nvim/pu
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-null-ls.nvim-2023-01-07&gt;</pre>
+<pre>&lt;derivation vimplugin-null-ls.nvim-2023-02-16&gt;</pre>
 </div>
 </div>
 </dd>
@@ -34231,7 +34231,7 @@ For more detail see: <a href="https://github.com/iamcco/markdown-preview.nvim/pu
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation prettier-2.8.1&gt;</pre>
+<pre>&lt;derivation prettier-2.8.3&gt;</pre>
 </div>
 </div>
 </dd>
@@ -34413,7 +34413,7 @@ For more detail see: <a href="https://github.com/iamcco/markdown-preview.nvim/pu
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation stylua-0.15.3&gt;</pre>
+<pre>&lt;derivation stylua-0.16.1&gt;</pre>
 </div>
 </div>
 </dd>
@@ -34740,7 +34740,7 @@ For more detail see: <a href="https://github.com/iamcco/markdown-preview.nvim/pu
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-nvim-autopairs-2023-01-08&gt;</pre>
+<pre>&lt;derivation vimplugin-nvim-autopairs-2023-02-07&gt;</pre>
 </div>
 </div>
 </dd>
@@ -35393,7 +35393,7 @@ For more detail see: <a href="https://github.com/iamcco/markdown-preview.nvim/pu
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation luascm.1-nvim-cmp-2023-01-06&gt;</pre>
+<pre>&lt;derivation luascm.1-nvim-cmp-2023-02-16&gt;</pre>
 </div>
 </div>
 </dd>
@@ -37771,7 +37771,7 @@ Or it can be a list of lists, which will use the cmp built-in helper function <c
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-nvim-tree.lua-2023-01-09&gt;</pre>
+<pre>&lt;derivation vimplugin-nvim-tree.lua-2023-02-14&gt;</pre>
 </div>
 </div>
 </dd>
@@ -39603,7 +39603,7 @@ The callback receives one parameter indicating the <code>health</code> of the se
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-rust-tools.nvim-2023-01-08&gt;</pre>
+<pre>&lt;derivation vimplugin-rust-tools.nvim-2023-02-05&gt;</pre>
 </div>
 </div>
 </dd>
@@ -43745,7 +43745,7 @@ Other clients requires all results upfront and might require a higher limit.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation rust-analyzer-2023-01-09&gt;</pre>
+<pre>&lt;derivation rust-analyzer-2023-02-06&gt;</pre>
 </div>
 </div>
 </dd>
@@ -45808,7 +45808,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-telescope-frecency.nvim-2022-12-28&gt;</pre>
+<pre>&lt;derivation vimplugin-telescope-frecency.nvim-2023-02-15&gt;</pre>
 </div>
 </div>
 </dd>
@@ -46073,7 +46073,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-telescope-fzf-native.nvim-2022-12-18&gt;</pre>
+<pre>&lt;derivation vimplugin-telescope-fzf-native.nvim-2023-02-05&gt;</pre>
 </div>
 </div>
 </dd>
@@ -46408,7 +46408,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-telescope.nvim-2023-01-07&gt;</pre>
+<pre>&lt;derivation vimplugin-telescope.nvim-2023-01-31&gt;</pre>
 </div>
 </div>
 </dd>
@@ -46557,7 +46557,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-nvim-treesitter-context-2023-01-06&gt;</pre>
+<pre>&lt;derivation vimplugin-nvim-treesitter-context-2023-02-13&gt;</pre>
 </div>
 </div>
 </dd>
@@ -47346,76 +47346,85 @@ you see when pressing |gO| in help files).</p>
 <div class="listingblock">
 <div class="content">
 <pre>[
-  &lt;derivation ada-grammar-e9e2ec9&gt;
+  &lt;derivation ada-grammar-42cc2eb&gt;
   &lt;derivation agda-grammar-80ea622&gt;
-  &lt;derivation arduino-grammar-c473c09&gt;
+  &lt;derivation arduino-grammar-257efff&gt;
   &lt;derivation astro-grammar-a1f66bf&gt;
   &lt;derivation awk-grammar-e559793&gt;
-  &lt;derivation bash-grammar-4488aa4&gt;
-  &lt;derivation beancount-grammar-4cbd1f0&gt;
+  &lt;derivation bash-grammar-7f9506c&gt;
+  &lt;derivation beancount-grammar-f3741a3&gt;
   &lt;derivation bibtex-grammar-ccfd77d&gt;
   &lt;derivation blueprint-grammar-6ef91ca&gt;
   &lt;derivation c-grammar-7175a6d&gt;
-  &lt;derivation c_sharp-grammar-f076a8e&gt;
-  &lt;derivation clojure-grammar-50468d3&gt;
-  &lt;derivation cmake-grammar-a322653&gt;
+  &lt;derivation c_sharp-grammar-5b6c4d0&gt;
+  &lt;derivation capnp-grammar-cb85cdd&gt;
+  &lt;derivation chatito-grammar-3baf22e&gt;
+  &lt;derivation clojure-grammar-262d6d6&gt;
+  &lt;derivation cmake-grammar-399605a&gt;
   &lt;derivation comment-grammar-a37ca37&gt;
   &lt;derivation commonlisp-grammar-c7e8149&gt;
   &lt;derivation cooklang-grammar-5e11341&gt;
-  &lt;derivation cpp-grammar-2d2c4ae&gt;
+  &lt;derivation cpp-grammar-56cec4c&gt;
   &lt;derivation css-grammar-769203d&gt;
-  &lt;derivation cuda-grammar-0091006&gt;
+  &lt;derivation cuda-grammar-a02c214&gt;
   &lt;derivation d-grammar-c2fbf21&gt;
   &lt;derivation dart-grammar-53485a8&gt;
   &lt;derivation devicetree-grammar-ea30a05&gt;
-  &lt;derivation diff-grammar-1d63cd4&gt;
+  &lt;derivation diff-grammar-f69bde8&gt;
   &lt;derivation dockerfile-grammar-09e316d&gt;
   &lt;derivation dot-grammar-9ab8555&gt;
-  &lt;derivation ebnf-grammar-ef241bc&gt;
+  &lt;derivation ebnf-grammar-8e635b0&gt;
   &lt;derivation eex-grammar-f742f2f&gt;
   &lt;derivation elixir-grammar-b20eaa7&gt;
   &lt;derivation elm-grammar-28bb193&gt;
+  &lt;derivation elsa-grammar-c83c21c&gt;
   &lt;derivation elvish-grammar-f32711e&gt;
-  &lt;derivation embedded_template-grammar-91fc5ae&gt;
-  &lt;derivation erlang-grammar-a8b8b0e&gt;
+  &lt;derivation embedded_template-grammar-203f7bd&gt;
+  &lt;derivation erlang-grammar-2422bc9&gt;
   &lt;derivation fennel-grammar-5171959&gt;
-  &lt;derivation fish-grammar-6675b56&gt;
+  &lt;derivation fish-grammar-f917690&gt;
   &lt;derivation foam-grammar-c238f4a&gt;
-  &lt;derivation fortran-grammar-edcb337&gt;
+  &lt;derivation fortran-grammar-0f6ad1a&gt;
+  &lt;derivation fsh-grammar-fa33477&gt;
+  &lt;derivation func-grammar-f161cfe&gt;
   &lt;derivation fusion-grammar-19db2f4&gt;
-  &lt;derivation gdscript-grammar-a8fa839&gt;
+  &lt;derivation gdscript-grammar-31ebb7c&gt;
   &lt;derivation git_rebase-grammar-127f5b5&gt;
   &lt;derivation gitattributes-grammar-577a075&gt;
-  &lt;derivation gitcommit-grammar-0ef7dd0&gt;
+  &lt;derivation gitcommit-grammar-f71b93f&gt;
   &lt;derivation gitignore-grammar-f4685bf&gt;
   &lt;derivation gleam-grammar-cfcbca3&gt;
-  &lt;derivation glimmer-grammar-fee3427&gt;
+  &lt;derivation glimmer-grammar-40cfb72&gt;
   &lt;derivation glsl-grammar-e2c2214&gt;
   &lt;derivation go-grammar-64457ea&gt;
   &lt;derivation godot_resource-grammar-b6ef076&gt;
   &lt;derivation gomod-grammar-4a65743&gt;
+  &lt;derivation gosum-grammar-68974b6&gt;
   &lt;derivation gowork-grammar-949a8a4&gt;
   &lt;derivation graphql-grammar-5e66e96&gt;
   &lt;derivation hack-grammar-b7bd692&gt;
-  &lt;derivation haskell-grammar-aee3725&gt;
+  &lt;derivation haskell-grammar-3bdba07&gt;
   &lt;derivation hcl-grammar-0ff887f&gt;
   &lt;derivation heex-grammar-2e1348c&gt;
-  &lt;derivation help-grammar-9dee68e&gt;
+  &lt;derivation help-grammar-8f75ef3&gt;
   &lt;derivation hjson-grammar-02fa3b7&gt;
-  &lt;derivation hlsl-grammar-bd0d463&gt;
+  &lt;derivation hlsl-grammar-8e2f090&gt;
   &lt;derivation hocon-grammar-c390f10&gt;
   &lt;derivation html-grammar-29f53d8&gt;
+  &lt;derivation htmldjango-grammar-b2dba02&gt;
   &lt;derivation http-grammar-2c6c445&gt;
-  &lt;derivation java-grammar-09d650d&gt;
-  &lt;derivation javascript-grammar-7a29d06&gt;
+  &lt;derivation ini-grammar-1a0ce07&gt;
+  &lt;derivation java-grammar-dd597f1&gt;
+  &lt;derivation javascript-grammar-15e85e8&gt;
   &lt;derivation jq-grammar-13990f5&gt;
   &lt;derivation jsdoc-grammar-189a6a4&gt;
   &lt;derivation json-grammar-7307675&gt;
   &lt;derivation json5-grammar-5dd5cdc&gt;
   &lt;derivation jsonc-grammar-02b0165&gt;
-  &lt;derivation jsonnet-grammar-505f5bd&gt;
-  &lt;derivation julia-grammar-1cd300b&gt;
-  &lt;derivation kotlin-grammar-b953dbd&gt;
+  &lt;derivation jsonnet-grammar-fdc7757&gt;
+  &lt;derivation julia-grammar-e2f449e&gt;
+  &lt;derivation kdl-grammar-b50d6c8&gt;
+  &lt;derivation kotlin-grammar-e463703&gt;
   &lt;derivation lalrpop-grammar-7744b56&gt;
   &lt;derivation latex-grammar-6b7ea83&gt;
   &lt;derivation ledger-grammar-47b8971&gt;
@@ -47423,75 +47432,79 @@ you see when pressing |gO| in help files).</p>
   &lt;derivation lua-grammar-0fc8996&gt;
   &lt;derivation m68k-grammar-d097b12&gt;
   &lt;derivation make-grammar-a4b9187&gt;
-  &lt;derivation markdown-grammar-16d0b5e&gt;
-  &lt;derivation markdown_inline-grammar-16d0b5e&gt;
+  &lt;derivation markdown-grammar-7e7aa9a&gt;
+  &lt;derivation markdown_inline-grammar-7e7aa9a&gt;
   &lt;derivation menhir-grammar-db7953a&gt;
   &lt;derivation mermaid-grammar-d787c66&gt;
-  &lt;derivation meson-grammar-6c5f7ef&gt;
-  &lt;derivation nickel-grammar-9d83db4&gt;
+  &lt;derivation meson-grammar-5f3138d&gt;
+  &lt;derivation nickel-grammar-d6c7eeb&gt;
   &lt;derivation ninja-grammar-0a95cfd&gt;
   &lt;derivation nix-grammar-6b71a81&gt;
-  &lt;derivation norg-grammar-6348056&gt;
+  &lt;derivation norg-grammar-1a30509&gt;
   &lt;derivation ocaml-grammar-f1106bf&gt;
   &lt;derivation ocaml_interface-grammar-f1106bf&gt;
   &lt;derivation ocamllex-grammar-ac1d595&gt;
   &lt;derivation org-grammar-081179c&gt;
   &lt;derivation pascal-grammar-9e99540&gt;
   &lt;derivation perl-grammar-749d26f&gt;
-  &lt;derivation php-grammar-47dd353&gt;
+  &lt;derivation php-grammar-f860e59&gt;
   &lt;derivation phpdoc-grammar-2f4d16c&gt;
   &lt;derivation pioasm-grammar-924aada&gt;
+  &lt;derivation poe_filter-grammar-80dc101&gt;
   &lt;derivation prisma-grammar-eca2596&gt;
   &lt;derivation proto-grammar-42d82fa&gt;
-  &lt;derivation pug-grammar-63e2149&gt;
+  &lt;derivation pug-grammar-884e225&gt;
   &lt;derivation python-grammar-9e53981&gt;
   &lt;derivation ql-grammar-bd08702&gt;
   &lt;derivation qmljs-grammar-ab75be9&gt;
   &lt;derivation query-grammar-0717de0&gt;
   &lt;derivation r-grammar-80efda5&gt;
-  &lt;derivation racket-grammar-dc9c334&gt;
+  &lt;derivation racket-grammar-1a5df02&gt;
   &lt;derivation rasi-grammar-5f04634&gt;
   &lt;derivation regex-grammar-e1cfca3&gt;
   &lt;derivation rego-grammar-b2667c9&gt;
   &lt;derivation rnoweb-grammar-502c112&gt;
+  &lt;derivation ron-grammar-049a3ef&gt;
   &lt;derivation rst-grammar-25e6328&gt;
-  &lt;derivation ruby-grammar-c919603&gt;
+  &lt;derivation ruby-grammar-206c707&gt;
   &lt;derivation rust-grammar-f7fb205&gt;
-  &lt;derivation scala-grammar-c4c7d2e&gt;
-  &lt;derivation scheme-grammar-16bdcf0&gt;
+  &lt;derivation scala-grammar-628e0aa&gt;
+  &lt;derivation scheme-grammar-67b90a3&gt;
   &lt;derivation scss-grammar-c478c68&gt;
   &lt;derivation slint-grammar-0754752&gt;
   &lt;derivation smali-grammar-d7f535e&gt;
+  &lt;derivation smithy-grammar-cf8c7eb&gt;
   &lt;derivation solidity-grammar-52ed088&gt;
   &lt;derivation sparql-grammar-05f949d&gt;
-  &lt;derivation sql-grammar-8635357&gt;
+  &lt;derivation sql-grammar-13d375d&gt;
   &lt;derivation supercollider-grammar-90c6d9f&gt;
   &lt;derivation surface-grammar-f4586b3&gt;
   &lt;derivation svelte-grammar-52e122a&gt;
-  &lt;derivation swift-grammar-5f0ffaf&gt;
+  &lt;derivation swift-grammar-0fe0de5&gt;
   &lt;derivation sxhkdrc-grammar-440d5f9&gt;
   &lt;derivation t32-grammar-f8106fc&gt;
-  &lt;derivation teal-grammar-1ae8c68&gt;
+  &lt;derivation teal-grammar-2158ecc&gt;
   &lt;derivation terraform-grammar-0ff887f&gt;
+  &lt;derivation thrift-grammar-d1f350b&gt;
   &lt;derivation tiger-grammar-a233ebe&gt;
-  &lt;derivation tlaplus-grammar-f2ad727&gt;
+  &lt;derivation tlaplus-grammar-6d2ec89&gt;
   &lt;derivation todotxt-grammar-0207f6a&gt;
   &lt;derivation toml-grammar-8bd2056&gt;
-  &lt;derivation tsx-grammar-faad909&gt;
+  &lt;derivation tsx-grammar-5d20856&gt;
   &lt;derivation turtle-grammar-085437f&gt;
   &lt;derivation twig-grammar-2457993&gt;
-  &lt;derivation typescript-grammar-faad909&gt;
-  &lt;derivation v-grammar-497563e&gt;
+  &lt;derivation typescript-grammar-5d20856&gt;
+  &lt;derivation v-grammar-136f3a0&gt;
   &lt;derivation vala-grammar-8f690bf&gt;
   &lt;derivation verilog-grammar-4457145&gt;
   &lt;derivation vhs-grammar-8a0df32&gt;
-  &lt;derivation vim-grammar-55ff1b0&gt;
+  &lt;derivation vim-grammar-e39a7bb&gt;
   &lt;derivation vue-grammar-91fe275&gt;
-  &lt;derivation wgsl-grammar-4c03f73&gt;
-  &lt;derivation wgsl_bevy-grammar-2475727&gt;
+  &lt;derivation wgsl-grammar-40259f3&gt;
+  &lt;derivation wgsl_bevy-grammar-7cd38d6&gt;
   &lt;derivation yaml-grammar-0e36bed&gt;
   &lt;derivation yang-grammar-2c0e6be&gt;
-  &lt;derivation zig-grammar-d90d38d&gt;
+  &lt;derivation zig-grammar-6b3f578&gt;
 ]</pre>
 </div>
 </div>
@@ -47790,7 +47803,7 @@ you see when pressing |gO| in help files).</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-nvim-treesitter-2023-01-09&gt;</pre>
+<pre>&lt;derivation vimplugin-nvim-treesitter-2023-02-16&gt;</pre>
 </div>
 </div>
 </dd>
@@ -47940,7 +47953,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-trouble.nvim-2023-01-04&gt;</pre>
+<pre>&lt;derivation vimplugin-trouble.nvim-2023-02-16&gt;</pre>
 </div>
 </div>
 </dd>
@@ -49259,7 +49272,7 @@ less than 12 set overrideNPercent to 11.</p>
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-vim-matchup-2022-12-04&gt;</pre>
+<pre>&lt;derivation vimplugin-vim-matchup-2023-02-12&gt;</pre>
 </div>
 </div>
 </dd>
@@ -49549,7 +49562,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-vimtex-2023-01-02&gt;</pre>
+<pre>&lt;derivation vimplugin-vimtex-2023-02-15&gt;</pre>
 </div>
 </div>
 </dd>
@@ -49644,7 +49657,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <dd>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;derivation vimplugin-zig.vim-2022-12-31&gt;</pre>
+<pre>&lt;derivation vimplugin-zig.vim-2023-02-15&gt;</pre>
 </div>
 </div>
 </dd>
