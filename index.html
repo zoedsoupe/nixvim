@@ -1980,6 +1980,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_plugins_telescope_extensions_project_nvim_enable">plugins.telescope.extensions.project-nvim.enable</a></li>
 <li><a href="#_plugins_telescope_extraoptions">plugins.telescope.extraOptions</a></li>
 <li><a href="#_plugins_telescope_highlighttheme">plugins.telescope.highlightTheme</a></li>
+<li><a href="#_plugins_telescope_keymaps">plugins.telescope.keymaps</a></li>
+<li><a href="#_plugins_telescope_keymapssilent">plugins.telescope.keymapsSilent</a></li>
 <li><a href="#_plugins_telescope_package">plugins.telescope.package</a></li>
 <li><a href="#_plugins_treesitter_context_enable">plugins.treesitter-context.enable</a></li>
 <li><a href="#_plugins_treesitter_context_exactpatterns">plugins.treesitter-context.exactPatterns</a></li>
@@ -51226,12 +51228,77 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_telescope_keymaps">plugins.telescope.keymaps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Keymaps for telescope.</p>
+</div>
+<h3 id="_details_1535" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>attribute set of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>{ }</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Example</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "&lt;C-p&gt;" = "git_files";
+  "&lt;leader&gt;fg" = "live_grep";
+}</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_telescope_keymapssilent">plugins.telescope.keymapsSilent</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether telescope keymaps should be silent</p>
+</div>
+<h3 id="_details_1536" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>false</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_telescope_package">plugins.telescope.package</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Plugin to use for telescope.nvim</p>
 </div>
-<h3 id="_details_1535" class="discrete">details</h3>
+<h3 id="_details_1537" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51260,7 +51327,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>Whether to enable nvim-treesitter-context.</p>
 </div>
-<h3 id="_details_1536" class="discrete">details</h3>
+<h3 id="_details_1538" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51293,7 +51360,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>Treat the coresponding entry in patterns as an exact match</p>
 </div>
-<h3 id="_details_1537" class="discrete">details</h3>
+<h3 id="_details_1539" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51322,7 +51389,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>How many lines the window should span. Null means no limit</p>
 </div>
-<h3 id="_details_1538" class="discrete">details</h3>
+<h3 id="_details_1540" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51351,7 +51418,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>Minimum editor window height to enable context</p>
 </div>
-<h3 id="_details_1539" class="discrete">details</h3>
+<h3 id="_details_1541" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51380,7 +51447,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>Plugin to use for treesitter-context</p>
 </div>
-<h3 id="_details_1540" class="discrete">details</h3>
+<h3 id="_details_1542" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51409,7 +51476,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>Patterns to use for context delimitation. The 'default' key matches all filetypes</p>
 </div>
-<h3 id="_details_1541" class="discrete">details</h3>
+<h3 id="_details_1543" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51438,7 +51505,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>Which context lines to discard if <code>max_lines</code> is exceeded</p>
 </div>
-<h3 id="_details_1542" class="discrete">details</h3>
+<h3 id="_details_1544" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51467,7 +51534,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>Whether to enable treesitter-refactor (requires plugins.treesitter.enable to be true).</p>
 </div>
-<h3 id="_details_1543" class="discrete">details</h3>
+<h3 id="_details_1545" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51500,7 +51567,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_1544" class="discrete">details</h3>
+<h3 id="_details_1546" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51529,7 +51596,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <div class="paragraph">
 <p>Whether to enable highlights the block from the current scope where the cursor is..</p>
 </div>
-<h3 id="_details_1545" class="discrete">details</h3>
+<h3 id="_details_1547" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51563,7 +51630,7 @@ Example: To set 'tagbar_show_tag_count' to 1, write
 <p>Controls if highlights should be cleared when the cursor is moved. If your 'updatetime'
 is around <code>100</code> you can set this to false to have a less laggy experience.</p>
 </div>
-<h3 id="_details_1546" class="discrete">details</h3>
+<h3 id="_details_1548" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51592,7 +51659,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_1547" class="discrete">details</h3>
+<h3 id="_details_1549" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51621,7 +51688,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>Whether to enable Highlights definition and usages of the current symbol under the cursor..</p>
 </div>
-<h3 id="_details_1548" class="discrete">details</h3>
+<h3 id="_details_1550" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51654,7 +51721,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_1549" class="discrete">details</h3>
+<h3 id="_details_1551" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51685,7 +51752,7 @@ is around <code>100</code> you can set this to false to have a less laggy experi
 and lists the definitions from the current file.
 .</p>
 </div>
-<h3 id="_details_1550" class="discrete">details</h3>
+<h3 id="_details_1552" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51718,7 +51785,7 @@ and lists the definitions from the current file.
 <div class="paragraph">
 <p>go to the definition of the symbol under the cursor</p>
 </div>
-<h3 id="_details_1551" class="discrete">details</h3>
+<h3 id="_details_1553" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51749,7 +51816,7 @@ and lists the definitions from the current file.
 the symbol can not be resolved. You can use your own fallback function if create a
 mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fallback_function)&lt;cr&gt;</code>.</p>
 </div>
-<h3 id="_details_1552" class="discrete">details</h3>
+<h3 id="_details_1554" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51778,7 +51845,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>go to next usage of identifier under the cursor</p>
 </div>
-<h3 id="_details_1553" class="discrete">details</h3>
+<h3 id="_details_1555" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51807,7 +51874,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>go to previous usage of identifier</p>
 </div>
-<h3 id="_details_1554" class="discrete">details</h3>
+<h3 id="_details_1556" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51836,7 +51903,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <div class="paragraph">
 <p>list all definitions from the current file</p>
 </div>
-<h3 id="_details_1555" class="discrete">details</h3>
+<h3 id="_details_1557" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51866,7 +51933,7 @@ mapping fo <code>lua require&#8217;nvim-treesitter.refactor.navigation(nil, fall
 <p>list all definitions from the current file like a table of contents (similar to the one
 you see when pressing |gO| in help files).</p>
 </div>
-<h3 id="_details_1556" class="discrete">details</h3>
+<h3 id="_details_1558" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51895,7 +51962,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Plugin to use for treesitter-refactor</p>
 </div>
-<h3 id="_details_1557" class="discrete">details</h3>
+<h3 id="_details_1559" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51924,7 +51991,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>List of languages to disable the module on</p>
 </div>
-<h3 id="_details_1558" class="discrete">details</h3>
+<h3 id="_details_1560" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51953,7 +52020,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable Renames the symbol under the cursor within the current scope (and current file)..</p>
 </div>
-<h3 id="_details_1559" class="discrete">details</h3>
+<h3 id="_details_1561" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -51986,7 +52053,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>rename symbol under the cursor</p>
 </div>
-<h3 id="_details_1560" class="discrete">details</h3>
+<h3 id="_details_1562" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52015,7 +52082,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Custom capture group highlighting</p>
 </div>
-<h3 id="_details_1561" class="discrete">details</h3>
+<h3 id="_details_1563" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52044,7 +52111,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>A list of languages to disable</p>
 </div>
-<h3 id="_details_1562" class="discrete">details</h3>
+<h3 id="_details_1564" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52073,7 +52140,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable tree-sitter syntax highlighting.</p>
 </div>
-<h3 id="_details_1563" class="discrete">details</h3>
+<h3 id="_details_1565" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52106,7 +52173,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Either "all" or a list of languages</p>
 </div>
-<h3 id="_details_1564" class="discrete">details</h3>
+<h3 id="_details_1566" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52135,7 +52202,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable tree-sitter based folding.</p>
 </div>
-<h3 id="_details_1565" class="discrete">details</h3>
+<h3 id="_details_1567" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52168,7 +52235,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Grammar packages to install</p>
 </div>
-<h3 id="_details_1566" class="discrete">details</h3>
+<h3 id="_details_1568" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52357,7 +52424,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>List of parsers to ignore installing (for "all")</p>
 </div>
-<h3 id="_details_1567" class="discrete">details</h3>
+<h3 id="_details_1569" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52386,7 +52453,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable incremental selection based on the named nodes from the grammar.</p>
 </div>
-<h3 id="_details_1568" class="discrete">details</h3>
+<h3 id="_details_1570" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52419,7 +52486,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1569" class="discrete">details</h3>
+<h3 id="_details_1571" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52448,7 +52515,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1570" class="discrete">details</h3>
+<h3 id="_details_1572" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52477,7 +52544,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1571" class="discrete">details</h3>
+<h3 id="_details_1573" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52506,7 +52573,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This option has no description.</p>
 </div>
-<h3 id="_details_1572" class="discrete">details</h3>
+<h3 id="_details_1574" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52535,7 +52602,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Whether to enable tree-sitter based indentation.</p>
 </div>
-<h3 id="_details_1573" class="discrete">details</h3>
+<h3 id="_details_1575" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52568,7 +52635,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>This is the configuration for extra modules. It should not be used directly</p>
 </div>
-<h3 id="_details_1574" class="discrete">details</h3>
+<h3 id="_details_1576" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52597,7 +52664,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Install grammars with Nix</p>
 </div>
-<h3 id="_details_1575" class="discrete">details</h3>
+<h3 id="_details_1577" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52626,7 +52693,7 @@ you see when pressing |gO| in help files).</p>
 <div class="paragraph">
 <p>Plugin to use for nvim-treesitter. If using nixGrammars, it should include a <code>withPlugins</code> function</p>
 </div>
-<h3 id="_details_1576" class="discrete">details</h3>
+<h3 id="_details_1578" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52656,7 +52723,7 @@ you see when pressing |gO| in help files).</p>
 <p>Location of the parsers to be installed by the plugin (only needed when nixGrammars is disabled).
 This default might not work on your own install, please make sure that $XDG_DATA_HOME is set if you want to use the default. Otherwise, change it to something that will work for you!</p>
 </div>
-<h3 id="_details_1577" class="discrete">details</h3>
+<h3 id="_details_1579" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52685,7 +52752,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Whether to enable trouble.nvim.</p>
 </div>
-<h3 id="_details_1578" class="discrete">details</h3>
+<h3 id="_details_1580" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52718,7 +52785,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Height of the trouble list when position is top or bottom</p>
 </div>
-<h3 id="_details_1579" class="discrete">details</h3>
+<h3 id="_details_1581" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52747,7 +52814,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Use devicons for filenames</p>
 </div>
-<h3 id="_details_1580" class="discrete">details</h3>
+<h3 id="_details_1582" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52776,7 +52843,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Plugin to use for trouble-nvim</p>
 </div>
-<h3 id="_details_1581" class="discrete">details</h3>
+<h3 id="_details_1583" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52805,7 +52872,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Position of the list</p>
 </div>
-<h3 id="_details_1582" class="discrete">details</h3>
+<h3 id="_details_1584" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52834,7 +52901,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Width of the trouble list when position is left or right</p>
 </div>
-<h3 id="_details_1583" class="discrete">details</h3>
+<h3 id="_details_1585" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52863,7 +52930,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Auto open diff window</p>
 </div>
-<h3 id="_details_1584" class="discrete">details</h3>
+<h3 id="_details_1586" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52892,7 +52959,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Diff command</p>
 </div>
-<h3 id="_details_1585" class="discrete">details</h3>
+<h3 id="_details_1587" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52921,7 +52988,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Undotree diff panel height</p>
 </div>
-<h3 id="_details_1586" class="discrete">details</h3>
+<h3 id="_details_1588" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52950,7 +53017,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Whether to enable Enable undotree.</p>
 </div>
-<h3 id="_details_1587" class="discrete">details</h3>
+<h3 id="_details_1589" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -52983,7 +53050,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Focus undotree after being opened</p>
 </div>
-<h3 id="_details_1588" class="discrete">details</h3>
+<h3 id="_details_1590" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53012,7 +53079,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Highlight changed text</p>
 </div>
-<h3 id="_details_1589" class="discrete">details</h3>
+<h3 id="_details_1591" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53041,7 +53108,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Highlight changes with a sign in the gutter</p>
 </div>
-<h3 id="_details_1590" class="discrete">details</h3>
+<h3 id="_details_1592" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53070,7 +53137,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Added lines highlight group</p>
 </div>
-<h3 id="_details_1591" class="discrete">details</h3>
+<h3 id="_details_1593" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53099,7 +53166,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Changed lines highlight group</p>
 </div>
-<h3 id="_details_1592" class="discrete">details</h3>
+<h3 id="_details_1594" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53128,7 +53195,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Deleted lines highlight group</p>
 </div>
-<h3 id="_details_1593" class="discrete">details</h3>
+<h3 id="_details_1595" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53157,7 +53224,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Plugin to use for undotree</p>
 </div>
-<h3 id="_details_1594" class="discrete">details</h3>
+<h3 id="_details_1596" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53186,7 +53253,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Use a relative timestamp</p>
 </div>
-<h3 id="_details_1595" class="discrete">details</h3>
+<h3 id="_details_1597" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53215,7 +53282,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>E.g. use 'd' instead of 'days'</p>
 </div>
-<h3 id="_details_1596" class="discrete">details</h3>
+<h3 id="_details_1598" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53244,7 +53311,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Show cursor line</p>
 </div>
-<h3 id="_details_1597" class="discrete">details</h3>
+<h3 id="_details_1599" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53273,7 +53340,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Show help line</p>
 </div>
-<h3 id="_details_1598" class="discrete">details</h3>
+<h3 id="_details_1600" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53302,7 +53369,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Tree node shape</p>
 </div>
-<h3 id="_details_1599" class="discrete">details</h3>
+<h3 id="_details_1601" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53331,7 +53398,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Window layout for undotree. Check <a href="https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29" class="bare">https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29</a> for reference</p>
 </div>
-<h3 id="_details_1600" class="discrete">details</h3>
+<h3 id="_details_1602" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53360,7 +53427,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Undotree window width</p>
 </div>
-<h3 id="_details_1601" class="discrete">details</h3>
+<h3 id="_details_1603" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53395,7 +53462,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>default: <code>0</code></p>
 </div>
-<h3 id="_details_1602" class="discrete">details</h3>
+<h3 id="_details_1604" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53428,7 +53495,7 @@ objects. Does not apply to match highlighting (see matchParenStopline instead)</
 <div class="paragraph">
 <p>default: <code>1500</code></p>
 </div>
-<h3 id="_details_1603" class="discrete">details</h3>
+<h3 id="_details_1605" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53457,7 +53524,7 @@ objects. Does not apply to match highlighting (see matchParenStopline instead)</
 <div class="paragraph">
 <p>Whether to enable Enable vim-matchup.</p>
 </div>
-<h3 id="_details_1604" class="discrete">details</h3>
+<h3 id="_details_1606" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53493,7 +53560,7 @@ objects. Does not apply to match highlighting (see matchParenStopline instead)</
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1605" class="discrete">details</h3>
+<h3 id="_details_1607" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53525,7 +53592,7 @@ objects. Does not apply to match highlighting (see matchParenStopline instead)</
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1606" class="discrete">details</h3>
+<h3 id="_details_1608" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53559,7 +53626,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1607" class="discrete">details</h3>
+<h3 id="_details_1609" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53591,7 +53658,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>700</code></p>
 </div>
-<h3 id="_details_1608" class="discrete">details</h3>
+<h3 id="_details_1610" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53623,7 +53690,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>50</code></p>
 </div>
-<h3 id="_details_1609" class="discrete">details</h3>
+<h3 id="_details_1611" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53655,7 +53722,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1610" class="discrete">details</h3>
+<h3 id="_details_1612" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53687,7 +53754,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1611" class="discrete">details</h3>
+<h3 id="_details_1613" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53720,7 +53787,7 @@ Note: this feature requires deferred highlighting to be supported and enabled.</
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1612" class="discrete">details</h3>
+<h3 id="_details_1614" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53752,7 +53819,7 @@ Note: this feature requires deferred highlighting to be supported and enabled.</
 <div class="paragraph">
 <p>default: <code>60</code></p>
 </div>
-<h3 id="_details_1613" class="discrete">details</h3>
+<h3 id="_details_1615" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53784,7 +53851,7 @@ Note: this feature requires deferred highlighting to be supported and enabled.</
 <div class="paragraph">
 <p>default: <code>{method = "status";}</code></p>
 </div>
-<h3 id="_details_1614" class="discrete">details</h3>
+<h3 id="_details_1616" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53830,7 +53897,7 @@ get the text.</p>
 <div class="paragraph">
 <p>default: <code>"status"</code></p>
 </div>
-<h3 id="_details_1615" class="discrete">details</h3>
+<h3 id="_details_1617" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53864,7 +53931,7 @@ This is intended to prevent flickering while scrolling with j and k.</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1616" class="discrete">details</h3>
+<h3 id="_details_1618" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53896,7 +53963,7 @@ This is intended to prevent flickering while scrolling with j and k.</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1617" class="discrete">details</h3>
+<h3 id="_details_1619" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53929,7 +53996,7 @@ Set this conservatively since high values may cause performance issues.</p>
 <div class="paragraph">
 <p>default: <code>400</code></p>
 </div>
-<h3 id="_details_1618" class="discrete">details</h3>
+<h3 id="_details_1620" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53961,7 +54028,7 @@ Set this conservatively since high values may cause performance issues.</p>
 <div class="paragraph">
 <p>default: <code>300</code></p>
 </div>
-<h3 id="_details_1619" class="discrete">details</h3>
+<h3 id="_details_1621" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -53994,7 +54061,7 @@ Set this conservatively since high values may cause performance issues.</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1620" class="discrete">details</h3>
+<h3 id="_details_1622" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54026,7 +54093,7 @@ Set this conservatively since high values may cause performance issues.</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1621" class="discrete">details</h3>
+<h3 id="_details_1623" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54066,7 +54133,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>default: <code>6</code></p>
 </div>
-<h3 id="_details_1622" class="discrete">details</h3>
+<h3 id="_details_1624" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54095,7 +54162,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>Plugin to use for vim-matchup</p>
 </div>
-<h3 id="_details_1623" class="discrete">details</h3>
+<h3 id="_details_1625" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54127,7 +54194,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1624" class="discrete">details</h3>
+<h3 id="_details_1626" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54159,7 +54226,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>default: <code>["d" "y"]</code></p>
 </div>
-<h3 id="_details_1625" class="discrete">details</h3>
+<h3 id="_details_1627" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54191,7 +54258,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>default: <code>[]</code></p>
 </div>
-<h3 id="_details_1626" class="discrete">details</h3>
+<h3 id="_details_1628" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54224,7 +54291,7 @@ explicit end markers (e.g., Python).</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1627" class="discrete">details</h3>
+<h3 id="_details_1629" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54253,7 +54320,7 @@ explicit end markers (e.g., Python).</p>
 <div class="paragraph">
 <p>Whether to enable Enable treesitter integration.</p>
 </div>
-<h3 id="_details_1628" class="discrete">details</h3>
+<h3 id="_details_1630" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54290,7 +54357,7 @@ explicit end markers (e.g., Python).</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1629" class="discrete">details</h3>
+<h3 id="_details_1631" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54319,7 +54386,7 @@ explicit end markers (e.g., Python).</p>
 <div class="paragraph">
 <p>Whether to enable vimtex.</p>
 </div>
-<h3 id="_details_1630" class="discrete">details</h3>
+<h3 id="_details_1632" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54356,7 +54423,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
     compiler_enabled = true;
   };</p>
 </div>
-<h3 id="_details_1631" class="discrete">details</h3>
+<h3 id="_details_1633" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54385,7 +54452,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Plugin to use for vimtex</p>
 </div>
-<h3 id="_details_1632" class="discrete">details</h3>
+<h3 id="_details_1634" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54414,7 +54481,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Whether to enable Enable zig.</p>
 </div>
-<h3 id="_details_1633" class="discrete">details</h3>
+<h3 id="_details_1635" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54447,7 +54514,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Run zig fmt on save</p>
 </div>
-<h3 id="_details_1634" class="discrete">details</h3>
+<h3 id="_details_1636" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54480,7 +54547,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Plugin to use for zig</p>
 </div>
-<h3 id="_details_1635" class="discrete">details</h3>
+<h3 id="_details_1637" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54509,7 +54576,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vi&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_1636" class="discrete">details</h3>
+<h3 id="_details_1638" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54538,7 +54605,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vim&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_1637" class="discrete">details</h3>
+<h3 id="_details_1639" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -54567,7 +54634,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Should the config be included in the wrapper script</p>
 </div>
-<h3 id="_details_1638" class="discrete">details</h3>
+<h3 id="_details_1640" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
