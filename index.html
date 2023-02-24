@@ -2098,11 +2098,46 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_plugins_treesitter_nixgrammars">plugins.treesitter.nixGrammars</a></li>
 <li><a href="#_plugins_treesitter_package">plugins.treesitter.package</a></li>
 <li><a href="#_plugins_treesitter_parserinstalldir">plugins.treesitter.parserInstallDir</a></li>
+<li><a href="#_plugins_trouble_actionkeys_cancel">plugins.trouble.actionKeys.cancel</a></li>
+<li><a href="#_plugins_trouble_actionkeys_close">plugins.trouble.actionKeys.close</a></li>
+<li><a href="#_plugins_trouble_actionkeys_closefolds">plugins.trouble.actionKeys.closeFolds</a></li>
+<li><a href="#_plugins_trouble_actionkeys_hover">plugins.trouble.actionKeys.hover</a></li>
+<li><a href="#_plugins_trouble_actionkeys_jump">plugins.trouble.actionKeys.jump</a></li>
+<li><a href="#_plugins_trouble_actionkeys_jumpclose">plugins.trouble.actionKeys.jumpClose</a></li>
+<li><a href="#_plugins_trouble_actionkeys_next">plugins.trouble.actionKeys.next</a></li>
+<li><a href="#_plugins_trouble_actionkeys_openfolds">plugins.trouble.actionKeys.openFolds</a></li>
+<li><a href="#_plugins_trouble_actionkeys_opensplit">plugins.trouble.actionKeys.openSplit</a></li>
+<li><a href="#_plugins_trouble_actionkeys_opentab">plugins.trouble.actionKeys.openTab</a></li>
+<li><a href="#_plugins_trouble_actionkeys_openvsplit">plugins.trouble.actionKeys.openVsplit</a></li>
+<li><a href="#_plugins_trouble_actionkeys_preview">plugins.trouble.actionKeys.preview</a></li>
+<li><a href="#_plugins_trouble_actionkeys_previous">plugins.trouble.actionKeys.previous</a></li>
+<li><a href="#_plugins_trouble_actionkeys_refresh">plugins.trouble.actionKeys.refresh</a></li>
+<li><a href="#_plugins_trouble_actionkeys_togglefold">plugins.trouble.actionKeys.toggleFold</a></li>
+<li><a href="#_plugins_trouble_actionkeys_togglemode">plugins.trouble.actionKeys.toggleMode</a></li>
+<li><a href="#_plugins_trouble_actionkeys_togglepreview">plugins.trouble.actionKeys.togglePreview</a></li>
+<li><a href="#_plugins_trouble_autoclose">plugins.trouble.autoClose</a></li>
+<li><a href="#_plugins_trouble_autofold">plugins.trouble.autoFold</a></li>
+<li><a href="#_plugins_trouble_autojump">plugins.trouble.autoJump</a></li>
+<li><a href="#_plugins_trouble_autoopen">plugins.trouble.autoOpen</a></li>
+<li><a href="#_plugins_trouble_autopreview">plugins.trouble.autoPreview</a></li>
 <li><a href="#_plugins_trouble_enable">plugins.trouble.enable</a></li>
+<li><a href="#_plugins_trouble_extraoptions">plugins.trouble.extraOptions</a></li>
+<li><a href="#_plugins_trouble_foldclosed">plugins.trouble.foldClosed</a></li>
+<li><a href="#_plugins_trouble_foldopen">plugins.trouble.foldOpen</a></li>
+<li><a href="#_plugins_trouble_group">plugins.trouble.group</a></li>
 <li><a href="#_plugins_trouble_height">plugins.trouble.height</a></li>
 <li><a href="#_plugins_trouble_icons">plugins.trouble.icons</a></li>
+<li><a href="#_plugins_trouble_indentlines">plugins.trouble.indentLines</a></li>
+<li><a href="#_plugins_trouble_mode">plugins.trouble.mode</a></li>
 <li><a href="#_plugins_trouble_package">plugins.trouble.package</a></li>
+<li><a href="#_plugins_trouble_padding">plugins.trouble.padding</a></li>
 <li><a href="#_plugins_trouble_position">plugins.trouble.position</a></li>
+<li><a href="#_plugins_trouble_signs_error">plugins.trouble.signs.error</a></li>
+<li><a href="#_plugins_trouble_signs_hint">plugins.trouble.signs.hint</a></li>
+<li><a href="#_plugins_trouble_signs_information">plugins.trouble.signs.information</a></li>
+<li><a href="#_plugins_trouble_signs_other">plugins.trouble.signs.other</a></li>
+<li><a href="#_plugins_trouble_signs_warning">plugins.trouble.signs.warning</a></li>
+<li><a href="#_plugins_trouble_usediagnosticsigns">plugins.trouble.useDiagnosticSigns</a></li>
 <li><a href="#_plugins_trouble_width">plugins.trouble.width</a></li>
 <li><a href="#_plugins_undotree_autoopendiff">plugins.undotree.autoOpenDiff</a></li>
 <li><a href="#_plugins_undotree_diffcommand">plugins.undotree.diffCommand</a></li>
@@ -55186,12 +55221,717 @@ This default might not work on your own install, please make sure that $XDG_DATA
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_cancel">plugins.trouble.actionKeys.cancel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cancel the preview and get back to your last window / buffer / cursor</p>
+</div>
+<div class="paragraph">
+<p>default: <code>&lt;esc&gt;</code></p>
+</div>
+<h3 id="_details_1653" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_close">plugins.trouble.actionKeys.close</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Close the list</p>
+</div>
+<div class="paragraph">
+<p>default: <code>q</code></p>
+</div>
+<h3 id="_details_1654" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_closefolds">plugins.trouble.actionKeys.closeFolds</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Close all folds</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "zM" "zm" ]</code></p>
+</div>
+<h3 id="_details_1655" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_hover">plugins.trouble.actionKeys.hover</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Opens a small popup with the full multiline message</p>
+</div>
+<div class="paragraph">
+<p>default: <code>K</code></p>
+</div>
+<h3 id="_details_1656" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_jump">plugins.trouble.actionKeys.jump</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jump to the diagnostic or open / close folds</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "&lt;cr&gt;" "&lt;tab&gt;" ]</code></p>
+</div>
+<h3 id="_details_1657" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_jumpclose">plugins.trouble.actionKeys.jumpClose</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jump to the diagnostic and close the list</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "o" ]</code></p>
+</div>
+<h3 id="_details_1658" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_next">plugins.trouble.actionKeys.next</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next item</p>
+</div>
+<div class="paragraph">
+<p>default: <code>j</code></p>
+</div>
+<h3 id="_details_1659" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_openfolds">plugins.trouble.actionKeys.openFolds</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Open all folds</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "zR" "zr" ]</code></p>
+</div>
+<h3 id="_details_1660" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_opensplit">plugins.trouble.actionKeys.openSplit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Open buffer in new split</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "&lt;c-x&gt;" ]</code></p>
+</div>
+<h3 id="_details_1661" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_opentab">plugins.trouble.actionKeys.openTab</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Open buffer in new tab</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "&lt;c-t&gt;" ]</code></p>
+</div>
+<h3 id="_details_1662" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_openvsplit">plugins.trouble.actionKeys.openVsplit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Open buffer in new vsplit</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "&lt;c-v&gt;" ]</code></p>
+</div>
+<h3 id="_details_1663" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_preview">plugins.trouble.actionKeys.preview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Preview the diagnostic location</p>
+</div>
+<div class="paragraph">
+<p>default: <code>p</code></p>
+</div>
+<h3 id="_details_1664" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_previous">plugins.trouble.actionKeys.previous</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Previous item</p>
+</div>
+<div class="paragraph">
+<p>default: <code>k</code></p>
+</div>
+<h3 id="_details_1665" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_refresh">plugins.trouble.actionKeys.refresh</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Manually refresh</p>
+</div>
+<div class="paragraph">
+<p>default: <code>r</code></p>
+</div>
+<h3 id="_details_1666" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_togglefold">plugins.trouble.actionKeys.toggleFold</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Toggle fold of current file</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "zA" "za" ]</code></p>
+</div>
+<h3 id="_details_1667" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_togglemode">plugins.trouble.actionKeys.toggleMode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>toggle between 'workspace' and 'document' diagnostics mode</p>
+</div>
+<div class="paragraph">
+<p>default: <code>m</code></p>
+</div>
+<h3 id="_details_1668" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_actionkeys_togglepreview">plugins.trouble.actionKeys.togglePreview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Toggle auto_preview</p>
+</div>
+<div class="paragraph">
+<p>default: <code>P</code></p>
+</div>
+<h3 id="_details_1669" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string or list of string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_autoclose">plugins.trouble.autoClose</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Automatically close the list when you have no diagnostics.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
+</div>
+<h3 id="_details_1670" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_autofold">plugins.trouble.autoFold</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Automatically fold a file trouble list at creation.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
+</div>
+<h3 id="_details_1671" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_autojump">plugins.trouble.autoJump</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For the given modes, automatically jump if there is only a single result.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>[ "lsp_definitions" ]</code></p>
+</div>
+<h3 id="_details_1672" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or (list of string)</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_autoopen">plugins.trouble.autoOpen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Automatically open the list when you have diagnostics.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
+</div>
+<h3 id="_details_1673" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_autopreview">plugins.trouble.autoPreview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Automatically preview the location of the diagnostic.
+&lt;esc&gt; to close preview and go back to last window.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
+<h3 id="_details_1674" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_trouble_enable">plugins.trouble.enable</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Whether to enable trouble.nvim.</p>
 </div>
-<h3 id="_details_1653" class="discrete">details</h3>
+<h3 id="_details_1675" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55219,12 +55959,141 @@ This default might not work on your own install, please make sure that $XDG_DATA
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_trouble_extraoptions">plugins.trouble.extraOptions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These attributes will be added to the table parameter for the setup function.
+(Can override other attributes set by nixvim)</p>
+</div>
+<h3 id="_details_1676" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>attribute set</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>{ }</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_foldclosed">plugins.trouble.foldClosed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Icon used for closed folds</p>
+</div>
+<div class="paragraph">
+<p>default: <code></code></p>
+</div>
+<h3 id="_details_1677" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_foldopen">plugins.trouble.foldOpen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Icon used for open folds</p>
+</div>
+<div class="paragraph">
+<p>default: <code></code></p>
+</div>
+<h3 id="_details_1678" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_group">plugins.trouble.group</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Group results by file</p>
+</div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
+<h3 id="_details_1679" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_trouble_height">plugins.trouble.height</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Height of the trouble list when position is top or bottom</p>
 </div>
-<h3 id="_details_1654" class="discrete">details</h3>
+<div class="paragraph">
+<p>default: <code>10</code></p>
+</div>
+<h3 id="_details_1680" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55253,7 +56122,10 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Use devicons for filenames</p>
 </div>
-<h3 id="_details_1655" class="discrete">details</h3>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
+<h3 id="_details_1681" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55277,12 +56149,76 @@ This default might not work on your own install, please make sure that $XDG_DATA
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_trouble_indentlines">plugins.trouble.indentLines</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Add an indent guide below the fold icons.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
+<h3 id="_details_1682" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_mode">plugins.trouble.mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use devicons for filenames</p>
+</div>
+<div class="paragraph">
+<p>default: <code>"workspace_diagnostics"</code></p>
+</div>
+<h3 id="_details_1683" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or one of "workspace_diagnostics", "document_diagnostics", "quickfix", "lsp_references", "loclist"</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_trouble_package">plugins.trouble.package</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Plugin to use for trouble-nvim</p>
 </div>
-<h3 id="_details_1656" class="discrete">details</h3>
+<h3 id="_details_1684" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55306,12 +56242,47 @@ This default might not work on your own install, please make sure that $XDG_DATA
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_trouble_padding">plugins.trouble.padding</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Add an extra new line on top of the list</p>
+</div>
+<div class="paragraph">
+<p>default: <code>true</code></p>
+</div>
+<h3 id="_details_1685" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_trouble_position">plugins.trouble.position</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Position of the list</p>
 </div>
-<h3 id="_details_1657" class="discrete">details</h3>
+<div class="paragraph">
+<p>default: <code>"bottom"</code></p>
+</div>
+<h3 id="_details_1686" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55335,12 +56306,207 @@ This default might not work on your own install, please make sure that $XDG_DATA
 </div>
 </div>
 <div class="sect1">
+<h2 id="_plugins_trouble_signs_error">plugins.trouble.signs.error</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Icon/text for error diagnostics.</p>
+</div>
+<div class="paragraph">
+<p>default: <code></code></p>
+</div>
+<h3 id="_details_1687" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_signs_hint">plugins.trouble.signs.hint</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Icon/text for hint diagnostics.</p>
+</div>
+<div class="paragraph">
+<p>default: <code></code></p>
+</div>
+<h3 id="_details_1688" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_signs_information">plugins.trouble.signs.information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Icon/text for information diagnostics.</p>
+</div>
+<div class="paragraph">
+<p>default: <code></code></p>
+</div>
+<h3 id="_details_1689" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_signs_other">plugins.trouble.signs.other</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Icon/text for other diagnostics.</p>
+</div>
+<div class="paragraph">
+<p>default: <code>﫠</code></p>
+</div>
+<h3 id="_details_1690" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_signs_warning">plugins.trouble.signs.warning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Icon/text for warning diagnostics.</p>
+</div>
+<div class="paragraph">
+<p>default: <code></code></p>
+</div>
+<h3 id="_details_1691" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or string</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugins_trouble_usediagnosticsigns">plugins.trouble.useDiagnosticSigns</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enabling this will use the signs defined in your lsp client</p>
+</div>
+<div class="paragraph">
+<p>default: <code>false</code></p>
+</div>
+<h3 id="_details_1692" class="discrete">details</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>null or boolean</p>
+</dd>
+<dt class="hdlist1">Default</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre>null</pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">No Example</dt>
+<dd>
+<p></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_plugins_trouble_width">plugins.trouble.width</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Width of the trouble list when position is left or right</p>
+<p>Width of the list when position is left or right</p>
 </div>
-<h3 id="_details_1658" class="discrete">details</h3>
+<div class="paragraph">
+<p>default: <code>50</code></p>
+</div>
+<h3 id="_details_1693" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55369,7 +56535,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Auto open diff window</p>
 </div>
-<h3 id="_details_1659" class="discrete">details</h3>
+<h3 id="_details_1694" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55398,7 +56564,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Diff command</p>
 </div>
-<h3 id="_details_1660" class="discrete">details</h3>
+<h3 id="_details_1695" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55427,7 +56593,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Undotree diff panel height</p>
 </div>
-<h3 id="_details_1661" class="discrete">details</h3>
+<h3 id="_details_1696" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55456,7 +56622,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Whether to enable Enable undotree.</p>
 </div>
-<h3 id="_details_1662" class="discrete">details</h3>
+<h3 id="_details_1697" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55489,7 +56655,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Focus undotree after being opened</p>
 </div>
-<h3 id="_details_1663" class="discrete">details</h3>
+<h3 id="_details_1698" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55518,7 +56684,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Highlight changed text</p>
 </div>
-<h3 id="_details_1664" class="discrete">details</h3>
+<h3 id="_details_1699" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55547,7 +56713,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Highlight changes with a sign in the gutter</p>
 </div>
-<h3 id="_details_1665" class="discrete">details</h3>
+<h3 id="_details_1700" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55576,7 +56742,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Added lines highlight group</p>
 </div>
-<h3 id="_details_1666" class="discrete">details</h3>
+<h3 id="_details_1701" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55605,7 +56771,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Changed lines highlight group</p>
 </div>
-<h3 id="_details_1667" class="discrete">details</h3>
+<h3 id="_details_1702" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55634,7 +56800,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Deleted lines highlight group</p>
 </div>
-<h3 id="_details_1668" class="discrete">details</h3>
+<h3 id="_details_1703" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55663,7 +56829,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Plugin to use for undotree</p>
 </div>
-<h3 id="_details_1669" class="discrete">details</h3>
+<h3 id="_details_1704" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55692,7 +56858,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Use a relative timestamp</p>
 </div>
-<h3 id="_details_1670" class="discrete">details</h3>
+<h3 id="_details_1705" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55721,7 +56887,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>E.g. use 'd' instead of 'days'</p>
 </div>
-<h3 id="_details_1671" class="discrete">details</h3>
+<h3 id="_details_1706" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55750,7 +56916,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Show cursor line</p>
 </div>
-<h3 id="_details_1672" class="discrete">details</h3>
+<h3 id="_details_1707" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55779,7 +56945,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Show help line</p>
 </div>
-<h3 id="_details_1673" class="discrete">details</h3>
+<h3 id="_details_1708" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55808,7 +56974,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Tree node shape</p>
 </div>
-<h3 id="_details_1674" class="discrete">details</h3>
+<h3 id="_details_1709" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55837,7 +57003,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Window layout for undotree. Check <a href="https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29" class="bare">https://github.com/mbbill/undotree/blob/master/plugin/undotree.vim#L29</a> for reference</p>
 </div>
-<h3 id="_details_1675" class="discrete">details</h3>
+<h3 id="_details_1710" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55866,7 +57032,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>Undotree window width</p>
 </div>
-<h3 id="_details_1676" class="discrete">details</h3>
+<h3 id="_details_1711" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55901,7 +57067,7 @@ This default might not work on your own install, please make sure that $XDG_DATA
 <div class="paragraph">
 <p>default: <code>0</code></p>
 </div>
-<h3 id="_details_1677" class="discrete">details</h3>
+<h3 id="_details_1712" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55934,7 +57100,7 @@ objects. Does not apply to match highlighting (see matchParenStopline instead)</
 <div class="paragraph">
 <p>default: <code>1500</code></p>
 </div>
-<h3 id="_details_1678" class="discrete">details</h3>
+<h3 id="_details_1713" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55963,7 +57129,7 @@ objects. Does not apply to match highlighting (see matchParenStopline instead)</
 <div class="paragraph">
 <p>Whether to enable Enable vim-matchup.</p>
 </div>
-<h3 id="_details_1679" class="discrete">details</h3>
+<h3 id="_details_1714" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -55999,7 +57165,7 @@ objects. Does not apply to match highlighting (see matchParenStopline instead)</
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1680" class="discrete">details</h3>
+<h3 id="_details_1715" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56031,7 +57197,7 @@ objects. Does not apply to match highlighting (see matchParenStopline instead)</
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1681" class="discrete">details</h3>
+<h3 id="_details_1716" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56065,7 +57231,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1682" class="discrete">details</h3>
+<h3 id="_details_1717" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56097,7 +57263,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>700</code></p>
 </div>
-<h3 id="_details_1683" class="discrete">details</h3>
+<h3 id="_details_1718" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56129,7 +57295,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>50</code></p>
 </div>
-<h3 id="_details_1684" class="discrete">details</h3>
+<h3 id="_details_1719" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56161,7 +57327,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1685" class="discrete">details</h3>
+<h3 id="_details_1720" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56193,7 +57359,7 @@ moving</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1686" class="discrete">details</h3>
+<h3 id="_details_1721" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56226,7 +57392,7 @@ Note: this feature requires deferred highlighting to be supported and enabled.</
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1687" class="discrete">details</h3>
+<h3 id="_details_1722" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56258,7 +57424,7 @@ Note: this feature requires deferred highlighting to be supported and enabled.</
 <div class="paragraph">
 <p>default: <code>60</code></p>
 </div>
-<h3 id="_details_1688" class="discrete">details</h3>
+<h3 id="_details_1723" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56290,7 +57456,7 @@ Note: this feature requires deferred highlighting to be supported and enabled.</
 <div class="paragraph">
 <p>default: <code>{method = "status";}</code></p>
 </div>
-<h3 id="_details_1689" class="discrete">details</h3>
+<h3 id="_details_1724" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56336,7 +57502,7 @@ get the text.</p>
 <div class="paragraph">
 <p>default: <code>"status"</code></p>
 </div>
-<h3 id="_details_1690" class="discrete">details</h3>
+<h3 id="_details_1725" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56370,7 +57536,7 @@ This is intended to prevent flickering while scrolling with j and k.</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1691" class="discrete">details</h3>
+<h3 id="_details_1726" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56402,7 +57568,7 @@ This is intended to prevent flickering while scrolling with j and k.</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1692" class="discrete">details</h3>
+<h3 id="_details_1727" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56435,7 +57601,7 @@ Set this conservatively since high values may cause performance issues.</p>
 <div class="paragraph">
 <p>default: <code>400</code></p>
 </div>
-<h3 id="_details_1693" class="discrete">details</h3>
+<h3 id="_details_1728" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56467,7 +57633,7 @@ Set this conservatively since high values may cause performance issues.</p>
 <div class="paragraph">
 <p>default: <code>300</code></p>
 </div>
-<h3 id="_details_1694" class="discrete">details</h3>
+<h3 id="_details_1729" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56500,7 +57666,7 @@ Set this conservatively since high values may cause performance issues.</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1695" class="discrete">details</h3>
+<h3 id="_details_1730" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56532,7 +57698,7 @@ Set this conservatively since high values may cause performance issues.</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1696" class="discrete">details</h3>
+<h3 id="_details_1731" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56572,7 +57738,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>default: <code>6</code></p>
 </div>
-<h3 id="_details_1697" class="discrete">details</h3>
+<h3 id="_details_1732" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56601,7 +57767,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>Plugin to use for vim-matchup</p>
 </div>
-<h3 id="_details_1698" class="discrete">details</h3>
+<h3 id="_details_1733" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56633,7 +57799,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>default: <code>true</code></p>
 </div>
-<h3 id="_details_1699" class="discrete">details</h3>
+<h3 id="_details_1734" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56665,7 +57831,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>default: <code>["d" "y"]</code></p>
 </div>
-<h3 id="_details_1700" class="discrete">details</h3>
+<h3 id="_details_1735" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56697,7 +57863,7 @@ less than 12 set overrideNPercent to 11.</p>
 <div class="paragraph">
 <p>default: <code>[]</code></p>
 </div>
-<h3 id="_details_1701" class="discrete">details</h3>
+<h3 id="_details_1736" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56730,7 +57896,7 @@ explicit end markers (e.g., Python).</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1702" class="discrete">details</h3>
+<h3 id="_details_1737" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56759,7 +57925,7 @@ explicit end markers (e.g., Python).</p>
 <div class="paragraph">
 <p>Whether to enable Enable treesitter integration.</p>
 </div>
-<h3 id="_details_1703" class="discrete">details</h3>
+<h3 id="_details_1738" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56796,7 +57962,7 @@ explicit end markers (e.g., Python).</p>
 <div class="paragraph">
 <p>default: <code>false</code></p>
 </div>
-<h3 id="_details_1704" class="discrete">details</h3>
+<h3 id="_details_1739" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56825,7 +57991,7 @@ explicit end markers (e.g., Python).</p>
 <div class="paragraph">
 <p>Whether to enable vimtex.</p>
 </div>
-<h3 id="_details_1705" class="discrete">details</h3>
+<h3 id="_details_1740" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56862,7 +58028,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
     compiler_enabled = true;
   };</p>
 </div>
-<h3 id="_details_1706" class="discrete">details</h3>
+<h3 id="_details_1741" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56891,7 +58057,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Plugin to use for vimtex</p>
 </div>
-<h3 id="_details_1707" class="discrete">details</h3>
+<h3 id="_details_1742" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56920,7 +58086,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Whether to enable Enable zig.</p>
 </div>
-<h3 id="_details_1708" class="discrete">details</h3>
+<h3 id="_details_1743" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56953,7 +58119,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Run zig fmt on save</p>
 </div>
-<h3 id="_details_1709" class="discrete">details</h3>
+<h3 id="_details_1744" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -56986,7 +58152,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Plugin to use for zig</p>
 </div>
-<h3 id="_details_1710" class="discrete">details</h3>
+<h3 id="_details_1745" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -57015,7 +58181,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vi&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_1711" class="discrete">details</h3>
+<h3 id="_details_1746" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -57044,7 +58210,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Symlink &lt;command&gt;vim&lt;/command&gt; to &lt;command&gt;nvim&lt;/command&gt; binary.</p>
 </div>
-<h3 id="_details_1712" class="discrete">details</h3>
+<h3 id="_details_1747" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -57073,7 +58239,7 @@ Example: To set 'vimtex_compiler_enabled' to 1, write
 <div class="paragraph">
 <p>Should the config be included in the wrapper script</p>
 </div>
-<h3 id="_details_1713" class="discrete">details</h3>
+<h3 id="_details_1748" class="discrete">details</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
