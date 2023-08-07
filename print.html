@@ -51192,12 +51192,13 @@ To add a new plugin you need to do the following.</p>
 <p>Add a file in the correct sub-directory of <a href="plugins">plugins</a>. This depends on your exact plugin.
 You will most certainly need the <code>helpers</code>, they can be added by doing something like:</p>
 <pre><code class="language-nix">{
- lib,
- pkgs,
- ...
+  lib,
+  pkgs,
+  ...
 } @ args:
+
 let
- helpers = import ../helpers.nix args;
+  helpers = import ../helpers.nix args;
 in {
 }
 </code></pre>
@@ -51212,12 +51213,16 @@ in {
 <li>
 <p>Add the plugin package to the installed plugins if it is enabled. This can be done with the following:</p>
 <pre><code class="language-nix">{
-    config = let cfg = config.plugins.&quot;&lt;plug-name&gt;&quot;; in lib.mkIf cfg.enable {
-        extraPlugins = [cfg.package];
+  config =
+    let
+      cfg = config.plugins.&quot;&lt;plug-name&gt;&quot;;
 
-        extraConfigLua = ''
-            &lt;plugin configuration if needed&gt;
-        '';
+    in lib.mkIf cfg.enable {
+      extraPlugins = [cfg.package];
+
+      extraConfigLua = ''
+        &lt;plugin configuration if needed&gt;
+      '';
     };
 }
 </code></pre>
