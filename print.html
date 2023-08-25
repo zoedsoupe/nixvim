@@ -52300,7 +52300,7 @@ boolean</p>
 <li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
 </ul>
 <h2 id="pluginstreesitter-contextpackage"><a class="header" href="#pluginstreesitter-contextpackage">plugins.treesitter-context.package</a></h2>
-<p>Plugin to use for treesitter-context</p>
+<p>Plugin to use for nvim-treesitter-context</p>
 <p><em>Type:</em>
 package</p>
 <p><em>Default:</em>
@@ -52309,52 +52309,115 @@ package</p>
 <ul>
 <li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
 </ul>
-<h2 id="pluginstreesitter-contextexactpatterns"><a class="header" href="#pluginstreesitter-contextexactpatterns">plugins.treesitter-context.exactPatterns</a></h2>
-<p>Treat the coresponding entry in patterns as an exact match</p>
+<h2 id="pluginstreesitter-contextextraoptions"><a class="header" href="#pluginstreesitter-contextextraoptions">plugins.treesitter-context.extraOptions</a></h2>
+<p>These attributes will be added to the table parameter for the setup function.
+(Can override other attributes set by nixvim)</p>
 <p><em>Type:</em>
-attribute set of boolean</p>
+attribute set</p>
 <p><em>Default:</em>
 <code>{ }</code></p>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
+</ul>
+<h2 id="pluginstreesitter-contextlinenumbers"><a class="header" href="#pluginstreesitter-contextlinenumbers">plugins.treesitter-context.lineNumbers</a></h2>
+<p>Whether to show line numbers.</p>
+<p>default: <code>true</code></p>
+<p><em>Type:</em>
+null or boolean</p>
+<p><em>Default:</em>
+<code>null</code></p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
 </ul>
 <h2 id="pluginstreesitter-contextmaxlines"><a class="header" href="#pluginstreesitter-contextmaxlines">plugins.treesitter-context.maxLines</a></h2>
-<p>How many lines the window should span. Null means no limit</p>
+<p>How many lines the window should span. 0 means no limit.</p>
+<p>default: <code>0</code></p>
 <p><em>Type:</em>
-null or positive integer, meaning &gt;0</p>
+null or unsigned integer, meaning &gt;=0</p>
 <p><em>Default:</em>
 <code>null</code></p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
 </ul>
-<h2 id="pluginstreesitter-contextmaxwindowheight"><a class="header" href="#pluginstreesitter-contextmaxwindowheight">plugins.treesitter-context.maxWindowHeight</a></h2>
-<p>Minimum editor window height to enable context</p>
+<h2 id="pluginstreesitter-contextminwindowheight"><a class="header" href="#pluginstreesitter-contextminwindowheight">plugins.treesitter-context.minWindowHeight</a></h2>
+<p>Minimum editor window height to enable context. 0 means no limit.</p>
+<p>default: <code>0</code></p>
 <p><em>Type:</em>
-null or positive integer, meaning &gt;0</p>
+null or unsigned integer, meaning &gt;=0</p>
 <p><em>Default:</em>
 <code>null</code></p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
 </ul>
-<h2 id="pluginstreesitter-contextpatterns"><a class="header" href="#pluginstreesitter-contextpatterns">plugins.treesitter-context.patterns</a></h2>
-<p>Patterns to use for context delimitation. The ‘default’ key matches all filetypes</p>
+<h2 id="pluginstreesitter-contextmode"><a class="header" href="#pluginstreesitter-contextmode">plugins.treesitter-context.mode</a></h2>
+<p>Line used to calculate context.</p>
+<p>default: <code>&quot;cursor&quot;</code></p>
 <p><em>Type:</em>
-attribute set of list of string</p>
+null or one of “cursor”, “topline”</p>
 <p><em>Default:</em>
-<code>{ }</code></p>
+<code>null</code></p>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
+</ul>
+<h2 id="pluginstreesitter-contextmultilinethreshold"><a class="header" href="#pluginstreesitter-contextmultilinethreshold">plugins.treesitter-context.multilineThreshold</a></h2>
+<p>Maximum number of lines to collapse for a single context line.</p>
+<p>default: <code>20</code></p>
+<p><em>Type:</em>
+null or unsigned integer, meaning &gt;=0</p>
+<p><em>Default:</em>
+<code>null</code></p>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
+</ul>
+<h2 id="pluginstreesitter-contextonattach"><a class="header" href="#pluginstreesitter-contextonattach">plugins.treesitter-context.onAttach</a></h2>
+<p>The implementation of a lua function which takes an integer <code>buf</code> as parameter and returns a
+boolean.
+Return <code>false</code> to disable attaching.</p>
+<p><em>Type:</em>
+null or string</p>
+<p><em>Default:</em>
+<code>null</code></p>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
+</ul>
+<h2 id="pluginstreesitter-contextseparator"><a class="header" href="#pluginstreesitter-contextseparator">plugins.treesitter-context.separator</a></h2>
+<p>Separator between context and content.
+Should be a single character string, like “-”.
+When separator is set, the context will only show up when there are at least 2 lines above
+cursorline.</p>
+<p><em>Type:</em>
+null or string</p>
+<p><em>Default:</em>
+<code>null</code></p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
 </ul>
 <h2 id="pluginstreesitter-contexttrimscope"><a class="header" href="#pluginstreesitter-contexttrimscope">plugins.treesitter-context.trimScope</a></h2>
-<p>Which context lines to discard if <code>max_lines</code> is exceeded</p>
+<p>Which context lines to discard if <code>maxLines</code> is exceeded.</p>
+<p>default: <code>&quot;outer&quot;</code></p>
 <p><em>Type:</em>
-one of “outer”, “inner”</p>
+null or one of “outer”, “inner”</p>
 <p><em>Default:</em>
-<code>&quot;outer&quot;</code></p>
+<code>null</code></p>
+<p><em>Declared by:</em></p>
+<ul>
+<li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
+</ul>
+<h2 id="pluginstreesitter-contextzindex"><a class="header" href="#pluginstreesitter-contextzindex">plugins.treesitter-context.zindex</a></h2>
+<p>The Z-index of the context window.</p>
+<p>default: <code>20</code></p>
+<p><em>Type:</em>
+null or unsigned integer, meaning &gt;=0</p>
+<p><em>Default:</em>
+<code>null</code></p>
 <p><em>Declared by:</em></p>
 <ul>
 <li><a href="https://github.com/nix-community/nixvim/blob/main/plugins/languages/treesitter/treesitter-context.nix">plugins/languages/treesitter/treesitter-context.nix</a></li>
