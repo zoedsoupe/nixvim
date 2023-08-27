@@ -55102,7 +55102,9 @@ There are a number of helpers to help you correctly implement them:</p>
 </ul>
 <p>The tests are then runnable with <code>nix flake check</code>.</p>
 <p>There are a second set of tests, unit tests for nixvim itself, defined in <code>tests/lib-tests.nix</code> that use the <code>pkgs.lib.runTests</code> framework.</p>
-<p>If you want to speed up tests, we have set up a Cachix for nixvim. This way, only tests whose dependencies have changed will be re-run, speeding things up considerably. To use it, just install cachix and run <code>cachix use nixvim</code>.</p>
+<p>If you want to speed up tests, we have set up a Cachix for nixvim.
+This way, only tests whose dependencies have changed will be re-run, speeding things up
+considerably. To use it, just install cachix and run <code>cachix use nix-community</code>.</p>
 
                     </main>
 
