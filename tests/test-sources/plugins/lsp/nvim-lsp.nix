@@ -87,7 +87,8 @@
         elmls.enable = true;
         eslint.enable = true;
         elixirls.enable = true;
-        futhark-lsp.enable = true;
+        # TODO: As of Oct. 09 2023, futhark-lsp is broken
+        # futhark-lsp.enable = true;
         gopls.enable = true;
         hls.enable = true;
         html.enable = true;
